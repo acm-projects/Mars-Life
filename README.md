@@ -55,8 +55,6 @@ Look through all of these at the beginning :)
 
 ### Git
 [Video: Learn Git in 15 minutes](https://youtu.be/USjZcfj8yxE)
-
-General Use:
 | Command | Description |
 | :-----: | :---------: |
 | cd "Mars-Life" | Change directories to our repository |
@@ -68,5 +66,6 @@ General Use:
 | git commit -m "msg" | Commit with message |
 | git push origin "branch" | Push to branch |
 | git pull origin "branch" | Pull updates from a specific branch |
+| ^ thanks Emily! | :)|
 
 
