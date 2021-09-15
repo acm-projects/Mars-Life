@@ -1,15 +1,15 @@
-# Mars-Life 🚀
+# Mars Life 🚀
 Ever wonder what life would be like on Mars? Keep up with your favorite red planet with daily Martian weather updates, rover photos, and stellar space facts all on this handy mobile app.
 
 ## Minimum Viable Product (MVP)
-* stuff
-* yeah
-* :)
+* Use the InSight Mars Weather Service API to get and display daily weather information on Mars
+* Get and display the weekly weather forecast using the InSight API
+* Use the Mars Rover Photos API to get and display pictures of Mars
+* Use NASA and/or other space APIs to get and display cool space facts (e.g. the current number of astronauts in space, general space weather, asteroid info, etc.)
 
 ## Stretch Goals
-* goals
-* for
-* stretching
+* Get info about the weather on Earth and display it in comparison with Mars
+* Display real-time or past weather patterns on Mars
 
 ## Tech Stack
 ### General Software
