@@ -18,11 +18,9 @@ Ever wonder what life would be like on Mars? Keep up with your favorite red plan
 * [Android Studio](https://developer.android.com/studio)
 * [Figma](https://www.figma.com/) or [Adobe XD](https://www.adobe.com/products/xd.html) for wireframing
 ### Tech Stack
-#### Mobile Application Frameworks: choose [Flutter](https://flutter.dev/) or [React Native](https://reactnative.dev/)
-* [Flutter](https://flutter.dev/): Uses [Dart](https://dart.dev/) programming language, has full native support, has more built-in widgets
+#### Mobile Application Frameworks:
 * [React Native](https://reactnative.dev/): Uses Javascript, has an active and established dev community
-#### Backend: choose [Firebase](https://firebase.google.com/) or [MongoDB](https://www.mongodb.com/)
-* [Firebase](https://firebase.google.com/): real-time database, cross-platform API w/ minimal, whole ecosystem for mobile dev
+#### Backend:
 * [MongoDB](https://www.mongodb.com/): flexible and scalable, uses JSON, part of the popular MERN stack, focuses on data storage
 ### APIs: many options, you're not limited to this list :)
 There's lots of [NASA APIs](https://api.nasa.gov/) to look at: 
