@@ -6,7 +6,7 @@ Ever wonder what life would be like on Mars? Keep up with your favorite red plan
 * Use the [Mars Rover Photos API](https://api.nasa.gov/) to get and display pictures of Mars
 * Have a news page that displays space news articles, upcoming missions from NASA/SpaceX, etc.
 * Show Mars' orbit in the solar system
-* Touch and scroll through a map of Mars using the [NASA Maps API Extension](https://ti.arc.nasa.gov/tech/asr/groups/intelligent-robotics/planetary/maps/)
+* Touch and scroll through a map of Mars using the [NASA Trek API](https://trek.nasa.gov/tiles/apidoc/trekAPI.html?body=mars)
 
 ## Stretch Goals
 * Send out notifications about Mars news and weather
