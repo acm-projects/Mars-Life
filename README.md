@@ -2,14 +2,18 @@
 Ever wonder what life would be like on Mars? Keep up with your favorite red planet with daily Martian weather updates, rover photos, and stellar space facts all on this handy mobile app..
 
 ## Minimum Viable Product (MVP)
-* Use the InSight Mars Weather Service API to get and display daily weather information on Mars
-* Get and display the weekly weather forecast using the InSight API
-* Use the Mars Rover Photos API to get and display pictures of Mars
-* Use NASA and/or other space APIs to get and display cool space facts (e.g. the current number of astronauts in space, general space weather, asteroid info, etc.)
+* Use the [Insight: Mars Weather Service API](https://api.nasa.gov/assets/insight/InSight%20Weather%20API%20Documentation.pdf) to get and display daily weather information on Mars on detail, similar to the iPhone weather app
+* Use the [Mars Rover Photos API](https://api.nasa.gov/) to get and display pictures of Mars
+* Have a news page that displays space news articles, upcoming missions from NASA/SpaceX, etc.
+* Show Mars' orbit in the solar system
+* Touch and scroll through a map of Mars using the [NASA Maps API Extension](https://ti.arc.nasa.gov/tech/asr/groups/intelligent-robotics/planetary/maps/)
 
 ## Stretch Goals
-* Get info about the weather on Earth and display it in comparison with Mars
-* Display real-time or past weather patterns on Mars
+* Send out notifications about Mars news and weather
+* Ability to toggle between 3d view and flat view of Mars terrain
+* Discussion section for talking about Mars events
+* User profiles and authentication
+* Find a way to seel it to musk and/or get Elon Musk to record some voice lines
 
 ## Tech Stack
 ### General Software
@@ -18,10 +22,10 @@ Ever wonder what life would be like on Mars? Keep up with your favorite red plan
 * [Android Studio](https://developer.android.com/studio)
 * [Figma](https://www.figma.com/) or [Adobe XD](https://www.adobe.com/products/xd.html) for wireframing
 ### Tech Stack
-#### Mobile Application Frameworks:
-* [React Native](https://reactnative.dev/): Uses Javascript, has an active and established dev community
-#### Backend:
-* [MongoDB](https://www.mongodb.com/): flexible and scalable, uses JSON, part of the popular MERN stack, focuses on data storage
+#### Mobile Application Framework: [React Native](https://reactnative.dev/) 
+* Uses Javascript, has an active and established dev community
+#### Backend: [MongoDB](https://www.mongodb.com/)
+* Flexible and scalable, uses JSON, part of the popular MERN stack, focuses on data storage
 ### APIs: many options, you're not limited to this list :)
 There's lots of [NASA APIs](https://api.nasa.gov/) to look at: 
 * [Insight: Mars Weather Service API](https://api.nasa.gov/assets/insight/InSight%20Weather%20API%20Documentation.pdf)
