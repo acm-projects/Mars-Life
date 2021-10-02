@@ -6,7 +6,7 @@ export function getRealmApp() {
      id: appId,
      timeout: 10000,
    };
-   const db = Realm.App(appConfig);
+   const db = new Realm.App(appConfig);
    try {
      const user = await db.logIn(credentials);
      console.log('Connected!...');
