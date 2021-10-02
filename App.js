@@ -8,6 +8,7 @@
 
 import React from 'react';
 import type {Node} from 'react';
+import Realm from 'realm';
 import {
   SafeAreaView,
   ScrollView,
