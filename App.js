@@ -9,6 +9,9 @@
 import React from 'react';
 import type {Node} from 'react';
 import Realm from 'realm';
+
+import {getRealmApp} from './database/getRealmApp.js';
+
 import {
   SafeAreaView,
   ScrollView,
@@ -26,6 +29,17 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+const realm = getRealmApp();
+
+// Declare the variable that will hold the dog instance.
+let dog;
+// Open a transaction.
+realm.write(() => {
+  // Assign a newly-created instance to the variable.
+  dog = realm.create("Dog", { name: "Max", age: 5 });
+});
+// use newly created dog object
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';

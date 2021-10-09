@@ -19,8 +19,3 @@ const user = {
     },
     primaryKey: "_id",
 };
-
-const realm = await Realm.open({
-  path: "myrealm",
-  schema: [TaskSchema],
-});
