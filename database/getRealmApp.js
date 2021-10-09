@@ -1,7 +1,7 @@
 import Realm from 'realm'
 
 export function getRealmApp() {
-   const appId = "testing-ngsjy";
+   const appId = "mars-life-ewodd";
    const appConfig = {
      id: appId,
      timeout: 10000,
