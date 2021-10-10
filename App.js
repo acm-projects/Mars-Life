@@ -16,6 +16,7 @@
    useColorScheme,
    View,
    Image,
+   Text,
  } from 'react-native';
  
  
