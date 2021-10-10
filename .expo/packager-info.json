@@ -1,0 +1,9 @@
+{
+  "devToolsPort": 19003,
+  "expoServerPort": null,
+  "packagerPort": 19001,
+  "expoServerNgrokUrl": "https://2i-t8s.anonymous.mars-life.exp.direct",
+  "packagerNgrokUrl": "https://packager.2i-t8s.anonymous.mars-life.exp.direct",
+  "ngrokPid": 14276,
+  "webpackServerPort": 19006
+}
