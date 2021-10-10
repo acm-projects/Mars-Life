@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "MarsLife",
-    "slug": "MarsLife",
+    "name": "Mars-Life",
+    "slug": "Mars-Life",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
