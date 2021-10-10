@@ -6,94 +6,108 @@
  * @flow strict-local
  */
 
- import  React from 'react';
- import Realm from 'realm';
- import {
-   SafeAreaView,
-   ScrollView,
-   StatusBar,
-   StyleSheet,
-   useColorScheme,
-   View,
-   Image,
-   Text,
- } from 'react-native';
- 
- 
- 
- function App() {
- 
- 
- 
- 
-   return (
-       <View style={style.body}>
-        <Text style= {style.headerText}>HOME</Text>
-        <View style ={style.textWrapper}>
-         <Text style={style.newsText }>News</Text>
-           <Text style={style.photosText }>Photos</Text>
-           <Text style={style.weatherText }>Weather</Text>
-          <Text style={style.mapText }>Map</Text>
+import React from 'react';
+import type {Node} from 'react';
+import Realm from 'realm';
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  useColorScheme,
+  View,
+} from 'react-native';
+
+import {
+  Colors,
+  DebugInstructions,
+  Header,
+  LearnMoreLinks,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
+
+const Section = ({children, title}): Node => {
+  const isDarkMode = useColorScheme() === 'dark';
+  return (
+    <View style={styles.sectionContainer}>
+      <Text
+        style={[
+          styles.sectionTitle,
+          {
+            color: isDarkMode ? Colors.white : Colors.black,
+          },
+        ]}>
+        {title}
+      </Text>
+      <Text
+        style={[
+          styles.sectionDescription,
+          {
+            color: isDarkMode ? Colors.light : Colors.dark,
+          },
+        ]}>
+        {children}
+      </Text>
+    </View>
+  );
+};
+
+const App: () => Node = () => {
+  const isDarkMode = useColorScheme() === 'dark';
+
+  const backgroundStyle = {
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  };
+
+  return (
+    <SafeAreaView style={backgroundStyle}>
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+        style={backgroundStyle}>
+        <Header />
+        <View
+          style={{
+            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+          }}>
+          <Section title="Step One">
+            Edit <Text style={styles.highlight}>App.js</Text> to change this
+            screen and then come back to see your edits.
+          </Section>
+          <Section title="See Your Changes">
+            <ReloadInstructions />
+          </Section>
+          <Section title="Debug">
+            <DebugInstructions />
+          </Section>
+          <Section title="Learn More">
+            Read the docs to discover what to do next:
+          </Section>
+          <LearnMoreLinks />
         </View>
-       </View>
-   );
- };
- 
- const style = StyleSheet.create({
- body:{
-   backgroundColor: '#171A2C',
-   flex :1
- },
- headerText:{
-   marginTop: 10,
-   color: '#F1FAEE',
-   fontSize: 60,
- 
-   alignSelf: 'center'
- },
- textWrapper: {
-   marginTop: 350,
-   marginBottom: 20,
-   marginLeft: 10,
-   marginRight: 10,
-   flex:1,
-   justifyContent: 'center',
-   flexDirection:'row'
- 
- },
- newsText:{
-   flex:1,
-   backgroundColor: '#323547',
- 
-   margin:2,
-   color: '#F1FAEE',
-   fontSize: 20
- },
- photosText:{
-   backgroundColor: '#323547',
-   flex:1,
-   margin:2,
-   color: '#F1FAEE',
-   fontSize: 20
- },
- weatherText:{
-   backgroundColor: '#323547',
-   flex: 1,
-   margin:2,
-   color: '#F1FAEE',
-   fontSize: 20
- },
- mapText:{
-   backgroundColor: '#323547',
-   flex: 1,
-   margin: 2,
-   color: '#F1FAEE',
-   fontSize: 20
- },
- 
- 
- });
- 
- export default App;
- 
- 
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  sectionContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24,
+  },
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: '600',
+  },
+  sectionDescription: {
+    marginTop: 8,
+    fontSize: 18,
+    fontWeight: '400',
+  },
+  highlight: {
+    fontWeight: '700',
+  },
+});dfghj
+
+export default App;
