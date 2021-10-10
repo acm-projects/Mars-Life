@@ -8,7 +8,6 @@
 
  import  React from 'react';
  import Realm from 'realm';
- import {PaperProvider, Text} from 'react-native-paper';
  import {
    SafeAreaView,
    ScrollView,
