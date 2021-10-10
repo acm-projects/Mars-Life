@@ -26,7 +26,6 @@
  
  
    return (
-     <PaperProvider>
        <View style={style.body}>
         <Text style= {style.headerText}>HOME</Text>
         <View style ={style.textWrapper}>
@@ -36,7 +35,6 @@
           <Text style={style.mapText }>Map</Text>
         </View>
        </View>
-     </PaperProvider>
    );
  };
  
