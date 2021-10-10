@@ -108,6 +108,6 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
-});dfghj
+});
 
 export default App;
