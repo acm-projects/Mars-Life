@@ -7,16 +7,6 @@ const ArticleSchema = {
         name: "string",
         content: "string?",
     },
-    vs
-};
-
-const user = {
-    name: "User",
-    properties: {
-        _id: "int",
-        username: "string",
-        password: "string",
-    },
     primaryKey: "_id",
 };
 
