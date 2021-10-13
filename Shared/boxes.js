@@ -36,4 +36,4 @@ const styles = StyleSheet({
         backgroundColor: '#323547',
         alighItems: 'center',
     }
-})
+});
