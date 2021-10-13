@@ -2,13 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 require('./Models/Article')
-require('./Mars_Image')                             //require mars image
+require('./Models/Mars_Image')                             //require mars image
 
 const Mars_Image = mongoose.model("mars_image")     //creating model
 
 const app = express();
 app.use(bodyParser.json());
-const mongoURI = ""
+const mongoURI = ""                         //put in the MONGI URI *****
 
 mongoose.connect(mongoURI,{
     useNewUrlParser: true,
@@ -45,7 +45,8 @@ app.post('/send-data',(req,res)=>{
 
     const mars_image = new Mars_Image({                //mars image post ----
         sol:req.body.sol,
-        camera:req.body.camera
+        camera:req.body.camera,
+        img_src:req.body.img_src
     })
     mars_image.save()
     .then(data=>{

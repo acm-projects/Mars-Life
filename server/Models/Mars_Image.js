@@ -7,6 +7,8 @@ const options = {
     method: 'GET'
 }
 
+//alert(options)                                          //alert
+
 const req = https.request(options, res => {             //make changes???
     console.log(`statusCode: ${res.statusCode}`)
   
@@ -22,9 +24,10 @@ req.on('error', error => {
 req.end()
 
 //---schema---
-const MarsImageSchema = new mongoose.MarsImageSchema({
-    sol:int,
-    camera:string
+const MarsImageSchema = new mongoose.Schema({
+    sol:String,
+    camera:String,
+    img_src:String
 })
 
 mongoose.model("mars_image", MarsImageSchema)
