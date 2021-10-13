@@ -17,12 +17,17 @@ export default class App extends React.Component{
 
   render(){
    return (
-      <View style= {style.container}>
-        <View>
-          <Image source = {require('./assets/Mars.png')}></Image>
-        </View>
-      </View>
+        <View style = {style.container}>
+                <Text>a</Text>
 
+          <Image source = {require('./assets/Mars.png')}></Image>
+          <Image
+            source = {require('./assets/favicon.png')}
+          />
+          <Text>a</Text>
+          <Text>a</Text>
+
+        </View>
    );
   }
 } 
