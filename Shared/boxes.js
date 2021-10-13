@@ -5,8 +5,8 @@ export default class Boxes extends React.Component{
 
     render() {
         return (
-            <View style = {style.container}>
-                <View style= {style.box}>
+            <View style = {styles.container}>
+                <View style= {styles.box}>
                     <View style = {styles.inner}></View>
                         <Text>Box1</Text>
                 </View>
@@ -18,7 +18,7 @@ export default class Boxes extends React.Component{
 
 }
 
-const style = StyleSheet({
+const styles = StyleSheet({
     container: {
         width: '100%',
         height: '100%',
