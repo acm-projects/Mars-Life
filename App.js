@@ -20,7 +20,6 @@ export default class App extends React.Component{
    return (
       <View style= {style.container}>
       <Text>a</Text>
-        <header />
       </View>
 
    );
