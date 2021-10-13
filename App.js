@@ -8,10 +8,9 @@
  */
 
  import  React from 'react';
- import { StyleSheet, Text, View } from 'react-native';
+ import { StyleSheet, Text, View, Image} from 'react-native';
  
  import header from './Shared/header';
- import boxes from './Shared/boxes'
  
  
 export default class App extends React.Component{
@@ -19,13 +18,16 @@ export default class App extends React.Component{
   render(){
    return (
       <View style= {style.container}>
-      <Text>a</Text>
+        <View>
+          <Image source = {require('./assets/Mars.png')}></Image>
+        </View>
       </View>
 
    );
   }
 } 
  const style = StyleSheet.create({
+
    container: {
      flex: 1
    }
