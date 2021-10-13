@@ -18,6 +18,7 @@ export default class Boxes extends React.Component{
 
 }
 
+
 const styles = StyleSheet({
     container: {
         width: '100%',
