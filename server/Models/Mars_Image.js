@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const https = require('https')
+var dataList = []
 
 const options = {
     hostname: 'api.nasa.gov',
@@ -9,16 +10,24 @@ const options = {
 
 //alert(options)                                          //alert
 
-const req = https.request(options, res => {             //make changes???
+const req = https.request(options, res => {
     console.log(`statusCode: ${res.statusCode}`)
   
-    res.on('data', d => {
-        //console.log(JSON.parse(d))
+    res.on('data', data => {
+        dataList.push(data)
+    }).on('end', () => {
+        let data = JSON.parse(Buffer.concat(dataList))
+        let imgList = []
+
         for(var i = 0; i < 10; i++) {
-            console.log(JSON.parse(d).photos[i][img_src])
+            imgList[i] = data.photos[i].img_src
         }
 
+        for(var i = 0; i < 10; i++) {
+            console.log(imgList[i])
+        }
     })
+
 })
 
 req.on('error', error => {
