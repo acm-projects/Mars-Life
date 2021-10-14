@@ -109,15 +109,24 @@ export default class App extends React.Component{
    },
    container: {
      width: '100%',
-     height: '60%',
+     height: '50%',
      padding: 5,
      flexDirection: 'row',
-     flexWrap: 'wrap'
+     flexWrap: 'wrap',
+     borderStyle: 'dashed',
+     alignContent: 'center'
+
    },
    select: {
-     width: '50%',
-     height: '50%',
-     padding: 5
+     width: '47%',
+     height: '48%',
+     borderWidth: 8,
+     borderRadius: 10,
+     borderColor: '#323547',
+     borderStartColor: '#323547',
+     margin: 5,
+
+
    },
    selectInner: {
      flex: 1,
