@@ -31,7 +31,7 @@ export default class App extends React.Component{
 
 
 
-<ImageBackground source = {(require('./assets/HomeBack.png'))}style = {style.background}>
+<ImageBackground style = {style.background} source = {(require('./assets/HomeBack.png'))}>
     <View style = {style.body}>
        
 
@@ -109,7 +109,7 @@ export default class App extends React.Component{
    },
    container: {
      width: '100%',
-     height: '52%',
+     height: '60%',
      padding: 5,
      flexDirection: 'row',
      flexWrap: 'wrap'
@@ -138,7 +138,9 @@ export default class App extends React.Component{
     padding: '30%',
 
   },
-
+  background: {
+    stretch: 'fill'
+  }
    
    
   });
