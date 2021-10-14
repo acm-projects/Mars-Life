@@ -13,7 +13,11 @@ const req = https.request(options, res => {             //make changes???
     console.log(`statusCode: ${res.statusCode}`)
   
     res.on('data', d => {
-      console.log(JSON.parse(d))
+        //console.log(JSON.parse(d))
+        for(var i = 0; i < 10; i++) {
+            console.log(JSON.parse(d).photos[i][img_src])
+        }
+
     })
 })
 

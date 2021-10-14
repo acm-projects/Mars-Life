@@ -8,7 +8,7 @@ const Mars_Image = mongoose.model("mars_image")     //creating model
 
 const app = express();
 app.use(bodyParser.json());
-const mongoURI = ""                         //put in the MONGI URI *****
+const mongoURI = "mongodb+srv://admin:admin@marslifedb.vzhlh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"                         //put in the MONGI URI *****
 
 mongoose.connect(mongoURI,{
     useNewUrlParser: true,
