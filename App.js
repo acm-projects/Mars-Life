@@ -52,20 +52,7 @@ export default class App extends React.Component{
 
         <View style = {style.select}>
           <View style= {style.selectInner}>
-            <Text style = {style.selectText}>Rover Photos</Text>
-            <Image 
-            style = {style.selectIcon}
-            source = {require('./assets/Rover.png')}></Image>
-            </View></View>
      
-          <View style = {style.select}>
-        <View style= {style.selectInner}>
-            <Text style = {style.selectText}>News</Text>
-            <Image 
-             style = {style.selectIcon}
-            source = {require('./assets/News.png')}></Image>
-            </View></View>
-
           <View style = {style.select}>
         <View style= {style.selectInner}>
            <Text style = {style.selectText}>Map</Text>
