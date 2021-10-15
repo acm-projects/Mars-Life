@@ -4,11 +4,12 @@
     "slug": "Mars-Life",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon3.png",
+    "icon": "./assets/icon1.png",
     "splash": {
-      "image": "./assets/logo2.png",
+      "image": "./assets/logo1.png",
       "resizeMode": "contain",
       "backgroundColor": "#080B1F"
+     
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -21,7 +22,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/logo2.png",
+        "foregroundImage": "./assets/logo1.png",
         "backgroundColor": "#080B1F"
       }
     },
