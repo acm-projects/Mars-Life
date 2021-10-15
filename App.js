@@ -33,7 +33,7 @@ export default class App extends React.Component{
      source = {require('./assets/HomeBack.png')}>
        <View style = {style.body}>
         <View style = {style.header}>
-          <Text style = {style.headerText}> Mars-Life </Text>
+          <Text style = {style.headerText}> Mars Life </Text>
         </View>
         <Image 
         style = {style.mars}
@@ -90,7 +90,12 @@ export default class App extends React.Component{
    );
   }
 }
+
+
+
+
 const style = StyleSheet.create({
+
   body: {
     flex: 1,
   },
