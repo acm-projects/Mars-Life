@@ -120,7 +120,7 @@ const style = StyleSheet.create({
     marginTop: '14',
     width:'90%',
     height:'60%',
-    borderwidth: 8,
+    borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
     borderStartColor: '#323547',
