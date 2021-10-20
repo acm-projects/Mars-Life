@@ -16,44 +16,69 @@ export default class weather extends React.Component{
 
   render(){
    return (
-     <View style = {style.body}>
-      <View style = {style.header}> 
-        <Text style = {style.headerText}>Weather</Text>
-      </View>
-      <Image 
-        style = {style.mars}
-        source = {require('./assets/Mars.png')}>
-      </Image>
-
-      <View style = {style.container}>
-        <View>
-
-        </View> 
-      </View>
-
+    <ImageBackground
+      style = {style.background}
+      source = {require('./assets/HomeBack.png')}>
+      <View style = {style.body}>
+        <View style = {style.header}>
+          <Text style = {style.headerText}> Weather</Text>
+        </View>
+        <Image
+            style = {style.mars}
+            source = {require('./assets/Mars.png')}></Image>
+        <View style = {style.sol}>
+          <Text style = {style.solText}> Sol xxxx</Text>
+        </View>
 
 
-      <View>
-      
+
+
 
       </View>
-
-     </View>
+    </ImageBackground>
 
    );
   }
 }
 const style = StyleSheet.create({
-  
+    background:{
+    flex: 1,
+    resizeMode: 'stretch'
+  },
+  body: {
+    flex: 1,
+  },
+  header: {
+    marginTop: 20,
+    height: '10%',
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  headerText: {
+    fontSize: 50,
+    color: '#F1FAEE',
+  },
+  mars:{
+    justifyContent: 'center',
+    alignSelf: 'center',
+    resizeMode: 'contain',
+    // height: '45%',
+    // width: '65%'
+   // padding
+  },
+  sol: {
+    width: '47%',
+    height: '48%',
+    borderWidth: 8,
+    borderRadius: 10,
+    borderColor: '#323547',
+    borderStartColor: '#323547',
+    margin: 5,
+  },
+  solText: {
+    fontSize: 30,
+    color: '#F1FAEE',
+    fontWeight: '800'
+  }
 });
-
-
-const [sol, setSol] = useState([
-  { solNum: '-1', key: '1' },
-  { solNum: '-2', key: '2' },
-  { solNum: '-3', key: '3' },
-  { solNum: '-4', key: '4' },
-  { solNum: '-5', key: '5' },
-  { solNum: '-6', key: '6' },
-  { solNum: '-7', key: '7' },
-]);
