@@ -63,18 +63,20 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     resizeMode: 'contain',
-    // height: '45%',
-    // width: '65%'
-   // padding
+
   },
   sol: {
-    width: '47%',
-    height: '48%',
+    marginTop: '14',
+    width: '40%',
+    height: '8%',
     borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
     borderStartColor: '#323547',
-    margin: 5,
+    justifyContent: 'center',
+    alignItems:'center',
+    alignSelf: 'center',
+    backgroundColor:'#323547',
   },
   solText: {
     fontSize: 30,
