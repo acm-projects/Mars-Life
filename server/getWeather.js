@@ -1,10 +1,6 @@
-const express = require('express');
-const app = express();
 const fetch = require("cross-fetch");
 
-
 let MAAS2_API = "https://api.maas2.apollorion.com/";
-
 
 //All weather temps are measured in celcius
 function getWeather(solNum){
@@ -30,10 +26,21 @@ function getWeather(solNum){
       })
 }
 
-// function getSevenDayWeather(){
-//     getWeather()
-// }
+// get latest sol data
+// let latestData;
+// getWeather(-1).then(data => {
+//     latestData = data;
+// });
+// get the data before the latest sol
+// let day1;
+// getWeather(latestData.sol-1).then(data =>{
+//     day1 = data;
+// });
+// get the data before the 2nd latest sol
+// let day2;
+// getWeather(day1.sol-1).then(data =>{
+//     day2 = data;
+// });
+// repeat all the way to day 7
 
-getWeather(1).then(data => {
-    console.log(data);
-});
+module.exports.getWeather = getWeather;
