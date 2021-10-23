@@ -16,7 +16,6 @@ export default class App extends React.Component{
  
   render(){
    return (
-     <ScrollView style = {style.scroll}>
     <ImageBackground
       style = {style.background}
       source = {require('./assets/HomeBack.png')}>
@@ -24,7 +23,8 @@ export default class App extends React.Component{
         <View style = {style.header}>
           <Text style = {style.headerText}> Weather</Text>
         </View>
- 
+        <ScrollView>
+
           <Image
             style = {style.mars}
             source = {require('./assets/Mars.png')}></Image>
@@ -132,14 +132,13 @@ export default class App extends React.Component{
               </View>
             </View>
  
- 
+            </ScrollView>
+
  
  
  
           </View>
     </ImageBackground>
-    </ScrollView>
- 
    );
   }
 }
@@ -165,14 +164,15 @@ const style = StyleSheet.create({
   mars:{
     justifyContent: 'center',
     alignSelf: 'center',
-    height : '20%',
+    height : '4%',
     width: '40%'
+    
    
   },
   sol: {
     marginTop: 1,
     width: '40%',
-    height: '8%',
+    height: '2%',
     borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
@@ -192,7 +192,7 @@ const style = StyleSheet.create({
   container: {
     marginTop: 14,
     width:'90%',
-    height:'60%',
+    height:'15%',
     borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
