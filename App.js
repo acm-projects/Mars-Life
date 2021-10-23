@@ -123,9 +123,19 @@ export default class weather extends React.Component{
             <View style = {style.sideline}></View>
 
             <View style = {style.fact}>
-              <Text style = {style.factText}> Fun fact, it's almost always sunny.</Text>
+              <Text style = {style.factText}> Fun fact, it's almost always sunny on Mars.</Text>
             </View>
             <View style = {style.sideline}></View>
+            <View style = {style.solData}>
+              <View style = {style.sunRise}>
+
+              </View>
+            </View>
+
+
+
+
+
           </View>
       </ScrollView>
     </ImageBackground>
@@ -237,6 +247,10 @@ const style = StyleSheet.create({
     fontSize: 20,
     justifyContent: 'center',
     color: '#F1FAEE',
-  }
+  },
+  solData: {
+
+  },
+  sunRise: {}
 
 });
