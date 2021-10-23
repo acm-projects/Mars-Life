@@ -1,3 +1,4 @@
+
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -7,8 +8,22 @@
  *
  */
  
- import  React, { useState } from 'react';
- import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
+ import  React from 'react';
+ import { StyleSheet, Text, View, Image, ImageBackground, TouchableOpacity} from 'react-native';
+ 
+ import header from './Shared/header';
+         // <View style = {style.container}>
+        //         <Text>a</Text>
+        //   <Image
+        //   style = {style.mars}
+        //   source = {require('./assets/Mars.png')}></Image>
+        //   <Image
+        //     source = {require('./assets/favicon.png')}
+        //   />
+        //   <Text>a</Text>
+        //   <Text>ab</Text>
+ 
+        // </View>
  
 export default class App extends React.Component{
  
@@ -16,119 +31,80 @@ export default class App extends React.Component{
  
   render(){
    return (
-    <ImageBackground
-      style = {style.background}
-      source = {require('./assets/HomeBack.png')}>
-      <View style = {style.body}>
+     <ImageBackground
+     style = {style.background}
+     source = {require('./assets/HomeBack.png')}>
+       <View style = {style.body}>
         <View style = {style.header}>
-          <Text style = {style.headerText}> Weather</Text>
+          <Text style = {style.headerText}> Mars Life </Text>
         </View>
-        <ScrollView>
-
-          <Image
-            style = {style.mars}
-            source = {require('./assets/Mars.png')}></Image>
-
-            <View style = {style.solTemp}>
-              <Text style = {style.solTempText}> -20</Text>
-            </View>
-           
-            <View style = {style.sol}>
-              <Text style = {style.solText}> Sol XXXX  </Text>
-            </View>
-           
-            <View style = {style.date}>
-              <Text style = {style.dateText}> 21 October 2021 </Text>
-            </View>
-            <View style = {style.sideline}></View>
-
-           
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-1</Text>
-              </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.week}>
-                <Text style = {style.weekText}>-sdfgsdfg sfdgsdfgr</Text>
-              </View>
-            </View>
  
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-2</Text>
+        <TouchableOpacity>
+         <Image
+          style = {style.mars}
+          source = {require('./assets/Mars.png')}></Image>
+          <View style = {style.container}>
+           <View style = {style.select}>
+             <View style = {style.selectInner}>
+               <View style = {style.selectHeader}>
+                 <Text style = {style.selectText}>Weather</Text>
               </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.temp}>
-                <Text style = {style.weekText}>-40</Text>
-              </View>
+              <Image
+              style = {style.selectIcon}
+              source = {require('./assets/Weather.png')}></Image>
             </View>
+           </View>    
  
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-3</Text> 
+          <View style = {style.select}>
+            <View style = {style.selectInner}>
+              <View style = {style.selectHeader}>
+                <Text style = {style.selectText}>Photos</Text>
               </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.temp}>
-                <Text style = {style.weekText}>-40</Text>
-              </View>
+              <Image
+              style = {style.selectIcon}
+               source = {require('./assets/Rover.png')}></Image>
             </View>
+           </View>  
  
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-4</Text>
+          <View style = {style.select}>
+            <View style = {style.selectInner}>
+              <View style = {style.selectHeader}>
+                <Text style = {style.selectText}>News</Text>
               </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.temp}>
-                <Text style = {style.weekText}>-40</Text>
-              </View>
+              <Image
+              style = {style.selectIcon}
+              source = {require('./assets/News.png')}
+              ></Image>
             </View>
+           </View>
  
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-5</Text>
+           <View style = {style.select}>
+            <View style = {style.selectInner}>
+              <View style = {style.selectHeader}>
+                <Text style = {style.selectText}>Map</Text>
               </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.temp}>
-                <Text style = {style.weekText}>-40</Text>
-              </View>
+              <Image
+              style = {style.selectIcon}
+              source = {require('./assets/Map.png')}
+              ></Image>
             </View>
+           </View>
+         </View>
+        </TouchableOpacity>
  
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-6</Text>
-              </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.temp}>
-                <Text style = {style.weekText}>-40</Text>
-              </View>
-            </View>
- 
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-7</Text>
-              </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.temp}>
-                <Text style = {style.weekText}>-40</Text>
-              </View>
-            </View>
- 
-            <View style = {style.fact}>
-              <Text style = {style.factText}> Fun fact, it's almost always sunny on Mars.</Text>
-            </View>
-            <View style = {style.sideline}></View>
- 
-            </ScrollView>
       </View>
-    </ImageBackground>
+     </ImageBackground>
    );
   }
 }
+ 
+ 
+const pressHandler = (id) => {
+    console.log()
+}
+ 
 const style = StyleSheet.create({
-    background:{
-    flex: 1,
-    resizeMode: 'stretch'
-  },
+ 
   body: {
     flex: 1,
   },
@@ -143,147 +119,174 @@ const style = StyleSheet.create({
     fontSize: 50,
     color: '#F1FAEE',
   },
-
   mars:{
     justifyContent: 'center',
     alignSelf: 'center',
-    height : '40%',
-    width: '70%'
+    resizeMode: 'contain',
+    height: '45%',
+    width: '65%'
+    },
+  container:{
+    width: '100%',
+    height: '43%',
+    padding: 5,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignContent: 'center',
+ 
   },
-  solTemp: {
-    justifyContent: 'center',
-    alignSelf: 'center',
-    alignItems: 'center',
+  select:{
+    width: '47%',
+    height: '48%',
+    borderWidth: 8,
+    borderRadius: 10,
+    borderColor: '#323547',
+    borderStartColor: '#323547',
+    margin: 5,
+  },
+  selectInner:{
+    flex: 1,
     backgroundColor: '#323547',
-    borderWidth: 8,
-    borderRadius: 10,
-    borderColor: '#323547',
-    height: '10%',
-    width: '35%',
-    marginBottom: 10
+    alignItems: 'center',
+    justifyContent: 'center'
   },
-  solTempText: {
+  selectHeader:{
+    width: '100%',
+    height: '25%',
     justifyContent: 'center',
-    alignSelf: 'center',
-    fontSize: 60,
-    color: '#F1FAEE'
+    alignItems: 'center'
   },
-  sol: {
-    marginTop: 1,
-    width: '40%',
-    height: '7%',
-    borderWidth: 8,
-    borderRadius: 10,
-    borderColor: '#323547',
-    justifyContent: 'center',
-    alignItems:'center',
-    alignSelf: 'center',
-    backgroundColor:'#323547',
-  },
-  solText: {
+  selectText: {
     fontSize: 30,
     color: '#F1FAEE',
     fontWeight: '800'
   },
- 
- 
-  container: {
-    marginTop: 14,
-    width:'70%',
-    height:'8%',
-    borderWidth: 8,
-    borderRadius: 10,
-    borderColor: '#323547',
-    borderStartColor: '#323547',
-    justifyContent: 'center',
-    alignSelf: 'center',
-    backgroundColor: '#323547',
-    flexDirection: 'row',
-    flex: 1
+  selectIcon:{
+    marginTop: 5,
+    height: '75%',
+    resizeMode: 'contain'
   },
-  solHeader: {
-    height: '5%',
-    width: '90%',
-    alignSelf: 'center',
-    alignItems: 'center',
-    justifyContent: 'center'
+  background:{
+    flex: 1,
+    resizeMode: 'stretch'
   },
-  solText:{
-    fontSize: 30,
-    justifyContent: 'center',
-    color: '#F1FAEE',
-  },
-
-  containerInner: {
-    margin:1,
-    width: '90%',
-    height: '3.25%',
-  },
-  innerText: {
-    fontSize: 10,
-    justifyContent: 'center',
-    color: '#F1FAEE',
- 
-  },
-  date: {
-    marginTop: 20,
-    borderWidth: 8,
-    borderRadius: 10,
-    borderColor: '#323547',
-    borderStartColor: '#323547',
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignSelf: 'center',
-    height:'6%',
-    width: '50%',
-    backgroundColor: '#323547'
-  },
-  dateText: {
-    fontSize: 20,
-    justifyContent: 'center',
-    color: '#F1FAEE',
-  },
-  sun: {
-    height: '90%',
-    width: '20%',
-    justifyContent: 'center'
-
-  },
-  week: {
-    height: '10%',
-    width: '20%',
-    alignItems: 'center',
-    alignContent: 'center',
-
-  },
-  weekText: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignContent: 'center',
-    color: '#F1FAEE',
-  },
-  temp: {
-    height: '15%',
-    width:'40%'
-  },
-
-  sideline: {
-    marginTop: 10,
-    height: '.2%',
-    width: '70%',
-    backgroundColor: '#F1FAEE',
-    justifyContent: 'center',
-    alignSelf: 'center'
-  },
-  upline: {
-    height: '90%',
-    width: '0.5%',
-    backgroundColor: 'white',
-  },
-
-  solData: {
- 
-  },
-  sunRise: {}
-
 });
+ 
+ 
+ 
+/* <View style = {style.body}>
+       
+//<ImageBackground style = {style.background} source = {(require('./assets/HomeBack.png'))}>
+ 
+      <View style = {style.header}>
+        <Text style= {style.headerText}>Mars-Life</Text>
+      </View>
+      <Image
+      style = {style.mars}
+      source = {require('./assets/Mars.png')} ></Image>
+      <View style = {style.container}>
+        <View style = {style.select}>
+          <View style= {style.selectInner}>
+            <Text style = {style.selectText}>Weather</Text>
+            <Image
+            style = {style.selectIcon}
+            source = {require('./assets/Weather.png')}></Image>
+            </View></View>
+ 
+        <View style = {style.select}>
+          <View style= {style.selectInner}>
+            <Text style = {style.selectText}>Rover Photos</Text>
+            <Image
+            style = {style.selectIcon}
+            source = {require('./assets/Rover.png')}></Image>
+            </View></View>
+     
+          <View style = {style.select}>
+        <View style= {style.selectInner}>
+            <Text style = {style.selectText}>News</Text>
+            <Image
+             style = {style.selectIcon}
+            source = {require('./assets/News.png')}></Image>
+            </View></View>
+ 
+          <View style = {style.select}>
+        <View style= {style.selectInner}>
+           <Text style = {style.selectText}>Map</Text>
+           <Image
+            style = {style.selectIcon}
+            source = {require('./assets/Map.png')}></Image>
+           </View></View>  
+      </View>
+    </View> */
+//</ImageBackground>
+ 
+ 
+ 
+//  const style = StyleSheet.create({
+//    body: {
+//      flex: 1,
+//      alignItems: 'center',
+ 
+//    },
+//    header: {
+//      width: '100%',
+//      height: '10%',
+//      justifyContent: 'center',
+//      alignItems: 'center',
+ 
+//    },
+//    headerText: {
+//     color: '#F1FAEE',
+//     fontSize: 60,
+//    },
+//    mars: {
+//      padding: '33%'
+ 
+//    },
+//    container: {
+//      width: '100%',
+//      height: '50%',
+//      padding: 5,
+//      flexDirection: 'row',
+//      flexWrap: 'wrap',
+//      borderStyle: 'dashed',
+//      alignContent: 'center'
+ 
+//    },
+//    select: {
+//      width: '47%',
+//      height: '48%',
+//      borderWidth: 8,
+//      borderRadius: 10,
+//      borderColor: '#323547',
+//      borderStartColor: '#323547',
+//      margin: 5,
+ 
+ 
+//    },
+//    selectInner: {
+//      flex: 1,
+//      backgroundColor: '#323547',
+//      alignItems: 'center',
+//      padding: 10,
+ 
+//    },
+//    selectText: {
+//      fontSize: 30,
+//      color: '#F1FAEE',
+//      fontWeight: '600'
+//    },
+ 
+//   selectIcon: {
+//     marginTop: 10,
+//     padding: '30%',
+ 
+//   },
+//   background: {
+   
+//   }
+   
+   
+//   });
+
+
