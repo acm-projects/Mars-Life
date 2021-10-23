@@ -28,10 +28,120 @@ export default class weather extends React.Component{
           <Image
             style = {style.mars}
             source = {require('./assets/Mars.png')}></Image>
-          <View style = {style.container}>
-            <View style = {style.solHeader}>
+            
+            <View style = {style.sol}>
               <Text style = {style.solText}> Sol XXXX  </Text>
             </View>
+            
+            <View style = {style.date}>
+              <Text style = {style.dateText}> 21 October 2021 </Text>
+            </View>
+            
+            <View style = {style.sideline}></View>
+            <View style = {style.container}>
+              <View style = {style.week}>
+                <Text style = {style.weekText}> Sol XXXX-1</Text>
+              </View>
+              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
+              <View style = {style.upline}></View>
+              <View style = {style.temp}>
+                <Text style = {style.tempText}></Text>
+              </View>
+            </View>
+
+            <View style = {style.sideline}></View>
+            <View style = {style.container}>
+              <View style = {style.week}>
+                <Text style = {style.weekText}> Sol XXXX-2</Text>
+              </View>
+              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
+              <View style = {style.upline}></View>
+              <View style = {style.temp}>
+                <Text style = {style.tempText}></Text>
+              </View>
+            </View>
+
+            <View style = {style.sideline}></View>
+            <View style = {style.container}>
+              <View style = {style.week}>
+                <Text style = {style.weekText}> Sol XXXX-3</Text>
+              </View>
+              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
+              <View style = {style.upline}></View>
+              <View style = {style.temp}>
+                <Text style = {style.tempText}></Text>
+              </View>
+            </View>
+
+            <View style = {style.sideline}></View>
+            <View style = {style.container}>
+              <View style = {style.week}>
+                <Text style = {style.weekText}> Sol XXXX-4</Text>
+              </View>
+              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
+              <View style = {style.upline}></View>
+              <View style = {style.temp}>
+                <Text style = {style.tempText}></Text>
+              </View>
+            </View>
+
+            <View style = {style.sideline}></View>
+            <View style = {style.container}>
+              <View style = {style.week}>
+                <Text style = {style.weekText}> Sol XXXX-5</Text>
+              </View>
+              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
+              <View style = {style.upline}></View>
+              <View style = {style.temp}>
+                <Text style = {style.tempText}></Text>
+              </View>
+            </View>
+
+            <View style = {style.sideline}></View>
+            <View style = {style.container}>
+              <View style = {style.week}>
+                <Text style = {style.weekText}> Sol XXXX-6</Text>
+              </View>
+              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
+              <View style = {style.upline}></View>
+              <View style = {style.temp}>
+                <Text style = {style.tempText}></Text>
+              </View>
+            </View>
+
+            <View style = {style.sideline}></View>
+            <View style = {style.container}>
+              <View style = {style.week}>
+                <Text style = {style.weekText}> Sol XXXX-7</Text>
+              </View>
+              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
+              <View style = {style.upline}></View>
+              <View style = {style.temp}>
+                <Text style = {style.tempText}></Text>
+              </View>
+            </View>
+            <View style = {style.sideline}></View>
+
+            <View style = {style.fact}>
+              <Text style = {style.factText}> Fun fact, it's almost always sunny.</Text>
+            </View>
+            <View style = {style.sideline}></View>
+
+            
+
+
+
+
+
+
+
+
+
+
+            <ScrollView>
+              <View style = {style}></View>
+
+            </ScrollView>
             <View style = {style.line}></View>
             <View style = {style.containerInner}>
               <Text style = {style.innerText}>Minimum and Maximum temperature: -xx to -xx </Text>
@@ -64,7 +174,6 @@ export default class weather extends React.Component{
 
 
 
-      </View>
       </ScrollView>
     </ImageBackground>
 
@@ -98,24 +207,26 @@ const style = StyleSheet.create({
     width: '20%'
     
   },
-  // sol: {
-  //   marginTop: '14',
-  //   width: '40%',
-  //   height: '8%',
-  //   borderWidth: 8,
-  //   borderRadius: 10,
-  //   borderColor: '#323547',
-  //   borderStartColor: '#323547',
-  //   justifyContent: 'center',
-  //   alignItems:'center',
-  //   alignSelf: 'center',
-  //   backgroundColor:'#323547',
-  // },
+  sol: {
+    marginTop: '14',
+    width: '40%',
+    height: '8%',
+    borderWidth: 8,
+    borderRadius: 10,
+    borderColor: '#323547',
+    borderStartColor: '#323547',
+    justifyContent: 'center',
+    alignItems:'center',
+    alignSelf: 'center',
+    backgroundColor:'#323547',
+  },
   solText: {
     fontSize: 30,
     color: '#F1FAEE',
     fontWeight: '800'
   },
+
+
   container: {
     marginTop: '14',
     width:'90%',
@@ -153,13 +264,13 @@ const style = StyleSheet.create({
     height: '13%',
   },
   innerText: {
-    fontSize: '10',
+    fontSize: 10,
     justifyContent: 'center',
     color: '#F1FAEE',
 
   },
   date: {
-    borderwidth: 8,
+    borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
     borderStartColor: '#323547',
