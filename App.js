@@ -23,11 +23,14 @@ export default class App extends React.Component{
         <View style = {style.header}>
           <Text style = {style.headerText}> Weather</Text>
         </View>
-        <ScrollView>
 
           <Image
             style = {style.mars}
             source = {require('./assets/Mars.png')}></Image>
+
+            <View style = {style.solTemp}>
+              <Text style = {style.solTempText}> -20</Text>
+            </View>
            
             <View style = {style.sol}>
               <Text style = {style.solText}> Sol XXXX  </Text>
@@ -114,12 +117,7 @@ export default class App extends React.Component{
             </View>
             <View style = {style.sideline}></View>
  
-            </ScrollView>
-
- 
- 
- 
-    </View>
+      </View>
     </ImageBackground>
    );
   }
@@ -149,6 +147,15 @@ const style = StyleSheet.create({
     height : '40%',
     width: '70%'
   },
+  solTemp: {
+    justifyContent: 'center',
+    alignSelf: 'center',
+    alignItems: 'center'
+  },
+  solTempText: {
+    fontSize: 60,
+    color: '#F1FAEE'
+  },
   sol: {
     marginTop: 1,
     width: '40%',
@@ -156,7 +163,6 @@ const style = StyleSheet.create({
     borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
-    borderStartColor: '#323547',
     justifyContent: 'center',
     alignItems:'center',
     alignSelf: 'center',
@@ -170,7 +176,7 @@ const style = StyleSheet.create({
  
  
   container: {
-  //  marginTop: 14,
+    marginTop: 14,
     width:'70%',
     height:'8%',
     borderWidth: 8,
@@ -181,7 +187,7 @@ const style = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor: '#323547',
     flexDirection: 'row',
-  //  flex: 1
+    flex: 1
   },
   solHeader: {
     height: '5%',
@@ -257,5 +263,5 @@ const style = StyleSheet.create({
  
   },
   sunRise: {}
- 
+
 });
