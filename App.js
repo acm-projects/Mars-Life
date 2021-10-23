@@ -23,7 +23,7 @@ export default class App extends React.Component{
         <View style = {style.header}>
           <Text style = {style.headerText}> Weather</Text>
         </View>
-        <ScrollView style = {style.scrollSize}>
+        <ScrollView>
 
           <Image
             style = {style.mars}
@@ -48,7 +48,7 @@ export default class App extends React.Component{
                 <Text style = {style.weekText}> Sol XXXX-1</Text>
               </View>
               <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.temp}>
+              <View style = {style.week}>
                 <Text style = {style.weekText}>-sdfgsdfg sfdgsdfgr</Text>
               </View>
             </View>
@@ -143,10 +143,7 @@ const style = StyleSheet.create({
     fontSize: 50,
     color: '#F1FAEE',
   },
-  scrollSize:{
-    height: '100%',
-    width: '100%'
-  },
+
   mars:{
     justifyContent: 'center',
     alignSelf: 'center',
@@ -254,9 +251,16 @@ const style = StyleSheet.create({
   },
   week: {
     height: '10%',
-    width: '20%'
+    width: '20%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
+
   },
   weekText: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignContent: 'center',
     color: '#F1FAEE',
   },
   temp: {
@@ -277,6 +281,7 @@ const style = StyleSheet.create({
     width: '0.5%',
     backgroundColor: 'white',
   },
+
   solData: {
  
   },
