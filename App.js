@@ -8,15 +8,14 @@
  */
  
  import  React, { useState } from 'react';
- import { StyleSheet, Text, View, Image, ImageBackground, ScrollView} from 'react-native';
-
+ import { StyleSheet, Text, View, Image, ImageBackground, } from 'react-native';
+ 
 export default class weather extends React.Component{
  
-
-
+ 
+ 
   render(){
    return (
-    <ScrollView style = {{width: '100%'}}>
     <ImageBackground
       style = {style.background}
       source = {require('./assets/HomeBack.png')}>
@@ -24,20 +23,20 @@ export default class weather extends React.Component{
         <View style = {style.header}>
           <Text style = {style.headerText}> Weather</Text>
         </View>
-
+ 
           <Image
             style = {style.mars}
             source = {require('./assets/Mars.png')}></Image>
-            
+           
             <View style = {style.sol}>
               <Text style = {style.solText}> Sol XXXX  </Text>
             </View>
-            
+           
             <View style = {style.date}>
               <Text style = {style.dateText}> 21 October 2021 </Text>
             </View>
-            
-            <View style = {style.sideline}></View>
+           
+            {/* <View style = {style.sideline}></View>
             <View style = {style.container}>
               <View style = {style.week}>
                 <Text style = {style.weekText}> Sol XXXX-1</Text>
@@ -48,7 +47,7 @@ export default class weather extends React.Component{
                 <Text style = {style.tempText}></Text>
               </View>
             </View>
-
+ 
             <View style = {style.sideline}></View>
             <View style = {style.container}>
               <View style = {style.week}>
@@ -60,7 +59,7 @@ export default class weather extends React.Component{
                 <Text style = {style.tempText}></Text>
               </View>
             </View>
-
+ 
             <View style = {style.sideline}></View>
             <View style = {style.container}>
               <View style = {style.week}>
@@ -72,7 +71,7 @@ export default class weather extends React.Component{
                 <Text style = {style.tempText}></Text>
               </View>
             </View>
-
+ 
             <View style = {style.sideline}></View>
             <View style = {style.container}>
               <View style = {style.week}>
@@ -84,7 +83,7 @@ export default class weather extends React.Component{
                 <Text style = {style.tempText}></Text>
               </View>
             </View>
-
+ 
             <View style = {style.sideline}></View>
             <View style = {style.container}>
               <View style = {style.week}>
@@ -96,7 +95,7 @@ export default class weather extends React.Component{
                 <Text style = {style.tempText}></Text>
               </View>
             </View>
-
+ 
             <View style = {style.sideline}></View>
             <View style = {style.container}>
               <View style = {style.week}>
@@ -108,7 +107,7 @@ export default class weather extends React.Component{
                 <Text style = {style.tempText}></Text>
               </View>
             </View>
-
+ 
             <View style = {style.sideline}></View>
             <View style = {style.container}>
               <View style = {style.week}>
@@ -121,16 +120,24 @@ export default class weather extends React.Component{
               </View>
             </View>
             <View style = {style.sideline}></View>
-
+ 
             <View style = {style.fact}>
-              <Text style = {style.factText}> Fun fact, it's almost always sunny.</Text>
+              <Text style = {style.factText}> Fun fact, it's almost always sunny on Mars.</Text>
             </View>
             <View style = {style.sideline}></View>
+            <View style = {style.solData}>
+              <View style = {style.sunRise}>
+ 
+              </View>
+            </View> */}
+ 
+ 
+ 
+ 
+ 
           </View>
-
     </ImageBackground>
-    </ScrollView>
-
+ 
    );
   }
 }
@@ -159,7 +166,7 @@ const style = StyleSheet.create({
     resizeMode: 'contain',
     height : '20%',
     width: '20%'
-    
+   
   },
   sol: {
     marginTop: '14',
@@ -179,8 +186,8 @@ const style = StyleSheet.create({
     color: '#F1FAEE',
     fontWeight: '800'
   },
-
-
+ 
+ 
   container: {
     marginTop: '14',
     width:'90%',
@@ -210,7 +217,7 @@ const style = StyleSheet.create({
     width: '90%',
     height: '1%',
     backgroundColor: '#F1FAEE',
-
+ 
   },
   containerInner: {
     margin:1,
@@ -221,7 +228,7 @@ const style = StyleSheet.create({
     fontSize: 10,
     justifyContent: 'center',
     color: '#F1FAEE',
-
+ 
   },
   date: {
     borderWidth: 8,
@@ -238,6 +245,12 @@ const style = StyleSheet.create({
     fontSize: 20,
     justifyContent: 'center',
     color: '#F1FAEE',
-  }
-
+  },
+  solData: {
+ 
+  },
+  sunRise: {}
+ 
 });
+ 
+
