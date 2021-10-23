@@ -8,7 +8,7 @@
  */
  
  import  React, { useState } from 'react';
- import { StyleSheet, Text, View, Image, ImageBackground, ScrollView} from 'react-native';
+ import { StyleSheet, Text, View, Image, ImageBackground} from 'react-native';
 
 export default class weather extends React.Component{
  
@@ -123,20 +123,57 @@ export default class weather extends React.Component{
             <View style = {style.sideline}></View>
 
             <View style = {style.fact}>
-              <Text style = {style.factText}> Fun fact, it's almost always sunny on Mars.</Text>
+              <Text style = {style.factText}> Fun fact, it's almost always sunny.</Text>
             </View>
             <View style = {style.sideline}></View>
-            <View style = {style.solData}>
-              <View style = {style.sunRise}>
 
-              </View>
+            
+
+
+
+
+
+
+
+
+
+
+            <ScrollView>
+              <View style = {style}></View>
+
+            </ScrollView>
+            <View style = {style.line}></View>
+            <View style = {style.containerInner}>
+              <Text style = {style.innerText}>Minimum and Maximum temperature: -xx to -xx </Text>
             </View>
-
-
-
-
-
+            <View style = {style.containerInner}>
+              <Text style = {style.innerText}>Atmospheric Temperature: -xx to -xx</Text>
+            </View>
+            <View style = {style.containerInner}>
+              <Text style = {style.innerText}>Ground Temperature: -xx to -xx </Text>
+            </View>
+            <View style = {style.containerInner}>
+              <Text style = {style.innerText}>Conditions: Sunny</Text>
+            </View>
+            <View style = {style.containerInner}>
+              <Text style = {style.innerText}>Sunrise/Sunset time: idk what format it's in</Text>
+            </View>
+            <View style = {style.containerInner}>
+              <Text style = {style.innerText}>Ultraviolet radiation levels: idk how it's reported</Text>
+            </View>
           </View>
+
+          <View style = {style.date}>
+            <Text style = {style.dateText}> Oct. 20, 2021</Text>
+          </View>
+
+
+
+
+
+
+
+
       </ScrollView>
     </ImageBackground>
 
@@ -233,7 +270,7 @@ const style = StyleSheet.create({
 
   },
   date: {
-    borderWidth: 8,
+    borderwidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
     borderStartColor: '#323547',
@@ -247,10 +284,6 @@ const style = StyleSheet.create({
     fontSize: 20,
     justifyContent: 'center',
     color: '#F1FAEE',
-  },
-  solData: {
-
-  },
-  sunRise: {}
+  }
 
 });
