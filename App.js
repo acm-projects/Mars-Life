@@ -8,7 +8,7 @@
  */
  
  import  React, { useState } from 'react';
- import { StyleSheet, Text, View, Image, ImageBackground, } from 'react-native';
+ import { StyleSheet, Text, View, Image, ImageBackground, ScrollView} from 'react-native';
 
 export default class weather extends React.Component{
  
@@ -16,10 +16,10 @@ export default class weather extends React.Component{
 
   render(){
    return (
+    <ScrollView style = {{width: '100%'}}>
     <ImageBackground
       style = {style.background}
       source = {require('./assets/HomeBack.png')}>
-      <ScrollView>
       <View style = {style.body}>
         <View style = {style.header}>
           <Text style = {style.headerText}> Weather</Text>
@@ -126,30 +126,10 @@ export default class weather extends React.Component{
               <Text style = {style.factText}> Fun fact, it's almost always sunny.</Text>
             </View>
             <View style = {style.sideline}></View>
-
-            
-
-
-
-
-
-
-
-
-
-
           </View>
 
-
-
-
-
-
-
-
-
-      </ScrollView>
     </ImageBackground>
+    </ScrollView>
 
    );
   }
