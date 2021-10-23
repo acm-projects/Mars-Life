@@ -252,7 +252,6 @@ const style = StyleSheet.create({
   week: {
     height: '10%',
     width: '20%',
-    justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
 
