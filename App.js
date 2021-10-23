@@ -19,7 +19,6 @@ export default class weather extends React.Component{
     <ImageBackground
       style = {style.background}
       source = {require('./assets/HomeBack.png')}>
-      <ScrollView>
       <View style = {style.body}>
         <View style = {style.header}>
           <Text style = {style.headerText}> Weather</Text>
@@ -126,55 +125,7 @@ export default class weather extends React.Component{
               <Text style = {style.factText}> Fun fact, it's almost always sunny.</Text>
             </View>
             <View style = {style.sideline}></View>
-
-            
-
-
-
-
-
-
-
-
-
-
-            <ScrollView>
-              <View style = {style}></View>
-
-            </ScrollView>
-            <View style = {style.line}></View>
-            <View style = {style.containerInner}>
-              <Text style = {style.innerText}>Minimum and Maximum temperature: -xx to -xx </Text>
-            </View>
-            <View style = {style.containerInner}>
-              <Text style = {style.innerText}>Atmospheric Temperature: -xx to -xx</Text>
-            </View>
-            <View style = {style.containerInner}>
-              <Text style = {style.innerText}>Ground Temperature: -xx to -xx </Text>
-            </View>
-            <View style = {style.containerInner}>
-              <Text style = {style.innerText}>Conditions: Sunny</Text>
-            </View>
-            <View style = {style.containerInner}>
-              <Text style = {style.innerText}>Sunrise/Sunset time: idk what format it's in</Text>
-            </View>
-            <View style = {style.containerInner}>
-              <Text style = {style.innerText}>Ultraviolet radiation levels: idk how it's reported</Text>
-            </View>
           </View>
-
-          <View style = {style.date}>
-            <Text style = {style.dateText}> Oct. 20, 2021</Text>
-          </View>
-
-
-
-
-
-
-
-
-      </ScrollView>
     </ImageBackground>
 
    );
