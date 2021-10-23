@@ -203,7 +203,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
   },
   solHeader: {
-    height: '20%',
+    height: '5%',
     width: '90%',
     alignSelf: 'center',
     alignItems: 'center',
@@ -223,7 +223,7 @@ const style = StyleSheet.create({
   containerInner: {
     margin:1,
     width: '90%',
-    height: '13%',
+    height: '3.25%',
   },
   innerText: {
     fontSize: 10,
@@ -240,7 +240,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    height:'8%',
+    height:'2%',
     width: '50%',
     backgroundColor: '#323547'
   },
@@ -248,6 +248,10 @@ const style = StyleSheet.create({
     fontSize: 20,
     justifyContent: 'center',
     color: '#F1FAEE',
+  },
+  sun: {
+    height: '10%',
+    width: '10%'
   },
   solData: {
  
