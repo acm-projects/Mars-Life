@@ -25,7 +25,7 @@ export default function App() {
 
       <ScrollView>
         { people.map(item => (
-          <View key={item.key} style={styles.roundedCorners}>
+          <View key={item.key}>
             <TouchableOpacity onPress={null} >
               <Text style={styles.item}> {item.name} </Text>
             </TouchableOpacity>
@@ -51,19 +51,18 @@ const styles = StyleSheet.create({
     backgroundColor: '#ff5733'
   },
   item: {
+    overflow: 'hidden',
     marginTop: 24,
     padding: 30,
     backgroundColor: '#E14616',
     fontSize: 20,
+    borderColor: '#E14616',
+    borderWidth: 1,
+    borderRadius: 10,
   },
   topNews: {
     //make the top article big
   },
-  roundedCorners: {
-    borderWidth: 1,
-    borderRadius: 10,
-    borderColor: '#E14616',
-  }
 });
 
 
