@@ -8,14 +8,15 @@
  */
  
  import  React, { useState } from 'react';
- import { StyleSheet, Text, View, Image, ImageBackground, } from 'react-native';
+ import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
  
-export default class weather extends React.Component{
+export default class App extends React.Component{
  
  
  
   render(){
    return (
+     <ScrollView style = {style.scroll}>
     <ImageBackground
       style = {style.background}
       source = {require('./assets/HomeBack.png')}>
@@ -36,7 +37,7 @@ export default class weather extends React.Component{
               <Text style = {style.dateText}> 21 October 2021 </Text>
             </View>
            
-            {/* <View style = {style.sideline}></View>
+            <View style = {style.sideline}></View>
             <View style = {style.container}>
               <View style = {style.week}>
                 <Text style = {style.weekText}> Sol XXXX-1</Text>
@@ -129,7 +130,7 @@ export default class weather extends React.Component{
               <View style = {style.sunRise}>
  
               </View>
-            </View> */}
+            </View>
  
  
  
@@ -137,6 +138,7 @@ export default class weather extends React.Component{
  
           </View>
     </ImageBackground>
+    </ScrollView>
  
    );
   }
@@ -163,13 +165,12 @@ const style = StyleSheet.create({
   mars:{
     justifyContent: 'center',
     alignSelf: 'center',
-    resizeMode: 'contain',
     height : '20%',
-    width: '20%'
+    width: '40%'
    
   },
   sol: {
-    marginTop: '14',
+    marginTop: 1,
     width: '40%',
     height: '8%',
     borderWidth: 8,
@@ -189,7 +190,7 @@ const style = StyleSheet.create({
  
  
   container: {
-    marginTop: '14',
+    marginTop: 14,
     width:'90%',
     height:'60%',
     borderWidth: 8,
@@ -231,6 +232,7 @@ const style = StyleSheet.create({
  
   },
   date: {
+    marginTop: 20,
     borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
@@ -238,8 +240,9 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    height:'15%',
-    width: '70%'
+    height:'8%',
+    width: '50%',
+    backgroundColor: '#323547'
   },
   dateText: {
     fontSize: 20,
