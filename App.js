@@ -156,9 +156,18 @@ const style = StyleSheet.create({
   solTemp: {
     justifyContent: 'center',
     alignSelf: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: '#323547',
+    borderWidth: 8,
+    borderRadius: 10,
+    borderColor: '#323547',
+    height: '10%',
+    width: '35%',
+    marginBottom: 10
   },
   solTempText: {
+    justifyContent: 'center',
+    alignSelf: 'center',
     fontSize: 60,
     color: '#F1FAEE'
   },
@@ -238,8 +247,10 @@ const style = StyleSheet.create({
     color: '#F1FAEE',
   },
   sun: {
-    height: '70%',
-    width: '20%'
+    height: '90%',
+    width: '20%',
+    justifyContent: 'center'
+
   },
   week: {
     height: '10%',
@@ -249,14 +260,15 @@ const style = StyleSheet.create({
     color: '#F1FAEE',
   },
   temp: {
-    color: 'white',
+    height: '15%',
+    width:'40%'
   },
 
   sideline: {
     marginTop: 10,
     height: '.2%',
     width: '70%',
-    backgroundColor: 'white',
+    backgroundColor: '#F1FAEE',
     justifyContent: 'center',
     alignSelf: 'center'
   },
