@@ -10,7 +10,7 @@
  import  React, { useState } from 'react';
  import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
  
-export default class App extends React.Component{
+export default class weather extends React.Component{
  
  
  
