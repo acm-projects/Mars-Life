@@ -23,6 +23,7 @@ export default class App extends React.Component{
         <View style = {style.header}>
           <Text style = {style.headerText}> Weather</Text>
         </View>
+        <ScrollView style = {style.scrollSize}>
 
           <Image
             style = {style.mars}
@@ -117,6 +118,7 @@ export default class App extends React.Component{
             </View>
             <View style = {style.sideline}></View>
  
+            </ScrollView>
       </View>
     </ImageBackground>
    );
@@ -140,6 +142,10 @@ const style = StyleSheet.create({
   headerText: {
     fontSize: 50,
     color: '#F1FAEE',
+  },
+  scrollSize:{
+    height: '100%',
+    width: '100%'
   },
   mars:{
     justifyContent: 'center',
