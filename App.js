@@ -39,58 +39,71 @@ export default class App extends React.Component{
           <Text style = {style.headerText}> Mars Life </Text>
         </View>
  
-        <TouchableOpacity>
          <Image
           style = {style.mars}
           source = {require('./assets/Mars.png')}></Image>
+
+
           <View style = {style.container}>
+
+
            <View style = {style.select}>
              <View style = {style.selectInner}>
-               <View style = {style.selectHeader}>
-                 <Text style = {style.selectText}>Weather</Text>
-              </View>
-              <Image
-              style = {style.selectIcon}
-              source = {require('./assets/Weather.png')}></Image>
+              <TouchableOpacity>
+                <View style = {style.selectHeader}>
+                  <Text style = {style.selectText}>Weather</Text>
+                </View>
+                <Image
+                style = {style.selectIcon}
+                source = {require('./assets/Weather.png')}></Image>
+              </TouchableOpacity>             
             </View>
            </View>    
  
-          <View style = {style.select}>
-            <View style = {style.selectInner}>
-              <View style = {style.selectHeader}>
-                <Text style = {style.selectText}>Photos</Text>
+          
+            <View style = {style.select}>
+              <View style = {style.selectInner}>
+              <TouchableOpacity>
+                <View style = {style.selectHeader}>
+                  <Text style = {style.selectText}>Photos</Text>
+                </View>
+                <Image
+                style = {style.selectIcon}
+                source = {require('./assets/Rover.png')}></Image>
+               </TouchableOpacity>              
               </View>
-              <Image
-              style = {style.selectIcon}
-               source = {require('./assets/Rover.png')}></Image>
-            </View>
-           </View>  
+            </View>  
  
-          <View style = {style.select}>
-            <View style = {style.selectInner}>
-              <View style = {style.selectHeader}>
-                <Text style = {style.selectText}>News</Text>
+            <View style = {style.select}>
+              <View style = {style.selectInner}>
+              <TouchableOpacity>
+                <View style = {style.selectHeader}>
+                  <Text style = {style.selectText}>News</Text>
+                </View>
+                <Image
+                style = {style.selectIcon}
+                source = {require('./assets/News.png')}
+                ></Image>
+               </TouchableOpacity>
               </View>
-              <Image
-              style = {style.selectIcon}
-              source = {require('./assets/News.png')}
-              ></Image>
             </View>
-           </View>
  
-           <View style = {style.select}>
-            <View style = {style.selectInner}>
-              <View style = {style.selectHeader}>
-                <Text style = {style.selectText}>Map</Text>
+            <View style = {style.select}>
+              <View style = {style.selectInner}>
+              <TouchableOpacity>
+                <View style = {style.selectHeader}>
+                  <Text style = {style.selectText}>Map</Text>
+                </View>
+                <Image
+                style = {style.selectIcon}
+                source = {require('./assets/Map.png')}
+                ></Image>
+                </TouchableOpacity>
               </View>
-              <Image
-              style = {style.selectIcon}
-              source = {require('./assets/Map.png')}
-              ></Image>
             </View>
-           </View>
+
+
          </View>
-        </TouchableOpacity>
  
       </View>
      </ImageBackground>
