@@ -1,47 +1,68 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
-import { Button, StyleSheet, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity, Pressable, TouchableHighlight } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient'
+import { FlatList, Button, StyleSheet, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity, Pressable, TouchableHighlight } from 'react-native';
 
-export default function App() {
-  const [people, setPeople] = useState([
-    { name: 'Sankalp', key: '1'},
-    { name: 'Batman', key: '2'},
-    { name: 'Superman', key: '3'},
-    { name: 'Flash', key: '4'},
-    { name: 'Spiderman', key: '5'},
-    { name: 'Ironman', key: '6'},
-    { name: 'Captain America', key: '7'}
-  ]);
+const [people, setPeople] = useState([
+  { name: 'Sankalp', key: '1'},
+  { name: 'Batman', key: '2'},
+  { name: 'Superman', key: '3'},
+  { name: 'Flash', key: '4'},
+  { name: 'Spiderman', key: '5'},
+  { name: 'Ironman', key: '6'},
+  { name: 'Captain America', key: '7'}
+]);
 
-  //TouchableOpacity or TouchableHighlight (and withoutFeedback) can be used for clickable view
+export default class App extends React.Component {
+  render() {    //*************** render causing problems *****************
+    // Since the breaking news is not part of the news list, it can be shown individually
+  
+    return (
+      <View style={styles.container}>
+        <LinearGradient 
+          colors={['#D0764E', '#13151E']} 
+          style={styles.linearGradient}
+          >
 
-  //------TO DO----------
-  // fix the border of each view so that it is aligned properly and overlaps 
-  // view. (to overlap just make the border bigger and rounder so make the view size smaller??)
-  // If statements don't work in JSX? Conditional rendering!
+        {/* <FlatList
+          data={people}
+          renderItem={({item}) => 
+          <TouchableOpacity onPress={() => pressHandler(item.key)} >
+            <Text style={styles.item}> {item.name} </Text>
+          </TouchableOpacity>
+          }
+        /> */}
 
-  return (
-    <View style={styles.container}>
-
-      <ScrollView>
-        { people.map(item => (
-          <View key={item.key}>
-            <TouchableOpacity onPress={null} >
-              <Text style={styles.item}> {item.name} </Text>
-            </TouchableOpacity>
+        <ScrollView>
+          <View>
+            <Text style={styles.topNews}> {people.name} </Text> 
           </View>
-       ))}
-      </ScrollView>
 
-    </View>
+          { people.map(item => (
+            <View key={item.key}>
+              <TouchableOpacity onPress={() => pressHandler(item.key)} >
+                <Text style={styles.item}> {item.name} </Text>
+              </TouchableOpacity>
+            </View>
+        ))}
+        </ScrollView>
 
-  );
+        </LinearGradient>
+      </View>
+
+    );
+  }
 }
+
+const pressHandler = (key) => {            //print the key when an item is pressed
+  console.log(key)
+}
+
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#D0764E',
+    //backgroundColor: '#D0764E',
     paddingTop: 40,
     paddingHorizontal: 20,
     //alignItems: 'center',
@@ -61,8 +82,22 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   topNews: {
-    //make the top article big
+    overflow: 'hidden',
+    marginTop: 24,
+    padding: 95,
+    backgroundColor: '#E14616',
+    fontSize: 20,
+    borderColor: '#E14616',
+    borderWidth: 1,
+    borderRadius: 10,
   },
+  linearGradient: {
+    //borderRadius: 5,
+    //alignItems: 'center',
+    //justifyContent: 'center',
+    height: 200,
+    width: 350,
+  }
 });
 
 
