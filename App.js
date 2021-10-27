@@ -1,13 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import expandedNews from './expanded_news';
+import ExpandedNews from './expanded_news';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <expandedNews/>
-    </View>
+    <ExpandedNews />
   );
 }
 
