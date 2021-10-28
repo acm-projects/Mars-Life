@@ -1,6 +1,10 @@
 const mongoose = require('mongoose')
 const https = require('https')
+const { NativeModules } = require('react-native')
 var dataList = []
+let imgList = []
+let cameraName = []
+let earthDate = []
 
 const options = {
     hostname: 'api.nasa.gov',
@@ -17,14 +21,17 @@ const req = https.request(options, res => {
         dataList.push(data)
     }).on('end', () => {
         let data = JSON.parse(Buffer.concat(dataList))
-        let imgList = []
 
         for(var i = 0; i < 10; i++) {
             imgList[i] = data.photos[i].img_src
+            cameraName[i] = data.photos[i].camera.full_name
+            earthDate[i] = data.photos[i].earth_date
         }
 
         for(var i = 0; i < 10; i++) {
             console.log(imgList[i])
+            console.log(cameraName[i])
+            console.log(earthDate[i])
         }
     })
 
@@ -44,3 +51,10 @@ const MarsImageSchema = new mongoose.Schema({
 })
 
 mongoose.model("mars_image", MarsImageSchema)
+
+module.exports = {
+    dataList: dataList,
+    imgList: imgList,
+    cameraName: cameraName,
+    earthDate: earthDate,
+}
