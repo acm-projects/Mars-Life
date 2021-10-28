@@ -1,9 +1,11 @@
 import  React from 'react';
- import { StyleSheet, Text, View, Image, ImageBackground} from 'react-native';
+ import { StyleSheet, Text, View, Image, ImageBackground, TouchableOpacity} from 'react-native';
  import { StatusBar } from 'expo-status-bar';
  import header from '../Shared/header';
+import RoverPhotos from './RoverPhotos';
 export default class HomeView extends React.Component{
  
+    
     render(){
      return (
        <ImageBackground 
@@ -26,8 +28,10 @@ export default class HomeView extends React.Component{
                style = {style.selectIcon}
                source = {require('../assets/Weather.png')}></Image>
              </View>
-           </View>    
-  
+           </View> 
+
+           
+       
            <View style = {style.select}>
              <View style = {style.selectInner}>
                <View style = {style.selectHeader}>
@@ -38,7 +42,8 @@ export default class HomeView extends React.Component{
                 source = {require('../assets/Rover.png')}></Image>
              </View>
            </View>  
-  
+        
+        
            <View style = {style.select}>
              <View style = {style.selectInner}>
                <View style = {style.selectHeader}>

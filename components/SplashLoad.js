@@ -7,24 +7,15 @@ export default function SplashLoad() {
     
     return (
         <View>
-        
           <LottieView
             source={require("./loader.json")}
             style={styles.animation}
             autoPlay
            > 
-           
             </LottieView>
                  <Text style={styles.loadingText}>launching off...</Text>
             </View>
-
-   
-
-   
-
-      );
-
-      
+      ); 
     }
     const styles = StyleSheet.create({
       animation: {

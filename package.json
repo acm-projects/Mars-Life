@@ -8,20 +8,25 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-navigation/native-stack": "^6.2.5",
+    "@react-navigation/stack": "^6.0.11",
     "expo": "~42.0.1",
+    "expo-app-loading": "1.1.2",
+    "expo-constants": "~11.0.2",
     "expo-status-bar": "~1.0.4",
+    "lottie-ios": "3.1.8",
+    "lottie-react-native": "4.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
     "react-native-animated-loader": "^0.0.9",
+    "react-native-fast-image": "^8.5.11",
+    "react-native-grid-image-viewer": "^1.2.2",
     "react-native-loading-spinner-overlay": "^2.0.0",
-    "react-native-web": "~0.13.12",
-    "react-spinners": "^0.11.0",
-    "lottie-ios": "3.1.8",
-    "expo-constants": "~11.0.2",
     "react-native-paper": "3.6.0",
-    "lottie-react-native": "4.0.2",
-    "expo-app-loading": "1.1.2"
+    "react-native-snap-carousel": "^3.9.1",
+    "react-native-web": "~0.13.12",
+    "react-spinners": "^0.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"
