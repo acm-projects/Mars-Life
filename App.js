@@ -20,8 +20,9 @@ export default class App extends React.Component{
       style = {style.background}
       source = {require('./assets/HomeBack.png')}>
       <View style = {style.body}>
+
         <View style = {style.header}>
-          <Text style = {style.headerText}> Weather</Text>
+          <Text style = {style.headerText}>Weather</Text>
         </View>
         <ScrollView>
 
@@ -89,7 +90,7 @@ export default class App extends React.Component{
               </View>
               <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
               <View style = {style.temp}>
-                <Text style = {style.weekText}>-40</Text>
+                <Text style = {style.weekText}>-40 F</Text>
               </View>
             </View>
  
@@ -143,10 +144,22 @@ export default class App extends React.Component{
 
 
             <View style = {style.minMaxOuter}>
-              <View style = {style.minMaxInner}>
-                <Text style = {style.atmospheric}>Atmospheric Temperature:  -10 F</Text>
+              <View style = {style.atmosphericInner}>
+                <Text style = {style.atmospheric}>Atmospheric Temperature:</Text>
+                <Text style = {style.atmosphericNumber}>-10 F</Text>
               </View>
             </View>
+
+            <View style = {style.sideline}/>
+
+            <View style = {style.minMaxOuter}>
+              <View style = {style.atmosphericInner}>
+                <Text style = {style.atmospheric}>Ultraviolet Index:</Text>
+                <Text style = {style.atmosphericNumber}>IDK how this is formated</Text>
+              </View>
+            </View>
+
+            <View style = {style.sideline}/>
 
             <View style = {style.minMaxOuter}>
               <View style = {style.minMaxInner}> 
@@ -236,6 +249,7 @@ const style = StyleSheet.create({
     borderStartColor: '#323547',
     justifyContent: 'center',
     alignSelf: 'center',
+    alignItems: 'center',
     backgroundColor: '#323547',
     flexDirection: 'row',
     flex: 1
@@ -287,9 +301,10 @@ const style = StyleSheet.create({
   },
   week: {
    // height: '10%',
-    width: '20%',
+    width: '33.33%',
     alignItems: 'center',
     alignContent: 'center',
+    alignSelf: 'center'
 
   },
   weekText: {
@@ -297,6 +312,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'center',
     color: '#F1FAEE',
+    fontSize: 20
   },
   temp: {
     //height: '15%',
@@ -336,7 +352,7 @@ const style = StyleSheet.create({
   minMaxOuter:{
     //paddingVertical: 200,
     paddingVertical: 10,
-    width: '70%',
+    width: '80%',
     borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
@@ -355,7 +371,7 @@ const style = StyleSheet.create({
     marginLeft:5     
   },
   minMaxText:{
-    color: 'white',
+    color: '#F1FAEE',
   },
   atmosphericInner: {
     height: '100%',
@@ -363,8 +379,13 @@ const style = StyleSheet.create({
 
   },
   atmospheric: {
-    color: 'white',
+    color: '#F1FAEE',
     fontSize: 20
+  },
+  atmosphericNumber:{
+    color: '#F1FAEE',
+    fontSize: 30,
+    alignSelf: 'center'
   }
 
 
