@@ -20,16 +20,16 @@ export default class App extends React.Component{
       style = {style.background}
       source = {require('./assets/HomeBack.png')}>
       <View style = {style.body}>
-
+ 
         <View style = {style.header}>
           <Text style = {style.headerText}>Weather</Text>
         </View>
         <ScrollView>
-
+ 
           <Image
             style = {style.mars}
             source = {require('./assets/Mars.png')}></Image>
-
+ 
             <View style = {style.solTemp}>
               <Text style = {style.solTempText}>-20 F</Text>
             </View>
@@ -42,7 +42,7 @@ export default class App extends React.Component{
               <Text style = {style.dateText}> 21 October 2021 </Text>
             </View>
             <View style = {style.sideline}></View>
-
+ 
            
             <View style = {style.container}>
               <View style = {style.week}>
@@ -66,7 +66,7 @@ export default class App extends React.Component{
  
             <View style = {style.container}>
               <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-3</Text> 
+                <Text style = {style.weekText}> Sol XXXX-3</Text>
               </View>
               <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
               <View style = {style.temp}>
@@ -114,14 +114,14 @@ export default class App extends React.Component{
               </View>
             </View>
             <View style = {style.sideline}/>
-
+ 
             <View style = {style.fact}>
               <Text style = {style.factText}> Fun fact, it's literally always sunny on Mars.</Text>
             </View>
             <View style = {style.sideline}/>
-
+ 
             <View style = {style.minMaxOuter}>
-              <View style = {style.minMaxInner}> 
+              <View style = {style.minMaxInner}>
                 <Text style = {style.minMaxText}>Minimum Temp: -80 F </Text>
               </View>
               <View style = {style.minMaxInner}>
@@ -129,44 +129,44 @@ export default class App extends React.Component{
               </View>
             </View>
             <View style = {style.sideline}/>
-
+ 
             <View style = {style.minMaxOuter}>
-              <View style = {style.minMaxInner}> 
+              <View style = {style.minMaxInner}>
                 <Text style = {style.minMaxText}>Ground Minimum Temp:        -20 F </Text>
               </View>
               <View style = {style.minMaxInner}>
                 <Text style = {style.minMaxText}>Ground Maximum Temp:         -20 F</Text>
               </View>
             </View>
-
+ 
             <View style = {style.sideline}></View>
-
-
-
+ 
+ 
+ 
             <View style = {style.minMaxOuter}>
               <View style = {style.atmosphericInner}>
                 <Text style = {style.atmospheric}>Atmospheric Temperature:</Text>
                 <Text style = {style.atmosphericNumber}>-10 F</Text>
               </View>
             </View>
-
+ 
             <View style = {style.sideline}/>
-
+ 
             <View style = {style.minMaxOuter}>
               <View style = {style.atmosphericInner}>
                 <Text style = {style.atmospheric}>Ultraviolet Index:</Text>
                 <Text style = {style.atmosphericNumber}>IDK how this is formated</Text>
               </View>
             </View>
-
+ 
             <View style = {style.sideline}/>
-
+ 
             <View style = {style.minMaxOuter}>
-              <View style = {style.minMaxInner}> 
-                <Text style = {style.minMaxText}>Sunrise Time:      8:00 AM</Text>
+              <View style = {style.minMaxInner}>
+                <Text style = {style.minMaxText}>Sunrise Time:           8:00 AM</Text>
               </View>
               <View style = {style.minMaxInner}>
-                <Text style = {style.minMaxText}>Sunset Time:        8:00 PM</Text>
+                <Text style = {style.minMaxText}>Sunset Time:            8:00 PM</Text>
               </View>
             </View>
             <View style = {style.sideline}/>
@@ -198,7 +198,7 @@ const style = StyleSheet.create({
     fontSize: 50,
     color: '#F1FAEE',
   },
-
+ 
   mars:{
     justifyContent: 'center',
     alignSelf: 'center',
@@ -258,7 +258,7 @@ const style = StyleSheet.create({
     //height: '5%',
     width: '90%',
     alignSelf: 'center',
-    alignItems: 'center', 
+    alignItems: 'center',
     justifyContent: 'center'
   },
   solText:{
@@ -266,8 +266,8 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     color: '#F1FAEE',
   },
-
-
+ 
+ 
   innerText: {
     fontSize: 10,
     justifyContent: 'center',
@@ -297,7 +297,7 @@ const style = StyleSheet.create({
     height: 35,
     width: '20%',
     justifyContent: 'center'
-
+ 
   },
   week: {
    // height: '10%',
@@ -305,7 +305,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'center',
     alignSelf: 'center'
-
+ 
   },
   weekText: {
     justifyContent: 'center',
@@ -318,18 +318,18 @@ const style = StyleSheet.create({
     //height: '15%',
     width:'40%'
   },
-
+ 
   sideline: {
     marginTop: 10,
     //height: '.2%',
-    height: 2,
+    height: 1,
     width: '70%',
     backgroundColor: '#F1FAEE',
     justifyContent: 'center',
     alignSelf: 'center'
   },
-
-
+ 
+ 
   fact: {
     marginTop: 10,
     marginBottom: 10,
@@ -352,7 +352,7 @@ const style = StyleSheet.create({
   minMaxOuter:{
     //paddingVertical: 200,
     paddingVertical: 10,
-    width: '80%',
+    width: '85%',
     borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
@@ -368,7 +368,7 @@ const style = StyleSheet.create({
   minMaxInner: {
     width: '50%',
     height: '100%',
-    marginLeft:5     
+    marginLeft:5    
   },
   minMaxText:{
     color: '#F1FAEE',
@@ -376,7 +376,7 @@ const style = StyleSheet.create({
   atmosphericInner: {
     height: '100%',
     width: '100%',
-
+ 
   },
   atmospheric: {
     color: '#F1FAEE',
@@ -387,6 +387,7 @@ const style = StyleSheet.create({
     fontSize: 30,
     alignSelf: 'center'
   }
-
-
+ 
+ 
 });
+
