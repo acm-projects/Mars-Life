@@ -11,7 +11,6 @@ const RoverPhotos = () => {
 
   return (
     <View>
-      
       <Carousel
         layout="default"
         layoutCardOffset={9}
