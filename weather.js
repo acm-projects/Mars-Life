@@ -147,8 +147,6 @@ const style = StyleSheet.create({
   mars:{
     justifyContent: 'center',
     alignSelf: 'center',
-    height : '40%',
-    width: '70%'
   },
   solTemp: {
     justifyContent: 'center',
@@ -171,7 +169,6 @@ const style = StyleSheet.create({
   sol: {
     marginTop: 1,
     width: '40%',
-    height: '7%',
     borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
