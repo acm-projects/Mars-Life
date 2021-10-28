@@ -18,7 +18,7 @@ export default class App extends React.Component{
    return (
     <ImageBackground
       style = {style.background}
-      source = {require('./assets/HomeBack2.png')}>
+      source = {require('./assets/HomeBack.png')}>
       <View style = {style.body}>
         <View style = {style.header}>
           <Text style = {style.headerText}> Weather</Text>
@@ -127,7 +127,36 @@ export default class App extends React.Component{
                 <Text style = {style.minMaxText}>Maximum Temp: -20 F</Text>
               </View>
             </View>
+            <View style = {style.sideline}/>
 
+            <View style = {style.minMaxOuter}>
+              <View style = {style.minMaxInner}> 
+                <Text style = {style.minMaxText}>Ground Minimum Temp:        -20 F </Text>
+              </View>
+              <View style = {style.minMaxInner}>
+                <Text style = {style.minMaxText}>Ground Maximum Temp:         -20 F</Text>
+              </View>
+            </View>
+
+            <View style = {style.sideline}></View>
+
+
+
+            <View style = {style.minMaxOuter}>
+              <View style = {style.minMaxInner}>
+                <Text style = {style.atmospheric}>Atmospheric Temperature:  -10 F</Text>
+              </View>
+            </View>
+
+            <View style = {style.minMaxOuter}>
+              <View style = {style.minMaxInner}> 
+                <Text style = {style.minMaxText}>Sunrise Time:      8:00 AM</Text>
+              </View>
+              <View style = {style.minMaxInner}>
+                <Text style = {style.minMaxText}>Sunset Time:        8:00 PM</Text>
+              </View>
+            </View>
+            <View style = {style.sideline}/>
             </ScrollView>
       </View>
     </ImageBackground>
@@ -137,14 +166,17 @@ export default class App extends React.Component{
 const style = StyleSheet.create({
   background: {
     flex: 1,
-    resizeMode: 'center'
+    resizeMode: 'stretch',
+    height: '100%',
+    width: '100%'
   },
   body: {
     flex: 1,
   },
   header: {
     marginTop: 20,
-    height: '10%',
+    paddingVertical: 15,
+    //height: '10%',
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
@@ -166,7 +198,7 @@ const style = StyleSheet.create({
     borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
-    height: '8%',
+   // height: '8%',
     width: '40%',
     marginBottom: 10
   },
@@ -197,7 +229,7 @@ const style = StyleSheet.create({
   container: {
     marginTop: 14,
     width:'70%',
-    height:'8%',
+    //height:'8%',
     borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
@@ -209,7 +241,7 @@ const style = StyleSheet.create({
     flex: 1
   },
   solHeader: {
-    height: '5%',
+    //height: '5%',
     width: '90%',
     alignSelf: 'center',
     alignItems: 'center', 
@@ -221,11 +253,7 @@ const style = StyleSheet.create({
     color: '#F1FAEE',
   },
 
-  containerInner: {
-    margin:1,
-    width: '90%',
-    height: '3.25%',
-  },
+
   innerText: {
     fontSize: 10,
     justifyContent: 'center',
@@ -241,7 +269,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    height:'6%',
+    //height:'6%',
     width: '50%',
     backgroundColor: '#323547'
   },
@@ -251,13 +279,14 @@ const style = StyleSheet.create({
     color: '#F1FAEE',
   },
   sun: {
-    height: '90%',
+    //height: '90%',
+    height: 35,
     width: '20%',
     justifyContent: 'center'
 
   },
   week: {
-    height: '10%',
+   // height: '10%',
     width: '20%',
     alignItems: 'center',
     alignContent: 'center',
@@ -270,23 +299,20 @@ const style = StyleSheet.create({
     color: '#F1FAEE',
   },
   temp: {
-    height: '15%',
+    //height: '15%',
     width:'40%'
   },
 
   sideline: {
     marginTop: 10,
-    height: '.2%',
+    //height: '.2%',
+    height: 2,
     width: '70%',
     backgroundColor: '#F1FAEE',
     justifyContent: 'center',
     alignSelf: 'center'
   },
-  upline: {
-    height: '90%',
-    width: '0.5%',
-    backgroundColor: 'white',
-  },
+
 
   fact: {
     marginTop: 10,
@@ -298,7 +324,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    height:'6%',
+    //height:'6%',
     width: '70%',
     backgroundColor: '#323547'
   },
@@ -309,7 +335,7 @@ const style = StyleSheet.create({
   },
   minMaxOuter:{
     //paddingVertical: 200,
-    paddingVertical: 200,
+    paddingVertical: 10,
     width: '70%',
     borderWidth: 8,
     borderRadius: 10,
@@ -322,7 +348,6 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     flex: 1,
     marginTop: 15,
-    marginBottom: 15
   },
   minMaxInner: {
     width: '50%',
@@ -331,6 +356,15 @@ const style = StyleSheet.create({
   },
   minMaxText:{
     color: 'white',
+  },
+  atmosphericInner: {
+    height: '100%',
+    width: '100%',
+
+  },
+  atmospheric: {
+    color: 'white',
+    fontSize: 20
   }
 
 
