@@ -9,12 +9,23 @@
  
  import  React, { useState } from 'react';
  import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
- 
-export default class App extends React.Component{
- 
- 
- 
-  render(){
+ import * as Font from 'expo-font';
+ import {AppLoading} from 'expo';
+
+ const getFonts = () => {
+   return Font.loadAsync({
+     'nunito-regular': require('./assets/Nunito-Regular.ttf')
+   });
+ }
+
+export default function App() {
+  const [loaded] = Font.useFonts({
+    Nunito: require('./assets/Nunito.ttf')
+  });
+
+  if(!loaded){
+    return null;
+  }
    return (
     <ImageBackground
       style = {style.background}
@@ -175,7 +186,6 @@ export default class App extends React.Component{
     </ImageBackground>
    );
   }
-}
 const style = StyleSheet.create({
   background: {
     flex: 1,
@@ -189,7 +199,6 @@ const style = StyleSheet.create({
   header: {
     marginTop: 20,
     paddingVertical: 15,
-    //height: '10%',
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
@@ -211,7 +220,6 @@ const style = StyleSheet.create({
     borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
-   // height: '8%',
     width: '40%',
     marginBottom: 10
   },
@@ -242,7 +250,6 @@ const style = StyleSheet.create({
   container: {
     marginTop: 14,
     width:'70%',
-    //height:'8%',
     borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
@@ -255,7 +262,6 @@ const style = StyleSheet.create({
     flex: 1
   },
   solHeader: {
-    //height: '5%',
     width: '90%',
     alignSelf: 'center',
     alignItems: 'center',
@@ -283,7 +289,6 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    //height:'6%',
     width: '50%',
     backgroundColor: '#323547'
   },
@@ -293,7 +298,6 @@ const style = StyleSheet.create({
     color: '#F1FAEE',
   },
   sun: {
-    //height: '90%',
     height: 35,
     width: '20%',
     justifyContent: 'center'
@@ -315,13 +319,11 @@ const style = StyleSheet.create({
     fontSize: 20
   },
   temp: {
-    //height: '15%',
     width:'40%'
   },
  
   sideline: {
     marginTop: 10,
-    //height: '.2%',
     height: 1,
     width: '70%',
     backgroundColor: '#F1FAEE',
@@ -340,7 +342,6 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    //height:'6%',
     width: '70%',
     backgroundColor: '#323547'
   },
@@ -350,7 +351,6 @@ const style = StyleSheet.create({
     color: '#F1FAEE',
   },
   minMaxOuter:{
-    //paddingVertical: 200,
     paddingVertical: 10,
     width: '85%',
     borderWidth: 8,
