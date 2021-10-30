@@ -15,13 +15,13 @@
  
 
 export default function Weather() {
-  // const [loaded] = Font.useFonts({
-  //   Nunito: require('./assets/Nunito.ttf')
-  // });
+  const [loaded] = Font.useFonts({
+    Nunito: require('./assets/Nunito.ttf')
+  });
  
-  // if(!loaded){
-  //   return null;
-  // }
+  if(!loaded){
+    return null;
+  }
    return (
     <ImageBackground
       style = {style.background}
@@ -229,7 +229,7 @@ const style = StyleSheet.create({
   solTempText: {
     fontSize: 55,
     color: '#F1FAEE',
-  //  fontFamily: 'Nunito'
+   fontFamily: 'Nunito'
   },
   sol: {
     marginTop: 1,
@@ -255,13 +255,13 @@ const style = StyleSheet.create({
   container: {
     marginTop: 14,
     width:'70%',
-    //borderWidth: 8,
-    //borderRadius: 10,
-    //borderColor: '#323547',
+    borderWidth: 8,
+    borderRadius: 10,
+    borderColor: '#323547',
     justifyContent: 'center',
     alignSelf: 'center',
     alignItems: 'center',
-    //backgroundColor: '#323547',
+    backgroundColor: '#323547',
     flexDirection: 'row',
     flex: 1
   },
@@ -269,7 +269,7 @@ const style = StyleSheet.create({
   solText:{
     fontSize: 30,
     color: '#F1FAEE',
-   // fontFamily: 'Nunito'
+   fontFamily: 'Nunito'
   },
  
   date: {
@@ -288,7 +288,7 @@ const style = StyleSheet.create({
     fontSize: 20,
     justifyContent: 'center',
     color: '#F1FAEE',
-   // fontFamily: 'Nunito'
+   fontFamily: 'Nunito'
   },
   sun: {
     height: 35,
@@ -297,26 +297,28 @@ const style = StyleSheet.create({
  
   },
   week: {
-   // height: '10%',
     width: '33.33%',
     alignItems: 'center',
     alignContent: 'center',
     alignSelf: 'center'
  
   },
+  temp: {
+    fontSize: 40,
+    width:'33%',
+    alignItems: 'center'
+  },
+ 
   weekText: {
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
     color: '#F1FAEE',
     fontSize: 20,
-   // fontFamily: 'Nunito'
+    fontFamily: 'Nunito'
   },
  
-  temp: {
-    width:'40%'
-  },
- 
+
   sideline: {
     marginTop: 10,
     height: 1,
@@ -329,9 +331,6 @@ const style = StyleSheet.create({
   fact: {
     marginTop: 10,
     marginBottom: 10,
-    // borderWidth: 8,
-    // borderRadius: 10,
-    // borderStartColor: '#323547',
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
@@ -342,7 +341,7 @@ const style = StyleSheet.create({
     fontSize: 20,
     justifyContent: 'center',
     color: '#F1FAEE',
-   // fontFamily: 'Nunito'
+    fontFamily: 'Nunito'
   },
  
   minMaxOuter:{
@@ -377,7 +376,7 @@ const style = StyleSheet.create({
   atmospheric: {
     color: '#F1FAEE',
     fontSize: 20,
-//    fontFamily: 'Nunito'
+    fontFamily: 'Nunito'
   },
  
   atmosphericNumber:{
