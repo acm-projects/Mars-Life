@@ -12,11 +12,11 @@
  import * as Font from 'expo-font';
  import {AppLoading} from 'expo';
 
- const getFonts = () => {
-   return Font.loadAsync({
-     'nunito-regular': require('./assets/Nunito-Regular.ttf')
-   });
- }
+//  const getFonts = () => {
+//    return Font.loadAsync({
+//      'nunito-regular': require('./assets/Nunito-Regular.ttf')
+//    });
+//  }
 
 export default function App() {
   const [loaded] = Font.useFonts({
@@ -206,6 +206,7 @@ const style = StyleSheet.create({
   headerText: {
     fontSize: 50,
     color: '#F1FAEE',
+    fontFamily: 'Nunito'
   },
  
   mars:{
