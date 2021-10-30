@@ -11,12 +11,12 @@
  import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
  import * as Font from 'expo-font';
  import {AppLoading} from 'expo';
- import weather from './Weather';
+ import Weather from './Weather';
 
 export default function App() {
 
    return (
-      <weather/>
+      <Weather/>
    );
   }
 const style = StyleSheet.create({
