@@ -133,20 +133,24 @@ export default function App() {
  
             <View style = {style.minMaxOuter}>
               <View style = {style.minMaxInner}>
-                <Text style = {style.minMaxText}>Minimum Temp: -80 F </Text>
+                <Text style = {style.atmospheric}>Minimum Temp:</Text>
+                <Text style = {style.atmosphericNumber}>-80 F</Text>
               </View>
               <View style = {style.minMaxInner}>
-                <Text style = {style.minMaxText}>Maximum Temp: -20 F</Text>
+                <Text style = {style.atmospheric}>Maximum Temp:</Text>
+                <Text style = {style.atmosphericNumber}>-20 F</Text>
               </View>
             </View>
             <View style = {style.sideline}/>
  
             <View style = {style.minMaxOuter}>
               <View style = {style.minMaxInner}>
-                <Text style = {style.minMaxText}>Ground Minimum Temp:        -20 F </Text>
+                <Text style = {style.atmospheric}>Ground Minimum Temp:</Text>
+                <Text style = {style.atmosphericNumber}>-80 F</Text>
               </View>
               <View style = {style.minMaxInner}>
-                <Text style = {style.minMaxText}>Ground Maximum Temp:         -20 F</Text>
+                <Text style = {style.atmospheric}>Ground Maximum Temp:</Text>
+                <Text style = {style.atmosphericNumber}>-20 F</Text>
               </View>
             </View>
  
@@ -166,7 +170,7 @@ export default function App() {
             <View style = {style.minMaxOuter}>
               <View style = {style.atmosphericInner}>
                 <Text style = {style.atmospheric}>Ultraviolet Index:</Text>
-                <Text style = {style.atmosphericNumber}>IDK how this is formated</Text>
+                <Text style = {style.atmosphericNumber}>Ultraviolet</Text>
               </View>
             </View>
  
@@ -174,10 +178,12 @@ export default function App() {
  
             <View style = {style.minMaxOuter}>
               <View style = {style.minMaxInner}>
-                <Text style = {style.minMaxText}>Sunrise Time:           8:00 AM</Text>
+                <Text style = {style.atmospheric}>Sunrise Time:</Text>
+                <Text style = {style.atmosphericNumber}>8:00 AM</Text>
               </View>
               <View style = {style.minMaxInner}>
-                <Text style = {style.minMaxText}>Sunset Time:            8:00 PM</Text>
+                <Text style = {style.atmospheric}>Sunset Time:</Text>
+                <Text style = {style.atmosphericNumber}>8:00 PM</Text>
               </View>
             </View>
             <View style = {style.sideline}/>
@@ -225,10 +231,9 @@ const style = StyleSheet.create({
     marginBottom: 10
   },
   solTempText: {
-    justifyContent: 'center',
-    alignSelf: 'center',
-    fontSize: 60,
-    color: '#F1FAEE'
+    fontSize: 55,
+    color: '#F1FAEE',
+    fontFamily: 'Nunito'
   },
   sol: {
     marginTop: 1,
@@ -241,46 +246,36 @@ const style = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor:'#323547',
   },
+  
   solText: {
     fontSize: 30,
     color: '#F1FAEE',
-    fontWeight: '800'
+    fontWeight: '800',
+    fontFamily: 'Nunito',
+    justifyContent: 'center'
   },
  
  
   container: {
     marginTop: 14,
     width:'70%',
-    borderWidth: 8,
-    borderRadius: 10,
-    borderColor: '#323547',
-    borderStartColor: '#323547',
+    //borderWidth: 8,
+    //borderRadius: 10,
+    //borderColor: '#323547',
     justifyContent: 'center',
     alignSelf: 'center',
     alignItems: 'center',
-    backgroundColor: '#323547',
+    //backgroundColor: '#323547',
     flexDirection: 'row',
     flex: 1
   },
-  solHeader: {
-    width: '90%',
-    alignSelf: 'center',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
+
   solText:{
     fontSize: 30,
-    justifyContent: 'center',
     color: '#F1FAEE',
+    fontFamily: 'Nunito'
   },
  
- 
-  innerText: {
-    fontSize: 10,
-    justifyContent: 'center',
-    color: '#F1FAEE',
- 
-  },
   date: {
     marginTop: 20,
     borderWidth: 8,
@@ -297,12 +292,13 @@ const style = StyleSheet.create({
     fontSize: 20,
     justifyContent: 'center',
     color: '#F1FAEE',
+    fontFamily: 'Nunito'
   },
   sun: {
     height: 35,
     width: '20%',
     justifyContent: 'center'
- 
+
   },
   week: {
    // height: '10%',
@@ -317,8 +313,10 @@ const style = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'center',
     color: '#F1FAEE',
-    fontSize: 20
+    fontSize: 20,
+    fontFamily: 'Nunito'
   },
+
   temp: {
     width:'40%'
   },
@@ -332,30 +330,30 @@ const style = StyleSheet.create({
     alignSelf: 'center'
   },
  
- 
   fact: {
     marginTop: 10,
     marginBottom: 10,
-    borderWidth: 8,
-    borderRadius: 10,
-    borderColor: '#323547',
-    borderStartColor: '#323547',
+    // borderWidth: 8,
+    // borderRadius: 10,
+    // borderStartColor: '#323547',
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    width: '70%',
-    backgroundColor: '#323547'
+    width: '90%',
   },
+
   factText: {
     fontSize: 20,
     justifyContent: 'center',
     color: '#F1FAEE',
+    fontFamily: 'Nunito'
   },
+
   minMaxOuter:{
-    paddingVertical: 10,
+    paddingVertical: 5,
     width: '85%',
     borderWidth: 8,
-    borderRadius: 10,
+    borderRadius: 5,
     borderColor: '#323547',
     borderStartColor: '#323547',
     alignSelf: 'center',
@@ -366,27 +364,29 @@ const style = StyleSheet.create({
     flex: 1,
     marginTop: 15,
   },
+
   minMaxInner: {
     width: '50%',
     height: '100%',
     marginLeft:5    
   },
-  minMaxText:{
-    color: '#F1FAEE',
-  },
+
   atmosphericInner: {
     height: '100%',
     width: '100%',
- 
+    justifyContent: 'center',
+    alignItems: 'center'
   },
+
   atmospheric: {
     color: '#F1FAEE',
-    fontSize: 20
+    fontSize: 20,
+    fontFamily: 'Nunito'
   },
+
   atmosphericNumber:{
     color: '#F1FAEE',
     fontSize: 30,
-    alignSelf: 'center'
   }
  
  
