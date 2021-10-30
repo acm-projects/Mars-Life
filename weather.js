@@ -67,7 +67,7 @@ export default function Weather() {
               </View>
               <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
               <View style = {style.temp}>
-                <Text style = {style.weekText}>-40</Text>
+                <Text style = {style.weekText}>-40 F</Text>
               </View>
             </View>
  
@@ -77,7 +77,7 @@ export default function Weather() {
               </View>
               <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
               <View style = {style.temp}>
-                <Text style = {style.weekText}>-40</Text>
+                <Text style = {style.weekText}>-40 F</Text>
               </View>
             </View>
  
@@ -87,7 +87,7 @@ export default function Weather() {
               </View>
               <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
               <View style = {style.temp}>
-                <Text style = {style.weekText}>-40</Text>
+                <Text style = {style.weekText}>-40 F</Text>
               </View>
             </View>
  
@@ -107,7 +107,7 @@ export default function Weather() {
               </View>
               <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
               <View style = {style.temp}>
-                <Text style = {style.weekText}>-40</Text>
+                <Text style = {style.weekText}>-40 F</Text>
               </View>
             </View>
  
@@ -117,7 +117,7 @@ export default function Weather() {
               </View>
               <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
               <View style = {style.temp}>
-                <Text style = {style.weekText}>-60</Text>
+                <Text style = {style.weekText}>-60 F</Text>
               </View>
             </View>
             <View style = {style.sideline}/>
