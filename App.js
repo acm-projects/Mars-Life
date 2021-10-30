@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import LinearGradient from 'react-native-linear-gradient';
-import { FlatList, Button, StyleSheet, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity, Pressable, TouchableHighlight } from 'react-native';
+import { BVLinearGradient, FlatList, Button, StyleSheet, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity, Pressable, TouchableHighlight } from 'react-native';
 
 export default function App() {
    //*************** render causing problems *****************
@@ -18,10 +18,15 @@ export default function App() {
 
     return (
       <View style={styles.container}>
-        <LinearGradient 
+        <ImageBackground
+          style = {styles.container}
+          source = {require('./assets/NewsBackgroundImg.png')}>
+
+        {/* <LinearGradient 
           colors={['#D0764E', '#13151E']} 
           style={styles.linearGradient}
           >
+        </LinearGradient> */}
 
         <ScrollView>
           <View>
@@ -37,7 +42,7 @@ export default function App() {
         ))}
         </ScrollView>
 
-        </LinearGradient>
+        </ImageBackground>
       </View>
 
     );
@@ -51,18 +56,19 @@ const pressHandler = (key) => {            //print the key when an item is press
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    //backgroundColor: '#D0764E',
-    paddingTop: 40,
-    paddingHorizontal: 20,
+    backgroundColor: '#D0764E',
+    // paddingTop: 40,
+    // paddingHorizontal: 20,
     //alignItems: 'center',
     //justifyContent: 'center',
-  },
-  header: {
-    backgroundColor: '#ff5733'
+    flex: 1,
+    resizeMode: 'stretch',
+    overflow: 'hidden',
   },
   item: {
     overflow: 'hidden',
     marginTop: 24,
+    marginHorizontal: 20,
     padding: 30,
     backgroundColor: '#E14616',
     fontSize: 20,
@@ -72,9 +78,10 @@ const styles = StyleSheet.create({
   },
   topNews: {
     overflow: 'hidden',
-    marginTop: 24,
+    marginTop: 50,
     padding: 95,
     backgroundColor: '#E14616',
+    marginHorizontal: 20,
     fontSize: 20,
     borderColor: '#E14616',
     borderWidth: 1,
@@ -86,7 +93,7 @@ const styles = StyleSheet.create({
     //justifyContent: 'center',
     height: 200,
     width: 350,
-  }
+  },
 });
 
 

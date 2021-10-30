@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const https = require('https')
-const { NativeModules } = require('react-native')
+
 var dataList = []
 let imgList = []
 let cameraName = []
@@ -11,8 +11,6 @@ const options = {
     path: '/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=UsULBxdgulmBqWNLnbcbaBjoyEVDpUUbFcZbf1td',
     method: 'GET'
 }
-
-//alert(options)                                          //alert
 
 const req = https.request(options, res => {
     console.log(`statusCode: ${res.statusCode}`)
