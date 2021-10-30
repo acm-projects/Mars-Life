@@ -13,7 +13,7 @@ const RoverPhotos = () => {
     <View>
       <Carousel
         layout="default"
-        layoutCardOffset={9}
+        layoutCardOffset={10}
         ref={isCarousel}
         data={RoverPhotosData}
         renderItem={CarouselViewAnim}
