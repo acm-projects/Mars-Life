@@ -1,4 +1,3 @@
-
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -301,5 +300,3 @@ const style = StyleSheet.create({
    
    
 //   });
-
-
