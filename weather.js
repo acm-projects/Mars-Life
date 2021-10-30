@@ -9,28 +9,36 @@
  
  import  React, { useState } from 'react';
  import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
+ import * as Font from 'expo-font';
+ import {AppLoading} from 'expo';
  
-export default class weather extends React.Component{
  
+
+export default function weather() {
+  const [loaded] = Font.useFonts({
+    Nunito: require('./assets/Nunito.ttf')
+  });
  
- 
-  render(){
+  if(!loaded){
+    return null;
+  }
    return (
     <ImageBackground
       style = {style.background}
       source = {require('./assets/HomeBack.png')}>
       <View style = {style.body}>
+ 
         <View style = {style.header}>
-          <Text style = {style.headerText}> Weather</Text>
+          <Text style = {style.headerText}>Weather</Text>
         </View>
         <ScrollView>
-
+ 
           <Image
             style = {style.mars}
             source = {require('./assets/Mars.png')}></Image>
-
+ 
             <View style = {style.solTemp}>
-              <Text style = {style.solTempText}> -20</Text>
+              <Text style = {style.solTempText}>-20 F</Text>
             </View>
            
             <View style = {style.sol}>
@@ -41,7 +49,7 @@ export default class weather extends React.Component{
               <Text style = {style.dateText}> 21 October 2021 </Text>
             </View>
             <View style = {style.sideline}></View>
-
+ 
            
             <View style = {style.container}>
               <View style = {style.week}>
@@ -65,7 +73,7 @@ export default class weather extends React.Component{
  
             <View style = {style.container}>
               <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-3</Text> 
+                <Text style = {style.weekText}> Sol XXXX-3</Text>
               </View>
               <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
               <View style = {style.temp}>
@@ -89,7 +97,7 @@ export default class weather extends React.Component{
               </View>
               <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
               <View style = {style.temp}>
-                <Text style = {style.weekText}>-40</Text>
+                <Text style = {style.weekText}>-40 F</Text>
               </View>
             </View>
  
@@ -109,32 +117,90 @@ export default class weather extends React.Component{
               </View>
               <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
               <View style = {style.temp}>
-                <Text style = {style.weekText}>-40</Text>
+                <Text style = {style.weekText}>-60</Text>
+              </View>
+            </View>
+            <View style = {style.sideline}/>
+ 
+            <View style = {style.fact}>
+              <Text style = {style.factText}> Fun fact, it's literally always sunny on Mars.</Text>
+            </View>
+            <View style = {style.sideline}/>
+ 
+            <View style = {style.minMaxOuter}>
+              <View style = {style.minMaxInner}>
+                <Text style = {style.atmospheric}>Minimum Temp:</Text>
+                <Text style = {style.atmosphericNumber}>-80 F</Text>
+              </View>
+              <View style = {style.minMaxInner}>
+                <Text style = {style.atmospheric}>Maximum Temp:</Text>
+                <Text style = {style.atmosphericNumber}>-20 F</Text>
+              </View>
+            </View>
+            <View style = {style.sideline}/>
+ 
+            <View style = {style.minMaxOuter}>
+              <View style = {style.minMaxInner}>
+                <Text style = {style.atmospheric}>Ground Minimum Temp:</Text>
+                <Text style = {style.atmosphericNumber}>-80 F</Text>
+              </View>
+              <View style = {style.minMaxInner}>
+                <Text style = {style.atmospheric}>Ground Maximum Temp:</Text>
+                <Text style = {style.atmosphericNumber}>-20 F</Text>
               </View>
             </View>
  
-            <View style = {style.fact}>
-              <Text style = {style.factText}> Fun fact, it's almost always sunny on Mars.</Text>
-            </View>
             <View style = {style.sideline}></View>
  
+ 
+ 
+            <View style = {style.minMaxOuter}>
+              <View style = {style.atmosphericInner}>
+                <Text style = {style.atmospheric}>Atmospheric Temperature:</Text>
+                <Text style = {style.atmosphericNumber}>-10 F</Text>
+              </View>
+            </View>
+ 
+            <View style = {style.sideline}/>
+ 
+            <View style = {style.minMaxOuter}>
+              <View style = {style.atmosphericInner}>
+                <Text style = {style.atmospheric}>Ultraviolet Index:</Text>
+                <Text style = {style.atmosphericNumber}>Ultraviolet</Text>
+              </View>
+            </View>
+ 
+            <View style = {style.sideline}/>
+ 
+            <View style = {style.minMaxOuter}>
+              <View style = {style.minMaxInner}>
+                <Text style = {style.atmospheric}>Sunrise Time:</Text>
+                <Text style = {style.atmosphericNumber}>8:00 AM</Text>
+              </View>
+              <View style = {style.minMaxInner}>
+                <Text style = {style.atmospheric}>Sunset Time:</Text>
+                <Text style = {style.atmosphericNumber}>8:00 PM</Text>
+              </View>
+            </View>
+            <View style = {style.sideline}/>
             </ScrollView>
       </View>
     </ImageBackground>
    );
   }
-}
 const style = StyleSheet.create({
-    background:{
+  background: {
     flex: 1,
-    resizeMode: 'stretch'
+    resizeMode: 'stretch',
+    height: '100%',
+    width: '100%'
   },
   body: {
     flex: 1,
   },
   header: {
     marginTop: 20,
-    height: '10%',
+    paddingVertical: 15,
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
@@ -142,8 +208,9 @@ const style = StyleSheet.create({
   headerText: {
     fontSize: 50,
     color: '#F1FAEE',
+    fontFamily: 'Nunito'
   },
-
+ 
   mars:{
     justifyContent: 'center',
     alignSelf: 'center',
@@ -156,15 +223,13 @@ const style = StyleSheet.create({
     borderWidth: 8,
     borderRadius: 10,
     borderColor: '#323547',
-    height: '10%',
-    width: '35%',
+    width: '40%',
     marginBottom: 10
   },
   solTempText: {
-    justifyContent: 'center',
-    alignSelf: 'center',
-    fontSize: 60,
-    color: '#F1FAEE'
+    fontSize: 55,
+    color: '#F1FAEE',
+    fontFamily: 'Nunito'
   },
   sol: {
     marginTop: 1,
@@ -177,51 +242,36 @@ const style = StyleSheet.create({
     alignSelf: 'center',
     backgroundColor:'#323547',
   },
+ 
   solText: {
     fontSize: 30,
     color: '#F1FAEE',
-    fontWeight: '800'
+    fontWeight: '800',
+    fontFamily: 'Nunito',
+    justifyContent: 'center'
   },
  
  
   container: {
     marginTop: 14,
     width:'70%',
-    height:'8%',
-    borderWidth: 8,
-    borderRadius: 10,
-    borderColor: '#323547',
-    borderStartColor: '#323547',
+    //borderWidth: 8,
+    //borderRadius: 10,
+    //borderColor: '#323547',
     justifyContent: 'center',
     alignSelf: 'center',
-    backgroundColor: '#323547',
+    alignItems: 'center',
+    //backgroundColor: '#323547',
     flexDirection: 'row',
     flex: 1
   },
-  solHeader: {
-    height: '5%',
-    width: '90%',
-    alignSelf: 'center',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
+ 
   solText:{
     fontSize: 30,
-    justifyContent: 'center',
     color: '#F1FAEE',
+    fontFamily: 'Nunito'
   },
-
-  containerInner: {
-    margin:1,
-    width: '90%',
-    height: '3.25%',
-  },
-  innerText: {
-    fontSize: 10,
-    justifyContent: 'center',
-    color: '#F1FAEE',
  
-  },
   date: {
     marginTop: 20,
     borderWidth: 8,
@@ -231,7 +281,6 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    height:'6%',
     width: '50%',
     backgroundColor: '#323547'
   },
@@ -239,48 +288,100 @@ const style = StyleSheet.create({
     fontSize: 20,
     justifyContent: 'center',
     color: '#F1FAEE',
+    fontFamily: 'Nunito'
   },
   sun: {
-    height: '90%',
+    height: 35,
     width: '20%',
     justifyContent: 'center'
-
+ 
   },
   week: {
-    height: '10%',
-    width: '20%',
+   // height: '10%',
+    width: '33.33%',
     alignItems: 'center',
     alignContent: 'center',
-
+    alignSelf: 'center'
+ 
   },
   weekText: {
     justifyContent: 'center',
     alignItems: 'center',
     alignContent: 'center',
     color: '#F1FAEE',
+    fontSize: 20,
+    fontFamily: 'Nunito'
   },
+ 
   temp: {
-    height: '15%',
     width:'40%'
   },
-
+ 
   sideline: {
     marginTop: 10,
-    height: '.2%',
+    height: 1,
     width: '70%',
     backgroundColor: '#F1FAEE',
     justifyContent: 'center',
     alignSelf: 'center'
   },
-  upline: {
-    height: '90%',
-    width: '0.5%',
-    backgroundColor: 'white',
-  },
-
-  solData: {
  
+  fact: {
+    marginTop: 10,
+    marginBottom: 10,
+    // borderWidth: 8,
+    // borderRadius: 10,
+    // borderStartColor: '#323547',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
+    width: '90%',
   },
-  sunRise: {}
-
+ 
+  factText: {
+    fontSize: 20,
+    justifyContent: 'center',
+    color: '#F1FAEE',
+    fontFamily: 'Nunito'
+  },
+ 
+  minMaxOuter:{
+    paddingVertical: 5,
+    width: '85%',
+    borderWidth: 8,
+    borderRadius: 5,
+    borderColor: '#323547',
+    borderStartColor: '#323547',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#323547',
+    flexDirection: 'row',
+    flex: 1,
+    marginTop: 15,
+  },
+ 
+  minMaxInner: {
+    width: '50%',
+    height: '100%',
+    marginLeft:5    
+  },
+ 
+  atmosphericInner: {
+    height: '100%',
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+ 
+  atmospheric: {
+    color: '#F1FAEE',
+    fontSize: 20,
+    fontFamily: 'Nunito'
+  },
+ 
+  atmosphericNumber:{
+    color: '#F1FAEE',
+    fontSize: 30,
+  }
 });
