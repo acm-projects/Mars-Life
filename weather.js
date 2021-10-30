@@ -14,7 +14,7 @@
  
  
 
-export default function weather() {
+export default function Weather() {
   const [loaded] = Font.useFonts({
     Nunito: require('./assets/Nunito.ttf')
   });
