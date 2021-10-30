@@ -11,9 +11,9 @@ export default function ExpandedNews() {
         <View style={styles.container}>
             <View>
                 <View style={styles.top}>
-                    <Icons name={'arrow-back'} size={30} color='#000' style={styles.button}/>
+                    <Icons name={'arrow-back'} size={width*0.075} color='#000' style={styles.button}/>
                     <Text style={styles.headerText}>News</Text>
-                    <Icons name={'menu'} size={30} color='#fff' style={styles.button}/>
+                    <Icons name={'menu'} size={width*0.075} color='#fff' style={styles.button}/>
                 </View>
             </View>
             
