@@ -11,12 +11,12 @@
  import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
  import * as Font from 'expo-font';
  import {AppLoading} from 'expo';
- import homeScreen from './homeScreen';
+ import HomeScreen from './HomeScreen';
 
 export default function App() {
 
    return (
-      <homeScreen/>
+      <HomeScreen/>
    );
   }
 const style = StyleSheet.create({
