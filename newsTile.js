@@ -4,7 +4,7 @@ import { getNews } from './server/getNews';
 
 const {width, height} = Dimensions.get('window');
 
-const NEWS_API = "https://api.spaceflightnewsapi.net/v3/articles/11331";
+const NEWS_API = "https://api.spaceflightnewsapi.net/v3/articles/11333";
 
 export default class NewsTile extends React.Component{
 
@@ -45,59 +45,61 @@ export default class NewsTile extends React.Component{
         else{
             return (
                 <View style={styles.body}>
-                    <Image source={{uri: dataSource.img_url}} style={{width: 100, height: 100}} />
-                    <Text style={styles.articleTitle}>{dataSource.title}</Text>
+                    <View>
+                        <Image source={{uri: dataSource.img_url}} style={styles.image} />
+                    </View>
+                    <View style={styles.articleDetails}>
+                        <Text style={styles.articleTitle}>{dataSource.title}</Text>
+                        <Text style={styles.captionText}>{"Date: " + dataSource.date}</Text>
+                        <Text style={styles.articleSummary}>{dataSource.summary}</Text>
+                    </View>
                 </View>
+
             );
         }
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
+    body: {
         flex: 1,
-        backgroundColor: '#080B1F',
-    },
-
-    loadText: {
-        color: "#FFFFFF"
-    },
-
-    top: {
-        flex: 1,
-        flexDirection: 'row',
-        alignItems: 'flex-start',
-        justifyContent: 'space-around',
+        flexDirection: 'column',
         margin: width*.1,
     },
 
-    body: {
-        flex: 0.2,
-    },
-
-    button: {
-        overflow: 'hidden',
-        color: 'white',
-        backgroundColor: 'orange',
-        padding: width*.01,
-        borderColor: 'orange',
-        borderRadius: 10,
-        borderWidth: 2,
-    },
-
-    headerText: {
-        color: 'white',
-        fontSize: width*.1,
-        marginHorizontal: width*.15,
-        textAlign: 'center',
-        justifyContent: 'center',
-    },
+    image: {
+        alignSelf: 'center',
+        width: width*0.80,
+        height: width*0.50,
+        borderRadius: 10, 
+    },  
 
     articleTitle: {
-        flex: 1,
-        flexWrap: 'wrap',
         color: 'white',
         fontSize: width*.05,
         textAlign: 'center',
-    }
+        padding: width*0.01,
+    },
+
+    articleSummary: {
+        color: 'white',
+        backgroundColor: '#B35335',
+        paddingBottom: height*.1,
+        paddingHorizontal: width*0.02,
+    },
+
+    captionText: {
+        color: 'white',
+        fontSize: width*.025,
+        textAlign: 'right',
+        padding: width*0.01,
+    },
+
+    articleDetails: {
+        backgroundColor: '#FD773B',
+        borderRadius: 5,
+        overflow: 'hidden',
+        marginVertical: height*.02,
+    },
+
 });

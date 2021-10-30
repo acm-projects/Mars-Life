@@ -9,15 +9,15 @@ const {width, height} = Dimensions.get('window');
 export default function ExpandedNews() {
     return (
         <View style={styles.container}>
-            <View style={styles.body}>
+            <View>
                 <View style={styles.top}>
                     <Icons name={'arrow-back'} size={30} color='#000' style={styles.button}/>
                     <Text style={styles.headerText}>News</Text>
                     <Icons name={'menu'} size={30} color='#fff' style={styles.button}/>
                 </View>
             </View>
-            <NewsTile style={styles.title} />
-
+            
+            <NewsTile />
 
         </View>
     );
@@ -27,10 +27,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#080B1F',
-    },
-
-    body: {
-        flex: 0.2,
+        flexDirection: 'column',
+        alignContent: 'flex-start',
     },
 
     loadText: {
@@ -42,15 +40,15 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'flex-start',
         justifyContent: 'space-around',
-        margin: width*.1,
+        margin: width*.05,
     },
 
     button: {
         overflow: 'hidden',
         color: 'white',
-        backgroundColor: 'orange',
+        backgroundColor: '#FD773B',
         padding: width*.01,
-        borderColor: 'orange',
+        borderColor: '#B35335',
         borderRadius: 10,
         borderWidth: 2,
     },
@@ -60,11 +58,6 @@ const styles = StyleSheet.create({
         fontSize: width*.1,
         marginHorizontal: width*.15,
         textAlign: 'center',
-    },
-
-    title: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
     },
 });
 
