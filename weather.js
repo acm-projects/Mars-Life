@@ -15,13 +15,13 @@
  
 
 export default function Weather() {
-  const [loaded] = Font.useFonts({
-    Nunito: require('./assets/Nunito.ttf')
-  });
+  // const [loaded] = Font.useFonts({
+  //   Nunito: require('./assets/Nunito.ttf')
+  // });
  
-  if(!loaded){
-    return null;
-  }
+  // if(!loaded){
+  //   return null;
+  // }
    return (
     <ImageBackground
       style = {style.background}
@@ -208,7 +208,7 @@ const style = StyleSheet.create({
   headerText: {
     fontSize: 50,
     color: '#F1FAEE',
-    fontFamily: 'Nunito'
+  //  fontFamily: 'Nunito'
   },
  
   mars:{
@@ -229,7 +229,7 @@ const style = StyleSheet.create({
   solTempText: {
     fontSize: 55,
     color: '#F1FAEE',
-    fontFamily: 'Nunito'
+  //  fontFamily: 'Nunito'
   },
   sol: {
     marginTop: 1,
@@ -247,7 +247,7 @@ const style = StyleSheet.create({
     fontSize: 30,
     color: '#F1FAEE',
     fontWeight: '800',
-    fontFamily: 'Nunito',
+   // fontFamily: 'Nunito',
     justifyContent: 'center'
   },
  
@@ -269,7 +269,7 @@ const style = StyleSheet.create({
   solText:{
     fontSize: 30,
     color: '#F1FAEE',
-    fontFamily: 'Nunito'
+   // fontFamily: 'Nunito'
   },
  
   date: {
@@ -288,7 +288,7 @@ const style = StyleSheet.create({
     fontSize: 20,
     justifyContent: 'center',
     color: '#F1FAEE',
-    fontFamily: 'Nunito'
+   // fontFamily: 'Nunito'
   },
   sun: {
     height: 35,
@@ -310,7 +310,7 @@ const style = StyleSheet.create({
     alignContent: 'center',
     color: '#F1FAEE',
     fontSize: 20,
-    fontFamily: 'Nunito'
+   // fontFamily: 'Nunito'
   },
  
   temp: {
@@ -342,7 +342,7 @@ const style = StyleSheet.create({
     fontSize: 20,
     justifyContent: 'center',
     color: '#F1FAEE',
-    fontFamily: 'Nunito'
+   // fontFamily: 'Nunito'
   },
  
   minMaxOuter:{
@@ -377,7 +377,7 @@ const style = StyleSheet.create({
   atmospheric: {
     color: '#F1FAEE',
     fontSize: 20,
-    fontFamily: 'Nunito'
+//    fontFamily: 'Nunito'
   },
  
   atmosphericNumber:{
