@@ -9,9 +9,7 @@
  
  import  React from 'react';
  import { StyleSheet, Text, View, Image, ImageBackground, TouchableOpacity} from 'react-native';
- 
- import header from './Shared/header';
-         // <View style = {style.container}>
+          // <View style = {style.container}>
         //         <Text>a</Text>
         //   <Image
         //   style = {style.mars}
