@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
-import LinearGradient from 'react-native-linear-gradient';
-import { BVLinearGradient, FlatList, Button, StyleSheet, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity, Pressable, TouchableHighlight } from 'react-native';
+import {LinearGradient} from 'expo-linear-gradient';
+import {FlatList, Button, StyleSheet, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity, Pressable, TouchableHighlight } from 'react-native';
 
 export default function App() {
    //*************** render causing problems *****************
@@ -18,15 +18,15 @@ export default function App() {
 
     return (
       <View style={styles.container}>
-        <ImageBackground
+        {/* <ImageBackground
           style = {styles.container}
-          source = {require('./assets/NewsBackgroundImg.png')}>
+          source = {require('./assets/NewsBackgroundImg.png')}> */}
 
-        {/* <LinearGradient 
+        <LinearGradient 
           colors={['#D0764E', '#13151E']} 
           style={styles.linearGradient}
           >
-        </LinearGradient> */}
+        
 
         <ScrollView>
           <View>
@@ -42,9 +42,9 @@ export default function App() {
         ))}
         </ScrollView>
 
-        </ImageBackground>
+        {/* </ImageBackground> */}
+        </LinearGradient>
       </View>
-
     );
 }
 
@@ -91,12 +91,10 @@ const styles = StyleSheet.create({
     //borderRadius: 5,
     //alignItems: 'center',
     //justifyContent: 'center',
-    height: 200,
-    width: 350,
+    //height: 200,
+    //width: 350,
   },
 });
-
-
 
 
 
