@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, Dimensions, Image } from "react-native"
-import { imgList } from '../server/Models/Mars_Image'
+import { dataList } from '../server/Models/Mars_Image'
 export const SLIDER_WIDTH = Dimensions.get('window').width + 80
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7)
 // comment
@@ -9,10 +9,10 @@ const CarouselCardItem = ({ item, index }) => {
     <View style={styles.container} key={index}>
     
       <Image
-        source={{ uri: imgList[index] }}
+        source={{ uri: dataList[index].img_src }}
         style={styles.image}
       />
-      <Text style={styles.header}>{cameraName[index]}</Text> 
+      <Text style={styles.header}>{dataList[index].camera_name}</Text> 
       
     </View>
   )

@@ -4,6 +4,7 @@ import Carousel, { Pagination } from 'react-native-snap-carousel';
 import CarouselViewAnim, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselViewAnim.js';
 //import RoverPhotosData from './RoverPhotosData';
 import Mars_Image from '../server/Models/Mars_Image.js';
+import { dataList } from '../server/Models/Mars_Image';
 
 const RoverPhotos = () => {
   const [index, setIndex] = React.useState(0)
@@ -16,7 +17,7 @@ const RoverPhotos = () => {
         layout="default"
         layoutCardOffset={9}
         ref={isCarousel}
-        data={RoverPhotosData}
+        data={dataList}                         //changed to datalist
         renderItem={CarouselViewAnim}
         sliderWidth={SLIDER_WIDTH}
         itemWidth={ITEM_WIDTH}
@@ -24,7 +25,7 @@ const RoverPhotos = () => {
         useScrollView={true}
       />
       <Pagination
-        dotsLength={RoverPhotosData.length}
+        dotsLength={dataList.length}            //changed to datalist
         activeDotIndex={index}
         carouselRef={isCarousel}
         dotStyle={{
