@@ -29,7 +29,7 @@ export default function weatherTest(){
 
            <View style = {style.select}>
              <View style = {style.selectInner}>
-              <TouchableOpacity onPress={() => homeHandler}>
+              <TouchableOpacity onPress={homeHandler}>
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>Weather</Text>
                 </View>
