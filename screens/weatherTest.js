@@ -12,7 +12,7 @@
 
  
 export default function weatherTest(){
- 
+
   const homeHandler = () => {
     navigation.navigate('home');
   }

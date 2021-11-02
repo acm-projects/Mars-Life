@@ -14,7 +14,7 @@
 export default function HomeScreen({navigation}){
  
   const pressHandler = () => {
-    navigation.push('weatherScreen');
+    navigation.navigate('weatherScreen');
   }
 
    return (
