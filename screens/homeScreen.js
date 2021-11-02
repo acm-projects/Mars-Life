@@ -28,9 +28,9 @@ export default class HomeScreen extends React.Component{
  
   render(){
    return (
-     <ImageBackground
-     style = {style.background}
-     source = {require('./assets/Mars.png')}>
+    <ImageBackground
+    style = {style.background}
+    source = {require('./assets/HomeBack.png')}>
        <View style = {style.body}>
         <View style = {style.header}>
           <Text style = {style.headerText}> Mars Life </Text>
