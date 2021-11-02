@@ -30,6 +30,7 @@ export default class HomeScreen extends React.Component{
    return (
      <ImageBackground
      style = {style.background}
+     //source = {require(./assets/HomeBack.png')}
      source = {require('./assets/HomeBack.png')}>
        <View style = {style.body}>
         <View style = {style.header}>
