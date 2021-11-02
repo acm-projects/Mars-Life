@@ -4,13 +4,13 @@ import weatherTest from '../screens/weatherTest.js';
 import HomeScreen from "../HomeScreen.js";
 
 const screens = {
-    weatherScreen: {
-        screen: weatherTest
-    },
+
     home: {
         screen: HomeScreen
     },
-
+    weatherScreen: {
+        screen: weatherTest
+    },
 }
 
 const HomeStack = createStackNavigator(screens)
