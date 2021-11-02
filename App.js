@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import {LinearGradient} from 'expo-linear-gradient';
-import {FlatList, Button, StyleSheet, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity, Pressable, TouchableHighlight } from 'react-native';
+import {Icon, Button, StyleSheet, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity, Pressable, TouchableHighlight } from 'react-native';
 
 export default function App() {
    //*************** render causing problems *****************
@@ -16,8 +16,25 @@ export default function App() {
       { name: 'Captain America', key: '7'}
     ]);
 
+    const headNum = '0.0';
+
     return (
       <View style={styles.container}>
+
+      <Button
+        // buttonStyle={                  back arrow button in creation
+
+        // }
+        icon={
+          <Icon
+            name="arrow-right"
+            size={15}
+            color="white"
+          />
+        }
+        title="B"
+      />
+
         {/* <ImageBackground
           style = {styles.container}
           source = {require('./assets/NewsBackgroundImg.png')}> */}
@@ -30,7 +47,9 @@ export default function App() {
 
         <ScrollView>
           <View>
-            <Text style={styles.topNews}> {people.name} </Text> 
+            <TouchableOpacity onPress={() => pressHandler(headNum)} >
+              <Text style={styles.topNews}> {people.name} </Text> 
+            </TouchableOpacity>
           </View>
 
           { people.map(item => (
@@ -88,6 +107,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   linearGradient: {
+    //check to see if we need to change the percentage of the color fade background
     //borderRadius: 5,
     //alignItems: 'center',
     //justifyContent: 'center',
