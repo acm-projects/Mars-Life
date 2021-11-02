@@ -30,8 +30,7 @@ export default class HomeScreen extends React.Component{
    return (
      <ImageBackground
      style = {style.background}
-     //source = {require(./assets/HomeBack.png')}
-     source = {require('./assets/HomeBack.png')}>
+     source = {require('./assets/Mars.png')}>
        <View style = {style.body}>
         <View style = {style.header}>
           <Text style = {style.headerText}> Mars Life </Text>
