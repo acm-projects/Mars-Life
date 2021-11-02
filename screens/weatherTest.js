@@ -11,7 +11,7 @@
  import { StyleSheet, Text, View, Image, ImageBackground, TouchableOpacity} from 'react-native';
 
  
-export default function weatherTest(){
+export default function weatherTest({navigation}){
 
   const homeHandler = () => {
     navigation.navigate('home');
