@@ -13,11 +13,13 @@
  import * as Font from 'expo-font';
  import {AppLoading} from 'expo';
  import HomeScreen from './screens/HomeScreen';
+import Navigator from './routes/homeStack';
 
 export default function App() {
 
    return (
-      <HomeScreen/>
+      <Navigator />
+      //<HomeScreen/>
    );
   }
 const style = StyleSheet.create({

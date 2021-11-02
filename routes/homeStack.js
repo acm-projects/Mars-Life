@@ -1,11 +1,11 @@
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
-import App from './screens/App.js';
-import weatherTest from './screens/weatherTest';
+import weatherTest from '../screens/weatherTest.js';
+import HomeScreen from "../screens/HomeScreen.js";
 
 const screens = {
-    homeScreen: {
-        screen: App
+    home: {
+        screen: HomeScreen
     },
     weatherScreen: {
         screen: weatherTest
