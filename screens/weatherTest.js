@@ -13,8 +13,8 @@
  
 export default function weatherTest(){
  
-  const weatherHandler = () => {
-    navigation.navigate('weatherScreen');
+  const homeHandler = () => {
+    navigation.navigate('home');
   }
 
    return (
@@ -29,7 +29,7 @@ export default function weatherTest(){
 
            <View style = {style.select}>
              <View style = {style.selectInner}>
-              <TouchableOpacity onPress={() => weatherHandler}>
+              <TouchableOpacity onPress={() => homeHandler}>
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>Weather</Text>
                 </View>
