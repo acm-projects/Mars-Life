@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import {LinearGradient} from 'expo-linear-gradient';
-import {Icon, Button, StyleSheet, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity, Pressable, TouchableHighlight } from 'react-native';
+import {Icons, Button, StyleSheet, Dimensions, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity, Pressable, TouchableHighlight } from 'react-native';
+
+const {width, height} = Dimensions.get('window')
 
 export default function App() {
    //*************** render causing problems *****************
@@ -21,19 +23,25 @@ export default function App() {
     return (
       <View style={styles.container}>
 
-      <Button
+        <View style={styles.backButton}>
+          <Icons name={'arrow-back'} size={width*0.075} color='#000' style={styles.arrowButton} />
+            <Text style={styles.headerText}>News</Text>
+          <Icons name={'menu'} size={width*0.075} color='#fff' style={styles.arrowButton} />
+        </View>
+
+      {/* <Button
         // buttonStyle={                  back arrow button in creation
 
         // }
         icon={
-          <Icon
+          <Icons
             name="arrow-right"
             size={15}
             color="white"
           />
         }
         title="B"
-      />
+      /> */}
 
         {/* <ImageBackground
           style = {styles.container}
@@ -114,6 +122,22 @@ const styles = StyleSheet.create({
     //height: 200,
     //width: 350,
   },
+  backButton: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-around',
+    margin: width*.05,
+  },
+  arrowButton: {
+    overflow: 'hidden',
+    color: 'white',
+    backgroundColor: '#FD773B',
+    padding: width*.01,
+    borderColor: '#B35335',
+    borderRadius: 10,
+    borderWidth: 2,
+  }, 
 });
 
 
