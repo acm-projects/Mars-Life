@@ -1,18 +1,18 @@
 import React from 'react';
-import { View, StyleSheet, Text, Image, TouchableOpacity} from "react-native";
+import { View, StyleSheet, Text, Image, TouchableOpacity, Button} from "react-native";
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import CarouselViewAnim, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselViewAnim.js';
 //import RoverPhotosData from './RoverPhotosData';
 import Mars_Image from '../server/Models/Mars_Image.js';
 import { dataList } from '../server/Models/Mars_Image';
 
-var beginIdx = 30;
-
 const RoverPhotos = () => {
+  const clength = 10;
   const [index, setIndex] = React.useState(0)
+  const [start, setStart] = React.useState(0)
   const isCarousel = React.useRef(null)
  
-  //gotta update beginIdx with the refresh button
+ // TODO: Fully implement refresh
 
   return (
     <View>
@@ -20,7 +20,7 @@ const RoverPhotos = () => {
         layout="default"
         layoutCardOffset={9}
         ref={isCarousel}
-        data={dataList.slice(beginIdx, beginIdx+10)}                         //changed to datalist
+        data={dataList.slice(start, start+clength)}                         //changed to datalist
         renderItem={CarouselViewAnim}
         sliderWidth={SLIDER_WIDTH}
         itemWidth={ITEM_WIDTH}
@@ -28,7 +28,7 @@ const RoverPhotos = () => {
         useScrollView={true}
       />
       <Pagination
-        dotsLength={dataList.slice(beginIdx, beginIdx+10).length}            //changed to datalist
+        dotsLength={clength}            //changed to datalist
         activeDotIndex={index}
         carouselRef={isCarousel}
         dotStyle={{
@@ -43,6 +43,13 @@ const RoverPhotos = () => {
         tappableDots={true}
       />
      
+     <Button
+      onPress={() => setStart(start + clength)}
+      title="Refresh"
+      color="#841584"
+      accessibilityLabel="Learn more about this purple button"
+      />
+
     </View>
 
   )
