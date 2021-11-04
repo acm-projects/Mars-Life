@@ -6,7 +6,7 @@ import CarouselViewAnim, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselViewAnim.j
 import Mars_Image from '../server/Models/Mars_Image.js';
 import { dataList } from '../server/Models/Mars_Image';
 
-var beginIdx = 0;
+var beginIdx = 30;
 
 const RoverPhotos = () => {
   const [index, setIndex] = React.useState(0)
@@ -20,7 +20,7 @@ const RoverPhotos = () => {
         layout="default"
         layoutCardOffset={9}
         ref={isCarousel}
-        data={dataList.slice(beginIdx, beginIdx+11)}                         //changed to datalist
+        data={dataList.slice(beginIdx, beginIdx+10)}                         //changed to datalist
         renderItem={CarouselViewAnim}
         sliderWidth={SLIDER_WIDTH}
         itemWidth={ITEM_WIDTH}
@@ -28,7 +28,7 @@ const RoverPhotos = () => {
         useScrollView={true}
       />
       <Pagination
-        dotsLength={dataList.slice(beginIdx, beginIdx+11).length}            //changed to datalist
+        dotsLength={dataList.slice(beginIdx, beginIdx+10).length}            //changed to datalist
         activeDotIndex={index}
         carouselRef={isCarousel}
         dotStyle={{
