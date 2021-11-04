@@ -23,11 +23,11 @@ export default function App() {
     return (
       <View style={styles.container}>
 
-        <View style={styles.backButton}>
+        {/* <View style={styles.backButton}>
           <Icons name={'arrow-back'} size={width*0.075} color='#000' style={styles.arrowButton} />
             <Text style={styles.headerText}>News</Text>
           <Icons name={'menu'} size={width*0.075} color='#fff' style={styles.arrowButton} />
-        </View>
+        </View> */}
 
       {/* <Button
         // buttonStyle={                  back arrow button in creation
