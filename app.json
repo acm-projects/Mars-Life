@@ -4,9 +4,9 @@
     "slug": "Mars-Life",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon1.png",
+    "icon": "./assets/marsicon.png",
     "splash": {
-      "image": "./assets/logo1.png",
+      "image": "./assets/marslogo.png",
       "resizeMode": "contain",
       "backgroundColor": "#080B1F"
      
@@ -22,7 +22,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/logo1.png",
+        "foregroundImage": "./assets/marslogo.png",
         "backgroundColor": "#080B1F"
       }
     },
