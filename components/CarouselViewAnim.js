@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions, Image } from "react-native"
+import { View, Text, StyleSheet, Dimensions, Image} from "react-native"
 import { dataList } from '../server/Models/Mars_Image'
 export const SLIDER_WIDTH = Dimensions.get('window').width + 80
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7)
@@ -18,7 +18,7 @@ const CarouselCardItem = ({ index }) => {
         style={styles.image}
       />
       <Text style={styles.header}>{dataList[index].camera_name}</Text> 
-      
+  
     </View>
     
   )
@@ -42,12 +42,8 @@ const styles = StyleSheet.create({
   },
   image: {
     width: ITEM_WIDTH,
-<<<<<<< HEAD
-    height: 500,
-    
-=======
     height: 400,
->>>>>>> rover_photos
+    
 
   },
   header: {

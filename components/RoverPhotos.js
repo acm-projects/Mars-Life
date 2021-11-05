@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { View, SafeAreaView, ScrollView, RefreshControl, Dimensions, StyleSheet, Text, Image, TouchableOpacity} from "react-native";
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import CarouselViewAnim, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselViewAnim.js';
-import Mars_Image from '../server/Models/Mars_Image.js';
 import { dataList } from '../server/Models/Mars_Image';
 import Constants from 'expo-constants';
 
@@ -33,7 +32,7 @@ const RoverPhotos = () => {
         layout="default"
         layoutCardOffset={10}
         ref={isCarousel}
-        data={RoverPhotosData}
+        data={dataList}
         renderItem={CarouselViewAnim}
         sliderWidth={SLIDER_WIDTH}
         itemWidth={ITEM_WIDTH}
@@ -43,7 +42,7 @@ const RoverPhotos = () => {
         
       />
       <Pagination
-        dotsLength={RoverPhotosData.length}
+        dotsLength={dataList.length}
         activeDotIndex={index}
         carouselRef={isCarousel}
         dotStyle={{
