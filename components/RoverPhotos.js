@@ -31,9 +31,9 @@ const RoverPhotos = () => {
       
       <Carousel
         layout="default"
-        layoutCardOffset={9}
+        layoutCardOffset={10}
         ref={isCarousel}
-        data={dataList}                         //changed to datalist
+        data={RoverPhotosData}
         renderItem={CarouselViewAnim}
         sliderWidth={SLIDER_WIDTH}
         itemWidth={ITEM_WIDTH}
@@ -43,7 +43,7 @@ const RoverPhotos = () => {
         
       />
       <Pagination
-        dotsLength={dataList.length}            //changed to datalist
+        dotsLength={RoverPhotosData.length}
         activeDotIndex={index}
         carouselRef={isCarousel}
         dotStyle={{

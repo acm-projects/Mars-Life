@@ -42,8 +42,12 @@ const styles = StyleSheet.create({
   },
   image: {
     width: ITEM_WIDTH,
+<<<<<<< HEAD
     height: 500,
     
+=======
+    height: 400,
+>>>>>>> rover_photos
 
   },
   header: {
