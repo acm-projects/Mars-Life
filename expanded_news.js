@@ -1,8 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, Text, Dimensions, Image} from 'react-native';
 import Icons from 'react-native-vector-icons/MaterialIcons';
-import { getNews } from './server/getNews';
-import NewsTile from './newsTile'
+import NewsTile from './components/newsTile'
 
 const {width, height} = Dimensions.get('window');
 
