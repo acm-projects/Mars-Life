@@ -17,6 +17,8 @@ export default function HomeScreen({navigation}){
     navigation.navigate('weatherScreen');
   }
 
+  
+
    return (
     <ImageBackground
     style = {style.background}
@@ -111,6 +113,7 @@ const style = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'row',
   },
   headerText: {
     fontSize: 50,
