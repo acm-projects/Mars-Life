@@ -10,6 +10,7 @@
  import  React, { useState } from 'react';
  import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
  import * as Font from 'expo-font';
+ import WeatherTile from './components/weatherTile';
  import {AppLoading} from 'expo';
  
  
@@ -22,7 +23,7 @@ export default function Weather() {
   if(!loaded){
     return null;
   }
-   return (
+  return (
     <ImageBackground
       style = {style.background}
       source = {require('./assets/HomeBack.png')}>
@@ -35,155 +36,12 @@ export default function Weather() {
  
           <Image
             style = {style.mars}
-            source = {require('./assets/Mars.png')}></Image>
- 
-            <View style = {style.solTemp}>
-              <Text style = {style.solTempText}>-20 F</Text>
-            </View>
-           
-            <View style = {style.sol}>
-              <Text style = {style.solText}> Sol XXXX  </Text>
-            </View>
-           
-            <View style = {style.date}>
-              <Text style = {style.dateText}> 21 October 2021 </Text>
-            </View>
-            <View style = {style.sideline}></View>
- 
-           
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-1</Text>
-              </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.week}>
-                <Text style = {style.weekText}>-sdfgsdfg sfdgsdfgr</Text>
-              </View>
-            </View>
- 
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-2</Text>
-              </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.temp}>
-                <Text style = {style.weekText}>-40 F</Text>
-              </View>
-            </View>
- 
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-3</Text>
-              </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.temp}>
-                <Text style = {style.weekText}>-40 F</Text>
-              </View>
-            </View>
- 
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-4</Text>
-              </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.temp}>
-                <Text style = {style.weekText}>-40 F</Text>
-              </View>
-            </View>
- 
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-5</Text>
-              </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.temp}>
-                <Text style = {style.weekText}>-40 F</Text>
-              </View>
-            </View>
- 
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-6</Text>
-              </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.temp}>
-                <Text style = {style.weekText}>-40 F</Text>
-              </View>
-            </View>
- 
-            <View style = {style.container}>
-              <View style = {style.week}>
-                <Text style = {style.weekText}> Sol XXXX-7</Text>
-              </View>
-              <Image style = {style.sun} source = {require('./assets/sun.png')}></Image>
-              <View style = {style.temp}>
-                <Text style = {style.weekText}>-60 F</Text>
-              </View>
-            </View>
-            <View style = {style.sideline}/>
- 
-            <View style = {style.fact}>
-              <Text style = {style.factText}> Fun fact, it's literally always sunny on Mars.</Text>
-            </View>
-            <View style = {style.sideline}/>
- 
-            <View style = {style.minMaxOuter}>
-              <View style = {style.minMaxInner}>
-                <Text style = {style.atmospheric}>Minimum Temp:</Text>
-                <Text style = {style.atmosphericNumber}>-80 F</Text>
-              </View>
-              <View style = {style.minMaxInner}>
-                <Text style = {style.atmospheric}>Maximum Temp:</Text>
-                <Text style = {style.atmosphericNumber}>-20 F</Text>
-              </View>
-            </View>
-            <View style = {style.sideline}/>
- 
-            <View style = {style.minMaxOuter}>
-              <View style = {style.minMaxInner}>
-                <Text style = {style.atmospheric}>Ground Minimum Temp:</Text>
-                <Text style = {style.atmosphericNumber}>-80 F</Text>
-              </View>
-              <View style = {style.minMaxInner}>
-                <Text style = {style.atmospheric}>Ground Maximum Temp:</Text>
-                <Text style = {style.atmosphericNumber}>-20 F</Text>
-              </View>
-            </View>
- 
-            <View style = {style.sideline}></View>
- 
- 
- 
-            <View style = {style.minMaxOuter}>
-              <View style = {style.atmosphericInner}>
-                <Text style = {style.atmospheric}>Atmospheric Temperature:</Text>
-                <Text style = {style.atmosphericNumber}>-10 F</Text>
-              </View>
-            </View>
- 
-            <View style = {style.sideline}/>
- 
-            <View style = {style.minMaxOuter}>
-              <View style = {style.atmosphericInner}>
-                <Text style = {style.atmospheric}>Ultraviolet Index:</Text>
-                <Text style = {style.atmosphericNumber}>Ultraviolet</Text>
-              </View>
-            </View>
- 
-            <View style = {style.sideline}/>
- 
-            <View style = {style.minMaxOuter}>
-              <View style = {style.minMaxInner}>
-                <Text style = {style.atmospheric}>Sunrise Time:</Text>
-                <Text style = {style.atmosphericNumber}>8:00 AM</Text>
-              </View>
-              <View style = {style.minMaxInner}>
-                <Text style = {style.atmospheric}>Sunset Time:</Text>
-                <Text style = {style.atmosphericNumber}>8:00 PM</Text>
-              </View>
-            </View>
-            <View style = {style.sideline}/>
-            </ScrollView>
+            source = {require('./assets/Mars.png')}>
+          </Image>
+
+          <WeatherTile />
+
+          </ScrollView>
       </View>
     </ImageBackground>
    );
