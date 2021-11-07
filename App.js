@@ -1,23 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import ExpandedNews from './screens/expanded_news';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ *
+ */
+ 
+ import  React, { useState } from 'react';
+ import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
+ import * as Font from 'expo-font';
+ import {AppLoading} from 'expo';
+ import Weather from './screens/weather';
 
 export default function App() {
-  return (
-    <ExpandedNews />
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#080B1F',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  loadText: {
-    color: "#FFFFFF"
+   return (
+      <Weather />
+   );
   }
+const style = StyleSheet.create({
+
 });
