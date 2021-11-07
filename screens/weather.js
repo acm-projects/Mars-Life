@@ -7,17 +7,14 @@
  *
  */
  
- import  React, { useState } from 'react';
- import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
- import * as Font from 'expo-font';
- import WeatherTile from './components/weatherTile';
- import {AppLoading} from 'expo';
- 
- 
+import  React, { useState } from 'react';
+import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
+import * as Font from 'expo-font';
+import WeatherTile from '../components/weatherTile'; 
 
 export default function Weather() {
   const [loaded] = Font.useFonts({
-    Nunito: require('./assets/Nunito.ttf')
+    Nunito: require('../assets/Nunito.ttf')
   });
  
   if(!loaded){
@@ -26,7 +23,7 @@ export default function Weather() {
   return (
     <ImageBackground
       style = {style.background}
-      source = {require('./assets/HomeBack.png')}>
+      source = {require('../assets/HomeBack.png')}>
       <View style = {style.body}>
  
         <View style = {style.header}>
@@ -36,7 +33,7 @@ export default function Weather() {
  
           <Image
             style = {style.mars}
-            source = {require('./assets/Mars.png')}>
+            source = {require('../assets/Mars.png')}>
           </Image>
 
           <WeatherTile />

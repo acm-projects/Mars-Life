@@ -11,8 +11,7 @@
  import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
  import * as Font from 'expo-font';
  import {AppLoading} from 'expo';
- import Weather from './weather';
- import WeatherTile from './components/weatherTile';
+ import Weather from './screens/weather';
 
 export default function App() {
 
