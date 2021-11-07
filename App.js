@@ -7,16 +7,15 @@
  *
  */
  
- import  React, { useState } from 'react';
- import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
- import * as Font from 'expo-font';
- import {AppLoading} from 'expo';
- import Weather from './screens/weather';
+import  React, { useState } from 'react';
+import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
+import Weather from './screens/weather';
+import ExpandedNews from './screens/expanded_news';
 
 export default function App() {
 
    return (
-      <Weather />
+      <ExpandedNews />
    );
   }
 const style = StyleSheet.create({
