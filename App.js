@@ -51,22 +51,19 @@ export default function App() {
         
 
         <ScrollView>
-          <View>
-            <TouchableOpacity onPress={() => pressHandler(headNum)}>
-              <View> 
+          <View style={styles.topNews}>
+            <TouchableOpacity onPress={() => pressHandler(headNum)}> 
                 <Image
                   style = {styles.newsImage}
                   source = {require('./assets/NewsBackgroundImg.png')}/>
-                </View>
-                <Text style={styles.topNews}>
-                {"people.name"} </Text> 
+                <Text> {"people.name"} </Text> 
             </TouchableOpacity>
           </View>
 
           { people.map(item => (
-            <View key={item.key}>
+            <View key={item.key} style={styles.item}>
               <TouchableOpacity onPress={() => pressHandler(item.key)} >
-                <Text style={styles.item}> {item.name} </Text>
+                <Text> {item.name} </Text>
               </TouchableOpacity>
             </View>
         ))}
@@ -101,7 +98,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     padding: 30,
     backgroundColor: '#E14616',
-    fontSize: 20,
+    //fontSize: 20,
     borderColor: '#E14616',
     borderWidth: 1,
     borderRadius: 10,
@@ -112,7 +109,7 @@ const styles = StyleSheet.create({
     padding: 95,
     backgroundColor: '#E14616',
     marginHorizontal: 20,
-    fontSize: 20,
+    //fontSize: 20,
     borderColor: '#E14616',
     borderWidth: 1,
     borderRadius: 10,
@@ -143,10 +140,12 @@ const styles = StyleSheet.create({
   }, 
   newsImage: {
     flex: 1,
-    marginTop: 30,
-    marginHorizontal: 20,
-    marginLeft: 30,
-    padding: 30,
+    display: "flex",
+    //alignItems: 'left',
+    //marginTop: 10,
+    //marginHorizontal: 10,
+    //marginLeft: 10,
+    //padding: 10,
     //borderWidth: 1,
     borderRadius: 10,
     height: 100,
