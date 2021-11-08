@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import {LinearGradient} from 'expo-linear-gradient';
+//import App from './components/app.jsx';
 import {Icons, Button, StyleSheet, Dimensions, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity, Pressable, TouchableHighlight } from 'react-native';
 
 const {width, height} = Dimensions.get('window')
@@ -43,10 +44,6 @@ export default function App() {
         title="B"
       /> */}
 
-        {/* <ImageBackground
-          style = {styles.container}
-          source = {require('./assets/NewsBackgroundImg.png')}> */}
-
         <LinearGradient 
           colors={['#D0764E', '#13151E']} 
           style={styles.linearGradient}
@@ -55,8 +52,14 @@ export default function App() {
 
         <ScrollView>
           <View>
-            <TouchableOpacity onPress={() => pressHandler(headNum)} >
-              <Text style={styles.topNews}> {people.name} </Text> 
+            <TouchableOpacity onPress={() => pressHandler(headNum)}>
+              <View> 
+                <Image
+                  style = {styles.newsImage}
+                  source = {require('./assets/NewsBackgroundImg.png')}/>
+                </View>
+                <Text style={styles.topNews}>
+                {"people.name"} </Text> 
             </TouchableOpacity>
           </View>
 
@@ -69,7 +72,6 @@ export default function App() {
         ))}
         </ScrollView>
 
-        {/* </ImageBackground> */}
         </LinearGradient>
       </View>
     );
@@ -93,6 +95,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   item: {
+    //flexDirection: 'row',
     overflow: 'hidden',
     marginTop: 24,
     marginHorizontal: 20,
@@ -138,6 +141,17 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 2,
   }, 
+  newsImage: {
+    flex: 1,
+    marginTop: 30,
+    marginHorizontal: 20,
+    marginLeft: 30,
+    padding: 30,
+    //borderWidth: 1,
+    borderRadius: 10,
+    height: 100,
+    width: 100
+  }
 });
 
 
