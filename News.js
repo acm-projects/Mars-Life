@@ -45,7 +45,6 @@ export default function News() {
 
         <LinearGradient 
           colors={['#D0764E', '#13151E']} 
-          style={styles.linearGradient}
           >
         
 
@@ -53,19 +52,23 @@ export default function News() {
         <View>
             <TouchableOpacity onPress={() => pressHandler(headNum)}>
               <View style={styles.topNews}> 
-                <Image style = {styles.newsImage} source = {require('./assets/NewsBackgroundImg.png')}/>
+                <Image style = {styles.topNewsImage} source = {require('./assets/NewsBackgroundImg.png')}/>
                 <Text style={styles.topNewsText}>{"people.name"} </Text>
               </View> 
             </TouchableOpacity>
           </View>
 
-          { people.map(item => (
-            <TouchableOpacity onPress={() => pressHandler(item.key)} >
-                <View key={item.key} style={styles.item}>
-                    <Text> {item.name} </Text>
-                </View>
-            </TouchableOpacity>
-        ))}
+        <View>
+            {people.map(item => (
+                <TouchableOpacity onPress={() => pressHandler(item.key)} >
+                    <View key={item.key} style={styles.item}>
+                        <Image style = {styles.newsImage} source = {require('./assets/NewsBackgroundImg.png')}/>
+                        <Text style={styles.newsText}> {item.name} </Text>
+                    </View>
+                </TouchableOpacity>
+            ))}
+        </View>
+
         </ScrollView>
 
         </LinearGradient>
@@ -96,10 +99,11 @@ const styles = StyleSheet.create({
   // },
 
   item: {
+    flexDirection: 'row',
     overflow: 'hidden',
     marginTop: 24,
     marginHorizontal: 20,
-    padding: 40,
+    //padding: 40,
     backgroundColor: '#E14616',
     fontSize: 20,
     borderColor: '#E14616',
@@ -120,17 +124,21 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
   },
+  topNewsImage: {
+    marginTop: 20,
+    marginBottom: 20,
+    // marginHorizontal: 20,
+    //marginLeft: 30,
+    marginRight: 50,
+    padding: 80,
+    //borderWidth: 1,
+    borderRadius: 10,
+    height: 100,
+    width: 100
+  },
   topNewsText: {
     marginTop: 40,
     marginRight: 30
-  },
-  linearGradient: {
-    //check to see if we need to change the percentage of the color fade background
-    //borderRadius: 5,
-    //alignItems: 'center',
-    //justifyContent: 'center',
-    //height: 200,
-    //width: 350,
   },
   backButton: {
     flex: 1,
@@ -149,17 +157,20 @@ const styles = StyleSheet.create({
     borderWidth: 2,
   }, 
   newsImage: {
-    marginTop: 20,
-    marginBottom: 20,
-    // marginHorizontal: 20,
-    //marginLeft: 30,
-    marginRight: 50,
-    padding: 80,
-    //borderWidth: 1,
+    marginTop: 5,
+    marginBottom: 5,
+    marginLeft: 9,
+    padding: 10,
     borderRadius: 10,
-    height: 100,
-    width: 100
-  }
+    height: 65,
+    width: 65
+  },
+  newsText: {
+    marginTop: 10,
+    //marginRight: 5
+    marginLeft: 80,
+    //marginBottom: 10
+  },
 });
 
 
