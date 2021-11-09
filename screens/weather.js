@@ -13,6 +13,7 @@ import * as Font from 'expo-font';
 import WeatherTile from '../components/weatherTile'; 
 import Icons from 'react-native-vector-icons/MaterialIcons';
 
+const {width, height} = Dimensions.get('window');
 
 export default function Weather() {
   const [loaded] = Font.useFonts({
