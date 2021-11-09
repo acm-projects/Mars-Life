@@ -15,7 +15,7 @@ import ExpandedNews from './screens/expanded_news';
 export default function App() {
 
    return (
-      <ExpandedNews />
+      <Weather />
    );
   }
 const style = StyleSheet.create({
