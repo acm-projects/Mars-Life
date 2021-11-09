@@ -38,17 +38,10 @@ export default function Weather() {
       <Modal visible = {modalOpen}>
         <ImageBackground style = {style.background} source = {require('../assets/HomeBack.png')}>
           <View style = {style.modal}>
-            <Text> test</Text>
             <TouchableOpacity>
             <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
             </TouchableOpacity>
             <ScrollView>
- 
- <Image
-   style = {style.mars}
-   source = {require('../assets/Mars.png')}>
- </Image>
-
  <WeatherTile />
 
  </ScrollView>
