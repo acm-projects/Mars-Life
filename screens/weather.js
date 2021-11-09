@@ -35,13 +35,18 @@ export default function Weather() {
 
 
       <Modal visible = {modalOpen}>
+        <ImageBackground
         <View style = {style.modal}>
+
+      style = {style.background}
+      source = {require('../assets/HomeBack.png')}>
           <Text> test</Text>
           <TouchableOpacity>
            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
           </TouchableOpacity>
 
         </View>
+        </ImageBackground>
       </Modal>
 
       <View style = {style.body}>
