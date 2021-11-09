@@ -37,6 +37,8 @@ export default function Weather() {
       <Modal visible = {modalOpen}>
         <View style = {style.modal}>
           <Text> test</Text>
+          <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(false)}/>
+
         </View>
       </Modal>
 
