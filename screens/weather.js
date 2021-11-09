@@ -15,6 +15,7 @@ import Icons from 'react-native-vector-icons/MaterialIcons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const {width, height} = Dimensions.get('window');
+const[modalOpen, setModalOpen] = useState(false);
 
 export default function Weather() {
   const [loaded] = Font.useFonts({
@@ -24,9 +25,6 @@ export default function Weather() {
   if(!loaded){
     return null;
   }
-
-  const[modalOpen, setModalOpen] = useState(false);
-
 
   return (
     <ImageBackground
