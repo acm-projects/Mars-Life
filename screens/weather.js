@@ -34,7 +34,7 @@ export default function Weather() {
 
 
 
-      <Modal visible = {false}>
+      <Modal visible = {true}>
         <View style = {style.modal}>
           <Text> test</Text>
         </View>
