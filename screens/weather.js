@@ -42,6 +42,12 @@ export default function Weather() {
             <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
             </TouchableOpacity>
             <ScrollView>
+ 
+ <Image
+   style = {style.mars}
+   source = {require('../assets/Mars.png')}>
+ </Image>
+
  <WeatherTile />
 
  </ScrollView>
