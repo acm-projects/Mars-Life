@@ -32,7 +32,7 @@ export default function Weather() {
         <View style = {style.header}>
           <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
           <Text style = {style.headerText}>Weather</Text>
-          <Icons name={'menu'} size={width*0.075} color='#fff' style={styles.button}/>
+          <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button}/>
 
         </View>
         <ScrollView>
