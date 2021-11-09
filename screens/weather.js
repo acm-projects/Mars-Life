@@ -40,18 +40,7 @@ export default function Weather() {
           <View style = {style.body}>
           <Text> test</Text>
             <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(false)}/>
-            <View style = {style.asdf}>
-              <Text>Photos</Text>
-            </View>
-            <View>
-              <Text>Weather</Text>
-            </View>
-            <View>
-              <Text>News</Text>
-            </View>
-            <View>
-              <Text>Map</Text>
-            </View>
+
           </View>
 
           </ImageBackground>
