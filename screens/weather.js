@@ -40,7 +40,7 @@ export default function Weather() {
           <View style = {style.body}>
           <Text> test</Text>
             <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(false)}/>
-            <View>
+            <View style = {style.asdf}>
               <Text>Photos</Text>
             </View>
             <View>
@@ -289,5 +289,9 @@ const style = StyleSheet.create({
     borderColor: '#B35335',
     borderRadius: 10,
     borderWidth: 2,
-},
+  },
+  asdf:{
+    backgroundColor: '#FD7773B',
+    padding: 5
+  }
 });
