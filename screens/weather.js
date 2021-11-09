@@ -15,9 +15,10 @@ import Icons from 'react-native-vector-icons/MaterialIcons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const {width, height} = Dimensions.get('window');
-const[modalOpen, setModalOpen] = useState(false);
 
 export default function Weather() {
+  const[modalOpen, setModalOpen] = useState(false);
+
   const [loaded] = Font.useFonts({
     Nunito: require('../assets/Nunito.ttf')
   });
@@ -26,6 +27,7 @@ export default function Weather() {
     return null;
   }
 
+  const[modalOpen, setModalOpen] = useState(false);
   return (
     <ImageBackground
       style = {style.background}
