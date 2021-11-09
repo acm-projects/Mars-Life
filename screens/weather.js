@@ -11,6 +11,8 @@ import  React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
 import * as Font from 'expo-font';
 import WeatherTile from '../components/weatherTile'; 
+import Icons from 'react-native-vector-icons/MaterialIcons';
+
 
 export default function Weather() {
   const [loaded] = Font.useFonts({
@@ -28,6 +30,8 @@ export default function Weather() {
  
         <View style = {style.header}>
           <Text style = {style.headerText}>Weather</Text>
+          <Icons name={'arrow-back'} size={width*0.075} color='#000' style={styles.button}/>
+
         </View>
         <ScrollView>
  
