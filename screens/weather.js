@@ -291,7 +291,7 @@ const style = StyleSheet.create({
     borderWidth: 2,
   },
   asdf:{
-    backgroundColor: '#FD7773B',
+    backgroundColor: '#FD773B',
     padding: 5
   }
 });
