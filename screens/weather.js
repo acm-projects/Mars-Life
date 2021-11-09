@@ -8,7 +8,7 @@
  */
  
 import  React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground, ScrollView, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground, ScrollView, Dimensions, Modal,} from 'react-native';
 import * as Font from 'expo-font';
 import WeatherTile from '../components/weatherTile'; 
 import Icons from 'react-native-vector-icons/MaterialIcons';
@@ -24,10 +24,23 @@ export default function Weather() {
   if(!loaded){
     return null;
   }
+
+  const[modalOpen, setModalOpen] = useState(false);
+
+
   return (
     <ImageBackground
       style = {style.background}
       source = {require('../assets/HomeBack.png')}>
+
+
+
+      <Modal visible = {false}>
+        <View style = {style.modal}>
+          <Text> test</Text>
+        </View>
+
+      </Modal>
       <View style = {style.body}>
  
         <View style = {style.header}>
@@ -37,7 +50,7 @@ export default function Weather() {
 
           <Text style = {style.headerText}>Weather</Text>
           <TouchableOpacity>
-            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button}/>
+            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress={() => setModalOpen(true)}/>
           </TouchableOpacity>
         </View>
         <ScrollView>
@@ -67,7 +80,7 @@ const style = StyleSheet.create({
   header: {
     marginTop: 20,
     paddingVertical: 15,
-    width: '100%',
+    width: '33%',
     justifyContent: 'center',
     alignItems: 'center',
   },
