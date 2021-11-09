@@ -31,7 +31,7 @@ export default function Weather() {
  
         <View style = {style.header}>
           <Text style = {style.headerText}>Weather</Text>
-          <Icons name={'arrow-back'} size={width*0.075} color='#000' style={styles.button}/>
+          <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
 
         </View>
         <ScrollView>
@@ -242,5 +242,14 @@ const style = StyleSheet.create({
   atmosphericNumber:{
     color: '#F1FAEE',
     fontSize: 30,
-  }
+  },
+  button: {
+    overflow: 'hidden',
+    color: 'white',
+    backgroundColor: '#FD773B',
+    padding: width*.01,
+    borderColor: '#B35335',
+    borderRadius: 10,
+    borderWidth: 2,
+},
 });
