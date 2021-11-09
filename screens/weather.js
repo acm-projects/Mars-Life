@@ -27,7 +27,6 @@ export default function Weather() {
     return null;
   }
 
-  const[modalOpen, setModalOpen] = useState(false);
   return (
     <ImageBackground
       style = {style.background}
