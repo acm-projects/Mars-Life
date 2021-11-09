@@ -31,7 +31,10 @@ export default function Weather() {
       <View style = {style.body}>
  
         <View style = {style.header}>
-          <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
+          <TouchableOpacity>
+            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
+          </TouchableOpacity>
+
           <Text style = {style.headerText}>Weather</Text>
           <TouchableOpacity>
             <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button}/>
