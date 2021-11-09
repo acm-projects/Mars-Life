@@ -6,7 +6,6 @@ import {Icons, Button, StyleSheet, Dimensions, Text, View, Image, ImageBackgroun
 const {width, height} = Dimensions.get('window')
 
 export default function News() {
-   //*************** render causing problems *****************
    // Since the breaking news is not part of the news list, it can be shown individually
     const [people, setPeople] = useState([
       { name: 'Sankalp', key: '1'},
@@ -44,7 +43,7 @@ export default function News() {
       /> */}
 
         <LinearGradient 
-          colors={['#D0764E', '#13151E']} 
+          colors={['#D0764E', '#080B1F']} 
           >
         
 
@@ -93,17 +92,11 @@ const styles = StyleSheet.create({
     resizeMode: 'stretch',
     overflow: 'hidden',
   },
-  
-  // textItem: {
-  //   alignContent: 'center',
-  // },
-
   item: {
     flexDirection: 'row',
     overflow: 'hidden',
     marginTop: 24,
     marginHorizontal: 20,
-    //padding: 40,
     backgroundColor: '#E14616',
     fontSize: 20,
     borderColor: '#E14616',
@@ -116,7 +109,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     overflow: 'hidden',
     marginTop: 50,
-    // padding: 95,
     backgroundColor: '#E14616',
     marginHorizontal: 20,
     fontSize: 20,
@@ -127,11 +119,8 @@ const styles = StyleSheet.create({
   topNewsImage: {
     marginTop: 20,
     marginBottom: 20,
-    // marginHorizontal: 20,
-    //marginLeft: 30,
     marginRight: 50,
     padding: 80,
-    //borderWidth: 1,
     borderRadius: 10,
     height: 100,
     width: 100
@@ -167,9 +156,7 @@ const styles = StyleSheet.create({
   },
   newsText: {
     marginTop: 10,
-    //marginRight: 5
     marginLeft: 80,
-    //marginBottom: 10
   },
 });
 
