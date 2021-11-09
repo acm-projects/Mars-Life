@@ -37,6 +37,7 @@ export default function Weather() {
       <Modal visible = {modalOpen}>
         <View style = {style.modal}>
           <Text> test</Text>
+          <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
         </View>
       </Modal>
 
@@ -45,8 +46,6 @@ export default function Weather() {
         <View style = {style.header}>
           <TouchableOpacity>
             <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
-                      <WeatherTile />
-
           </TouchableOpacity>
 
           <Text style = {style.headerText}>Weather</Text>
