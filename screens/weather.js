@@ -39,8 +39,8 @@ export default function Weather() {
         <View style = {style.modal}>
           <Text> test</Text>
         </View>
-
       </Modal>
+
       <View style = {style.body}>
  
         <View style = {style.header}>
@@ -50,7 +50,7 @@ export default function Weather() {
 
           <Text style = {style.headerText}>Weather</Text>
           <TouchableOpacity>
-            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress={() => setModalOpen(true)}/>
+            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} />
           </TouchableOpacity>
         </View>
         <ScrollView>
