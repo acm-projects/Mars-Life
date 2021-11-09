@@ -36,10 +36,22 @@ export default function Weather() {
 
       <Modal visible = {modalOpen}>
         <View style = {style.modal}>
-          <Text> test</Text>
-          <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(false)}/>
-          <WeatherTile />
-
+          <ImageBackground style = {style.background}  source = {require('../assets/HomeBack.png')}>
+            <Text> test</Text>
+            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(false)}/>
+            <View>
+              <Text>Photos</Text>
+            </View>
+            <View>
+              <Text>Weather</Text>
+            </View>
+            <View>
+              <Text>News</Text>
+            </View>
+            <View>
+              <Text>Map</Text>
+            </View>
+          </ImageBackground>
         </View>
       </Modal>
 
