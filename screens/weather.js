@@ -49,7 +49,7 @@ export default function Weather() {
 
           <Text style = {style.headerText}>Weather</Text>
           <TouchableOpacity>
-            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} />
+            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(true)}/>
           </TouchableOpacity>
         </View>
         <ScrollView>
