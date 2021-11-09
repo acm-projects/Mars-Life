@@ -36,14 +36,7 @@ export default function Weather() {
 
       <Modal visible = {modalOpen}>
         <View style = {style.modal}>
-          <ImageBackground style = {style.background}  source = {require('../assets/HomeBack.png')}>
-          <View style = {style.body}>
           <Text> test</Text>
-            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(false)}/>
-
-          </View>
-
-          </ImageBackground>
         </View>
       </Modal>
 
@@ -279,8 +272,4 @@ const style = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 2,
   },
-  asdf:{
-    backgroundColor: '#FD773B',
-    padding: 5
-  }
 });
