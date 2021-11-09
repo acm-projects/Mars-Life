@@ -8,7 +8,7 @@
  */
  
 import  React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground, ScrollView, Dimensions } from 'react-native';
 import * as Font from 'expo-font';
 import WeatherTile from '../components/weatherTile'; 
 import Icons from 'react-native-vector-icons/MaterialIcons';
