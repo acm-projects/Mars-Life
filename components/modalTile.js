@@ -44,138 +44,141 @@ export default class modal extends React.Component{
             );
         }
         else{
-            return (
-                    <View>
-                        <View style = {style.solTemp}>
-                            <Text style = {style.solTempText}>{(dataSource[0].min+dataSource[0].max)/2} C</Text>
-                        </View>
+             return (
+               <View>
+                 <Text>asdfasdfadsf</Text>
+               </View>
+            //         <View>
+            //             <View style = {style.solTemp}>
+            //                 <Text style = {style.solTempText}>{(dataSource[0].min+dataSource[0].max)/2} C</Text>
+            //             </View>
                         
-                        <View style = {style.sol}>
-                            <Text style = {style.solText}>Sol {dataSource[0].sol} </Text>
-                        </View>
+            //             <View style = {style.sol}>
+            //                 <Text style = {style.solText}>Sol {dataSource[0].sol} </Text>
+            //             </View>
                         
-                        <View style = {style.date}>
-                            <Text style = {style.dateText}> {getCurrentDate()} </Text>
-                        </View>
-                        <View style = {style.sideline}></View>
+            //             <View style = {style.date}>
+            //                 <Text style = {style.dateText}> {getCurrentDate()} </Text>
+            //             </View>
+            //             <View style = {style.sideline}></View>
 
-                        {/*Day 2*/}
-                        <View style = {style.container}>
-                            <View style = {style.week}>
-                                <Text style = {style.weekText}> Sol {dataSource[1].sol}</Text>
-                            </View>
-                            <Image style = {style.sun} source = {require('../assets/sun.png')}></Image>
-                            <View style = {style.week}>
-                                <Text style = {style.weekText}>{(dataSource[1].min+dataSource[1].max)/2} C</Text>
-                            </View>
-                        </View>
+            //             {/*Day 2*/}
+            //             <View style = {style.container}>
+            //                 <View style = {style.week}>
+            //                     <Text style = {style.weekText}> Sol {dataSource[1].sol}</Text>
+            //                 </View>
+            //                 <Image style = {style.sun} source = {require('../assets/sun.png')}></Image>
+            //                 <View style = {style.week}>
+            //                     <Text style = {style.weekText}>{(dataSource[1].min+dataSource[1].max)/2} C</Text>
+            //                 </View>
+            //             </View>
 
-                        {/*Day 3*/}
-                        <View style = {style.container}>
-                            <View style = {style.week}>
-                                <Text style = {style.weekText}> Sol {dataSource[2].sol}</Text>
-                            </View>
-                            <Image style = {style.sun} source = {require('../assets/sun.png')}></Image>
-                            <View style = {style.week}>
-                                <Text style = {style.weekText}>{(dataSource[2].min+dataSource[2].max)/2} C</Text>
-                            </View>
-                        </View>
+            //             {/*Day 3*/}
+            //             <View style = {style.container}>
+            //                 <View style = {style.week}>
+            //                     <Text style = {style.weekText}> Sol {dataSource[2].sol}</Text>
+            //                 </View>
+            //                 <Image style = {style.sun} source = {require('../assets/sun.png')}></Image>
+            //                 <View style = {style.week}>
+            //                     <Text style = {style.weekText}>{(dataSource[2].min+dataSource[2].max)/2} C</Text>
+            //                 </View>
+            //             </View>
 
-                        {/*Day 4*/}
-                        <View style = {style.container}>
-                            <View style = {style.week}>
-                                <Text style = {style.weekText}> Sol {dataSource[3].sol}</Text>
-                            </View>
-                            <Image style = {style.sun} source = {require('../assets/sun.png')}></Image>
-                            <View style = {style.week}>
-                                <Text style = {style.weekText}>{(dataSource[3].min+dataSource[3].max)/2} C</Text>
-                            </View>
-                        </View>
+            //             {/*Day 4*/}
+            //             <View style = {style.container}>
+            //                 <View style = {style.week}>
+            //                     <Text style = {style.weekText}> Sol {dataSource[3].sol}</Text>
+            //                 </View>
+            //                 <Image style = {style.sun} source = {require('../assets/sun.png')}></Image>
+            //                 <View style = {style.week}>
+            //                     <Text style = {style.weekText}>{(dataSource[3].min+dataSource[3].max)/2} C</Text>
+            //                 </View>
+            //             </View>
 
-                        {/*Day 5*/}
-                        <View style = {style.container}>
-                            <View style = {style.week}>
-                                <Text style = {style.weekText}> Sol {dataSource[4].sol}</Text>
-                            </View>
-                            <Image style = {style.sun} source = {require('../assets/sun.png')}></Image>
-                            <View style = {style.week}>
-                                <Text style = {style.weekText}>{(dataSource[4].min+dataSource[4].max)/2} C</Text>
-                            </View>
-                        </View>
+            //             {/*Day 5*/}
+            //             <View style = {style.container}>
+            //                 <View style = {style.week}>
+            //                     <Text style = {style.weekText}> Sol {dataSource[4].sol}</Text>
+            //                 </View>
+            //                 <Image style = {style.sun} source = {require('../assets/sun.png')}></Image>
+            //                 <View style = {style.week}>
+            //                     <Text style = {style.weekText}>{(dataSource[4].min+dataSource[4].max)/2} C</Text>
+            //                 </View>
+            //             </View>
 
-                        {/*Day 6*/}
-                        <View style = {style.container}>
-                            <View style = {style.week}>
-                                <Text style = {style.weekText}> Sol {dataSource[5].sol}</Text>
-                            </View>
-                            <Image style = {style.sun} source = {require('../assets/sun.png')}></Image>
-                            <View style = {style.week}>
-                                <Text style = {style.weekText}>{(dataSource[5].min+dataSource[5].max)/2} C</Text>
-                            </View>
-                        </View>
+            //             {/*Day 6*/}
+            //             <View style = {style.container}>
+            //                 <View style = {style.week}>
+            //                     <Text style = {style.weekText}> Sol {dataSource[5].sol}</Text>
+            //                 </View>
+            //                 <Image style = {style.sun} source = {require('../assets/sun.png')}></Image>
+            //                 <View style = {style.week}>
+            //                     <Text style = {style.weekText}>{(dataSource[5].min+dataSource[5].max)/2} C</Text>
+            //                 </View>
+            //             </View>
 
-                        {/*Day 7*/}
-                        <View style = {style.container}>
-                            <View style = {style.week}>
-                                <Text style = {style.weekText}> Sol {dataSource[6].sol}</Text>
-                            </View>
-                            <Image style = {style.sun} source = {require('../assets/sun.png')}></Image>
-                            <View style = {style.week}>
-                                <Text style = {style.weekText}>{(dataSource[6].min+dataSource[6].max)/2} C</Text>
-                            </View>
-                        </View>
+            //             {/*Day 7*/}
+            //             <View style = {style.container}>
+            //                 <View style = {style.week}>
+            //                     <Text style = {style.weekText}> Sol {dataSource[6].sol}</Text>
+            //                 </View>
+            //                 <Image style = {style.sun} source = {require('../assets/sun.png')}></Image>
+            //                 <View style = {style.week}>
+            //                     <Text style = {style.weekText}>{(dataSource[6].min+dataSource[6].max)/2} C</Text>
+            //                 </View>
+            //             </View>
 
-                        <View style = {style.fact}>
-                            <Text style = {style.factText}> Fun fact, it's literally always sunny on Mars.</Text>
-                        </View>
-                        <View style = {style.sideline}/>
+            //             <View style = {style.fact}>
+            //                 <Text style = {style.factText}> Fun fact, it's literally always sunny on Mars.</Text>
+            //             </View>
+            //             <View style = {style.sideline}/>
 
-                        <View style = {style.minMaxOuter}>
-                            <View style = {style.minMaxInner}>
-                            <Text style = {style.atmospheric}>Minimum Temp:</Text>
-                            <Text style = {style.atmosphericNumber}>{dataSource[0].min} C</Text>
-                            </View>
-                            <View style = {style.minMaxInner}>
-                            <Text style = {style.atmospheric}>Maximum Temp:</Text>
-                            <Text style = {style.atmosphericNumber}>{dataSource[0].max} C</Text>
-                            </View>
-                        </View>
-                        <View style = {style.sideline}/>
+            //             <View style = {style.minMaxOuter}>
+            //                 <View style = {style.minMaxInner}>
+            //                 <Text style = {style.atmospheric}>Minimum Temp:</Text>
+            //                 <Text style = {style.atmosphericNumber}>{dataSource[0].min} C</Text>
+            //                 </View>
+            //                 <View style = {style.minMaxInner}>
+            //                 <Text style = {style.atmospheric}>Maximum Temp:</Text>
+            //                 <Text style = {style.atmosphericNumber}>{dataSource[0].max} C</Text>
+            //                 </View>
+            //             </View>
+            //             <View style = {style.sideline}/>
 
-                        <View style = {style.minMaxOuter}>
-                            <View style = {style.minMaxInner}>
-                            <Text style = {style.atmospheric}>Ground Minimum Temp:</Text>
-                            <Text style = {style.atmosphericNumber}>{dataSource[0].ground_min} C</Text>
-                            </View>
-                            <View style = {style.minMaxInner}>
-                            <Text style = {style.atmospheric}>Ground Maximum Temp:</Text>
-                            <Text style = {style.atmosphericNumber}>{dataSource[0].ground_max} C</Text>
-                            </View>
-                        </View>
-                        <View style = {style.sideline}></View>
+            //             <View style = {style.minMaxOuter}>
+            //                 <View style = {style.minMaxInner}>
+            //                 <Text style = {style.atmospheric}>Ground Minimum Temp:</Text>
+            //                 <Text style = {style.atmosphericNumber}>{dataSource[0].ground_min} C</Text>
+            //                 </View>
+            //                 <View style = {style.minMaxInner}>
+            //                 <Text style = {style.atmospheric}>Ground Maximum Temp:</Text>
+            //                 <Text style = {style.atmosphericNumber}>{dataSource[0].ground_max} C</Text>
+            //                 </View>
+            //             </View>
+            //             <View style = {style.sideline}></View>
 
-                        <View style = {style.minMaxOuter}>
-                            <View style = {style.atmosphericInner}>
-                            <Text style = {style.atmospheric}>Ultraviolet Index:</Text>
-                            <Text style = {style.atmosphericNumber}>{dataSource[0].uvIndex}</Text>
-                            </View>
-                        </View>
-                        <View style = {style.sideline}/>
+            //             <View style = {style.minMaxOuter}>
+            //                 <View style = {style.atmosphericInner}>
+            //                 <Text style = {style.atmospheric}>Ultraviolet Index:</Text>
+            //                 <Text style = {style.atmosphericNumber}>{dataSource[0].uvIndex}</Text>
+            //                 </View>
+            //             </View>
+            //             <View style = {style.sideline}/>
 
 
-                        <View style = {style.minMaxOuter}>
-                            <View style = {style.minMaxInner}>
-                            <Text style = {style.atmospheric}>Sunrise Time:</Text>
-                            <Text style = {style.atmosphericNumber}>{dataSource[0].sunrise}</Text>
-                            </View>
-                            <View style = {style.minMaxInner}>
-                            <Text style = {style.atmospheric}>Sunset Time:</Text>
-                            <Text style = {style.atmosphericNumber}>{dataSource[0].sunset}</Text>
-                            </View>
-                        </View>
-                        <View style = {style.sideline}/>
+            //             <View style = {style.minMaxOuter}>
+            //                 <View style = {style.minMaxInner}>
+            //                 <Text style = {style.atmospheric}>Sunrise Time:</Text>
+            //                 <Text style = {style.atmosphericNumber}>{dataSource[0].sunrise}</Text>
+            //                 </View>
+            //                 <View style = {style.minMaxInner}>
+            //                 <Text style = {style.atmospheric}>Sunset Time:</Text>
+            //                 <Text style = {style.atmosphericNumber}>{dataSource[0].sunset}</Text>
+            //                 </View>
+            //             </View>
+            //             <View style = {style.sideline}/>
 
-                    </View>
+            //         </View>
             );
         }
     }
