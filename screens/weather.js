@@ -42,12 +42,6 @@ export default function Weather() {
             <TouchableOpacity>
             <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
             </TouchableOpacity>
-            <View>
-              <Text>adsfadsf</Text>
-            </View>
-            <View>
-              <Text>adsfadsf</Text>
-            </View>
             <ScrollView>
  
  <Image
