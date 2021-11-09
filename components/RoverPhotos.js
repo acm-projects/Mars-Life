@@ -1,6 +1,7 @@
 import React from 'react';
 import {SafeAreaView, ScrollView, RefreshControl, View, StyleSheet, Dimensions, Text, Image, TouchableOpacity, Button} from "react-native";
 import Carousel, { Pagination } from 'react-native-snap-carousel';
+import {LinearGradient} from 'expo-linear-gradient';
 import CarouselViewAnim, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselViewAnim.js';
 //import RoverPhotosData from './RoverPhotosData';
 import Mars_Image from '../server/Models/Mars_Image.js';
@@ -21,58 +22,52 @@ const RoverPhotos = () => {
     setRefreshing(false);
   }
 
- // TODO: Fully implement refresh
-
   return (
-    //<View>        //this view is not causing the error
       <SafeAreaView style={styles.body}>
-        <ScrollView contentContainerStyle={styles.scrollView} // Think this is what is causing viewing issues
-          refreshControl = {
-            <RefreshControl
-            refreshing={Refreshing}
-            onRefresh={onRefresh}
-            colors={["#FFA500"]}
-            tintColor={'#FFA500'}
-            />
-          }>
-        <Carousel
-          layout="default"
-          layoutCardOffset={9}
-          ref={isCarousel}
-          data={dataList.slice(start, start+carouselLength)}                         //changed to datalist
-          renderItem={CarouselViewAnim}
-          sliderWidth={SLIDER_WIDTH}
-          itemWidth={ITEM_WIDTH}
-          onSnapToItem={(index) => setIndex(index)}
-          useScrollView={true}
-        />
-        <Pagination
-          dotsLength={carouselLength}            //changed to datalist
-          activeDotIndex={index}
-          carouselRef={isCarousel}
-          dotStyle={{
-            width: 10,
-            height: 10,
-            borderRadius: 5,
-            marginHorizontal: 0,
-            backgroundColor: '#fff'
-          }}
-          inactiveDotOpacity={0.4}
-          inactiveDotScale={0.6}
-          tappableDots={true}
-        />
-      
-      <Button                         //ss way to refresh. Not needed anymore
-        onPress={() => setStart(start + carouselLength)}
-        title="Refresh"
-        color="#841584"
-        accessibilityLabel="Learn more about this purple button"
-        />
+        <LinearGradient 
+          colors={['#D0764E', '#080B1F']} 
+          >
+          <ScrollView contentContainerStyle={styles.scrollView}
+            refreshControl = {
+              <RefreshControl
+              refreshing={Refreshing}
+              onRefresh={onRefresh}
+              //colors={["#FFA500"]}              //refresh color from orange to blue
+              colors={["#080B1F"]}
+              //tintColor={'#FFA500'}
+              tintColor={'#080B1F'}
+              />
+            }>
+          <Carousel
+            layout="default"
+            layoutCardOffset={9}
+            ref={isCarousel}
+            data={dataList.slice(start, start+carouselLength)}                         //changed to datalist
+            renderItem={CarouselViewAnim}
+            sliderWidth={SLIDER_WIDTH}
+            itemWidth={ITEM_WIDTH}
+            onSnapToItem={(index) => setIndex(index)}
+            useScrollView={true}
+          />
+          <Pagination
+            dotsLength={carouselLength}
+            activeDotIndex={index}
+            carouselRef={isCarousel}
+            dotStyle={{
+              width: 10,
+              height: 10,
+              borderRadius: 5,
+              marginHorizontal: 0,
+              backgroundColor: '#fff'
+            }}
+            inactiveDotOpacity={0.4}
+            inactiveDotScale={0.6}
+            tappableDots={true}
+          />
 
-        </ScrollView>
+          </ScrollView>
+        </LinearGradient>
       </SafeAreaView>
-    //</View>
-
   )
 }
 

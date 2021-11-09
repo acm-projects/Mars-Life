@@ -18,9 +18,10 @@ const CarouselCardItem = ({ item, index }) => {
 }
 const styles = StyleSheet.create({
   container: {
-
-    backgroundColor: 'white',
+    //backgroundColor: 'white',         //this is the image tile from white to blue
+    backgroundColor: '#080B1F',
     borderRadius: 8,
+    borderTopEndRadius: 8,
     width: ITEM_WIDTH,
     paddingBottom: 50,
     justifyContent: 'center',
@@ -39,7 +40,8 @@ const styles = StyleSheet.create({
 
   },
   header: {
-    color: "#222",
+    //color: "#222",                  //text of the image tile from grey to white
+    color: 'white',
     fontSize: 28,
     fontWeight: "bold",
     paddingLeft: 20,
