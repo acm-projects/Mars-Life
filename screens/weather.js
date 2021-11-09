@@ -44,6 +44,19 @@ export default function Weather() {
             <View>
               <Text>adsfadsf</Text>
             </View>
+            <View>
+              <Text>adsfadsf</Text>
+            </View>
+            <ScrollView>
+ 
+ <Image
+   style = {style.mars}
+   source = {require('../assets/Mars.png')}>
+ </Image>
+
+ <WeatherTile />
+
+ </ScrollView>
           </View>
         </ImageBackground>
       </Modal>
