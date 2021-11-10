@@ -26,7 +26,8 @@ export default class modal extends React.Component{
 const style = StyleSheet.create({
   container:
   {
-    
+    justifyContent: 'center',
+    alignSelf: 'center'
   },
   words:
   {
