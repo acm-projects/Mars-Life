@@ -41,12 +41,6 @@ export default class modal extends React.Component{
           </View>
         </View>
       </View>
-
-      <Image
-            style = {style.mars}
-            source = {require('../assets/Mars.png')}>
-          </Image>
-
     </View>
       
     );
