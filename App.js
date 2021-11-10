@@ -32,9 +32,9 @@ const [show, setShow] = useState(false);
   return (
     <View style={style.container}>
       
-      {show ? <SafeAreaView style={style.photocontainer}>
+      {/* {show ? <SafeAreaView style={style.photocontainer}> */}
       <Navigator />
-      </SafeAreaView> : <SplashLoad/> }
+      {/* </SafeAreaView> : <SplashLoad/> } */}
       
       <StatusBar style="auto" />
       
