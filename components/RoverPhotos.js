@@ -23,7 +23,7 @@ const RoverPhotos = () => {
   }
 
   return (
-    <View style = {styles.container}>
+    //<View style = {styles.container}>
       <SafeAreaView style={styles.body}>
         <LinearGradient 
           colors={['#D0764E', '#080B1F']} 
@@ -69,7 +69,7 @@ const RoverPhotos = () => {
           </ScrollView>
         </LinearGradient>
       </SafeAreaView>
-    </View>
+    //</View>
   )
 }
 
