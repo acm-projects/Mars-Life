@@ -11,7 +11,7 @@ export default class modal extends React.Component{
       <View>
         <View style = {style.header}>
           <TouchableOpacity>
-            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(true)}/>
+            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
           </TouchableOpacity>
           <Text style = {style.headerText}>Weather</Text>
           <TouchableOpacity>
