@@ -6,8 +6,10 @@ export default class modal extends React.Component{
   render() {
     return (
       <View>
-        <View style = {style.container}>
-          <Text style = {style.words}>Weather</Text>
+        <View style = {style.minMaxOuter}>
+          <View style = {style.minMaxInner}>
+          <Text style = {style.atmospheric}>Weather</Text>
+          </View>
         </View>
         <View style = {style.container}>
           <Text style = {style.words}>Photo</Text>
@@ -33,5 +35,39 @@ const style = StyleSheet.create({
   {
     fontSize: 40,
     color: 'white'
-  }
+  },
+  minMaxOuter:{
+    paddingVertical: 5,
+    width: '85%',
+    borderWidth: 8,
+    borderRadius: 5,
+    borderColor: '#323547',
+    borderStartColor: '#323547',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#323547',
+    flexDirection: 'row',
+    flex: 1,
+    marginTop: 15,
+  },
+ 
+  minMaxInner: {
+    width: '50%',
+    height: '100%',
+    marginLeft:5    
+  },
+ 
+  atmosphericInner: {
+    height: '100%',
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+ 
+  atmospheric: {
+    color: '#F1FAEE',
+    fontSize: 20,
+  //   fontFamily: 'Nunito'
+  },
   });
