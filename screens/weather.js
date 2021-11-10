@@ -42,9 +42,8 @@ export default function Weather() {
             <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
             </TouchableOpacity>
             <ScrollView>
-          <ModalTile />
-
- </ScrollView>
+              <ModalTile />
+            </ScrollView>
           </View>
         </ImageBackground>
       </Modal>
@@ -87,7 +86,7 @@ const style = StyleSheet.create({
   header: {
     marginTop: 20,
     paddingVertical: 15,
-    width: '33%',
+    width: '20%',
     justifyContent: 'center',
     alignItems: 'center',
   },
