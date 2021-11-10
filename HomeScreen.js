@@ -87,9 +87,9 @@ export default function HomeScreen({navigation}){
             <View style = {style.select}>
               <View style = {style.selectInner}>
               <TouchableOpacity>
-                <View style = {style.selectHeader}>
-                  <Text style = {style.selectText}>Map</Text>
-                </View>
+                {/* <View style = {style.selectHeader}> */}
+                  {/* <Text style = {style.selectText}>Map</Text> */}
+                {/* </View> */}
                 <Image
                 style = {style.selectIcon}
                 source = {require('./assets/Map.png')}
@@ -116,11 +116,11 @@ const style = StyleSheet.create({
   },
   header: {
     marginTop: 20,
-    height: '10%',
+    height: '15%',
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'row',
+
   },
   headerText: {
     fontSize: 50,
@@ -130,8 +130,8 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     resizeMode: 'contain',
-    height: '45%',
-    width: '65%'
+    // height: '45%',
+    // width: '65%'
     },
   container:{
     width: '100%',
