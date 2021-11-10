@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import {LinearGradient} from 'expo-linear-gradient';
 import {Icons, Button, StyleSheet, Dimensions, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity, Pressable, TouchableHighlight } from 'react-native';
+import NewsItem from './newsItem';
 
 const {width, height} = Dimensions.get('window')
 
@@ -48,16 +49,8 @@ export default function News() {
         
 
         <ScrollView>
-        <View>
-            <TouchableOpacity onPress={() => pressHandler(headNum)}>
-              <View style={styles.topNews}> 
-                <Image style = {styles.topNewsImage} source = {require('./assets/NewsBackgroundImg.png')}/>
-                <Text style={styles.topNewsText}>{"people.name"} </Text>
-              </View> 
-            </TouchableOpacity>
-          </View>
 
-        <View>
+        {/* <View>
             {people.map(item => (
                 <TouchableOpacity onPress={() => pressHandler(item.key)} >
                     <View key={item.key} style={styles.item}>
@@ -66,7 +59,9 @@ export default function News() {
                     </View>
                 </TouchableOpacity>
             ))}
-        </View>
+        </View> */}
+        <NewsItem />
+
 
         </ScrollView>
 
