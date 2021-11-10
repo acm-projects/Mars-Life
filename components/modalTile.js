@@ -8,7 +8,6 @@ const {width, height} = Dimensions.get('window');
 export default class modal extends React.Component{
 
   render() {
-    const[modalOpen, setModalOpen] = useState(false);
 
     return (
       
