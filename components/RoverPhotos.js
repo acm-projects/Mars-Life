@@ -24,7 +24,22 @@ const RoverPhotos = () => {
     setStart(start + carouselLength)    //handles the refresh now. Done. Need anything more??
     setRefreshing(false);
   }
+  const homeHandler = () => {
+    navigation.navigate('home');
+  }
 
+  const newsHandler = () => {
+    navigation.navigate('news')
+  }
+
+  const photoHandler = () => {
+    navigation.navigate('photos')
+  }
+
+  const weatherHandler = () => {
+    navigation.navigate('weather')
+  }
+  
   return (
       <SafeAreaView style={styles.body}>
         <LinearGradient 
@@ -96,21 +111,6 @@ const RoverPhotos = () => {
 }
 
 export default RoverPhotos
-const homeHandler = () => {
-  navigation.navigate('home');
-}
-
-const newsHandler = () => {
-  navigation.navigate('news')
-}
-
-const photoHandler = () => {
-  navigation.navigate('photos')
-}
-
-const weatherHandler = () => {
-  navigation.navigate('weather')
-}
 
 const styles = StyleSheet.create({
   bottomBar:{
