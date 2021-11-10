@@ -19,6 +19,7 @@ import News from './News';
 import {AppLoading} from 'expo';
 import * as Font from 'expo-font';
 import Navigator from './routes/homeStack';
+
  
 export default function App(){
  
@@ -29,15 +30,15 @@ const [show, setShow] = useState(false);
   }, []);
 
   return (
-    // <View style={style.container}>
+    <View style={style.container}>
       
-    //   {show ? <SafeAreaView style={style.photocontainer}>
+      {show ? <SafeAreaView style={style.photocontainer}>
       <Navigator />
-    //   </SafeAreaView> : <SplashLoad/> }
+      </SafeAreaView> : <SplashLoad/> }
       
-    //   <StatusBar style="auto" />
+      <StatusBar style="auto" />
       
-    // </View>
+    </View>
   );
   
   
@@ -51,7 +52,7 @@ const style = StyleSheet.create({
     flex : 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'pink'
+    backgroundColor: '#080B1F'
   },
 
   photocontainer: {                        //how do I remove the that blue bar from top???
