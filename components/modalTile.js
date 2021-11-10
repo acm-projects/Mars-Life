@@ -6,6 +6,9 @@ export default class modal extends React.Component{
   render() {
     return (
       <View style = {style.leftJustify}>
+                  <TouchableOpacity>
+            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
+            </TouchableOpacity>
         <View style = {style.minMaxOuter}>
           <View style = {style.minMaxInner}>
           <Text style = {style.atmospheric}>Weather</Text>
