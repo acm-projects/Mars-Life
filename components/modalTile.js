@@ -11,12 +11,14 @@ export default class modal extends React.Component{
           <Text style = {style.atmospheric}>Weather</Text>
           </View>
         </View>
+        <View style = {style.sideline}/>
 
         <View style = {style.minMaxOuter}>
           <View style = {style.minMaxInner}>
           <Text style = {style.atmospheric}>Photos</Text>
           </View>
         </View>
+        <View style = {style.sideline}/>
 
         <View style = {style.minMaxOuter}>
           <View style = {style.minMaxInner}>
@@ -48,7 +50,7 @@ const style = StyleSheet.create({
   },
   minMaxOuter:{
     paddingVertical: 5,
-    width: '85%',
+    width: '70%',
     borderWidth: 8,
     borderRadius: 5,
     borderColor: '#323547',
@@ -76,6 +78,7 @@ const style = StyleSheet.create({
   
   sideline: {
     marginTop: 10,
+    marginBottom: 10,
     height: 1,
     width: '70%',
     backgroundColor: '#F1FAEE',
