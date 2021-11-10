@@ -11,7 +11,7 @@ import  React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground, ScrollView, Dimensions, Modal,} from 'react-native';
 import * as Font from 'expo-font';
 import WeatherTile from '../components/weatherTile';
-import ModalTlie from '../components/modalTile'; 
+import ModalTile from '../components/modalTile'; 
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
