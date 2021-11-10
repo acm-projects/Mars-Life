@@ -52,7 +52,6 @@ const style = StyleSheet.create({
     marginTop: 15,
   },
 
- 
   atmosphericInner: {
     height: '100%',
     width: '100%',
@@ -62,7 +61,7 @@ const style = StyleSheet.create({
  
   atmospheric: {
     color: '#F1FAEE',
-    fontSize: 20,
+    fontSize: 40,
   //   fontFamily: 'Nunito'
   },
   });
