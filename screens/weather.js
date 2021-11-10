@@ -91,7 +91,7 @@ export default function Weather() {
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             <View style = {style.bottomInner}>
-            <Icons name={'arrow-back'} size={width*0.075, height*0.075} color='#000' style={style.button}/>
+            <Icons name={'home'} size={width*0.075, height*0.075} color='#000' style={style.button}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
           </View>
