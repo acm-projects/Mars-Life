@@ -24,7 +24,7 @@ const RoverPhotos = () => {
 
   return (
     <ImageBackground
-    style = {style.background}
+    style = {styles.background}
     source = {require('C:/Users/12148/Mars-Life/assets/HomeBack.png')}>      <SafeAreaView style={styles.body}>
         <LinearGradient 
           colors={['#D0764E', '#080B1F']} 
