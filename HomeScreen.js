@@ -21,6 +21,9 @@ export default function HomeScreen({navigation}){
     navigation.navigate('news')
   }
 
+  const photoHandler = () => {
+    navigation.navigate('photos')
+  }
   
 
    return (
@@ -56,7 +59,7 @@ export default function HomeScreen({navigation}){
           
             <View style = {style.select}>
               <View style = {style.selectInner}>
-              <TouchableOpacity>
+              <TouchableOpacity onPress = {photoHandler}>
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>Photos</Text>
                 </View>
