@@ -17,6 +17,9 @@ export default function HomeScreen({navigation}){
     navigation.navigate('weatherScreen');
   }
 
+  const newsHandler = () => {
+    navigation.navigate('news')
+  }
 
   
 
@@ -66,7 +69,7 @@ export default function HomeScreen({navigation}){
  
             <View style = {style.select}>
               <View style = {style.selectInner}>
-              <TouchableOpacity>
+              <TouchableOpacity onPress = {newsHandler}>
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>News</Text>
                 </View>
