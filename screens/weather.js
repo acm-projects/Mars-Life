@@ -92,8 +92,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 50,
-    height: '100%'
+    marginBottom: 30,
   },
   bottomInner:{
     backgroundColor: 'white',
@@ -102,7 +101,7 @@ const style = StyleSheet.create({
    // color: 'white',
   },
   scroll: {
-    marginBottom: 5
+    marginBottom: 20
   },
 
 
