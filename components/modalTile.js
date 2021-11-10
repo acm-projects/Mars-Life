@@ -52,9 +52,9 @@ const style = StyleSheet.create({
     paddingVertical: 5,
     width: '70%',
     borderWidth: 8,
-    borderRadius: 5,
     borderColor: '#323547',
     borderStartColor: '#323547',
+    borderLeftColor: '#F1FAEE',
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
@@ -77,9 +77,7 @@ const style = StyleSheet.create({
   },
   
   sideline: {
-    marginTop: 10,
-    marginBottom: 10,
-    height: 1,
+    height: 2,
     width: '70%',
     backgroundColor: '#F1FAEE',
     justifyContent: 'center',
