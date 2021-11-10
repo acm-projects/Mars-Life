@@ -58,6 +58,7 @@ const style = StyleSheet.create({
 
   },
   leftJustify: {
+    borderColor: 'white',
     marginLeft: '20%',
     width: '100%'
   },
