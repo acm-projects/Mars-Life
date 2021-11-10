@@ -92,7 +92,8 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 20
+    marginBottom: 50,
+    height: '100%'
   },
   bottomInner:{
     backgroundColor: 'white',
