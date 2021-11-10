@@ -104,12 +104,12 @@ export default function Weather({navigation}) {
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             <View style = {style.bottomInner}>
-                <Icons name={'cloud'} size={width*0.075, height*0.075} color='#000' style={style.button}/>
+                <Icons name={'cloud'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress={weatherHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             
             <View style = {style.bottomInner}>
-              <Icons name={'home'} size={width*0.075, height*0.075} color='#000' style={style.button}/>
+              <Icons name={'menu-book'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress = {newsHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
           </View>
