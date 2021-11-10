@@ -79,15 +79,19 @@ export default function Weather() {
           </ScrollView>
           <View style = {style.bottomBar}>
             <View style = {style.bottomInner}>
+            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
               <Text style = {style.bottomText}>adsfasdfasdf</Text>
             </View>
             <View style = {style.bottomInner}>
+            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
               <Text style = {style.bottomText}>adsfasdfasdf</Text>
             </View>
             <View style = {style.bottomInner}>
+              <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
               <Text style = {style.bottomText}>adsfasdfasdf</Text>
             </View>
             <View style = {style.bottomInner}>
+            <Icons name={'arrow-back'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
               <Text style = {style.bottomText}>adsfasdfasdf</Text>
             </View>
           </View>
@@ -103,6 +107,9 @@ const style = StyleSheet.create({
     alignItems: 'center',
    // marginBottom: 30,
     marginBottom: height * 0.075,
+
+    
+
   },
   bottomInner:{
     width: '25%',
@@ -112,7 +119,7 @@ const style = StyleSheet.create({
    // color: 'white',
   },
   scroll: {
-    marginBottom: 20
+    marginBottom: height * 0.075,
   },
 
 
