@@ -11,7 +11,7 @@ import  React, { useState } from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground, ScrollView, Dimensions, Modal,} from 'react-native';
 import * as Font from 'expo-font';
 import WeatherTile from '../components/weatherTile';
-import modalTile from '../components/modalTile'; 
+import ModalTlie from '../components/modalTile'; 
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -42,7 +42,7 @@ export default function Weather() {
             <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
             </TouchableOpacity>
             <ScrollView>
-          <modalTile />
+          <ModalTile />
 
  </ScrollView>
           </View>
