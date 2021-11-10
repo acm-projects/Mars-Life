@@ -6,8 +6,9 @@ import Icons from 'react-native-vector-icons/MaterialIcons';
 const {width, height} = Dimensions.get('window');
 
 export default class modal extends React.Component{
+  const[modalOpen, setModalOpen] = useState(false);
+
   render() {
-    const[modalOpen, setModalOpen] = useState(false);
 
     return (
       <View>
