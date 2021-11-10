@@ -5,7 +5,18 @@ import * as Font from 'expo-font';
 export default class modal extends React.Component{
   render() {
     return (
-      <View style = {style.leftJustify}>
+      <View>
+        <View style = {style.header}>
+          <TouchableOpacity>
+            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
+          </TouchableOpacity>
+          <Text style = {style.headerText}>Weather</Text>
+          <TouchableOpacity>
+            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(true)}/>
+          </TouchableOpacity>
+        </View>
+
+        <View style = {style.leftJustify}>
         <View style = {style.minMaxOuter}>
           <View style = {style.minMaxInner}>
           <Text style = {style.atmospheric}>Weather</Text>
@@ -33,6 +44,8 @@ export default class modal extends React.Component{
           </View>
         </View>
       </View>
+      </View>
+      
     );
   }
 }
