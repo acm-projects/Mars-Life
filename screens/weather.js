@@ -101,7 +101,7 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 30,
+   // marginBottom: 30,
     marginBottom: height * 0.075,
   },
   bottomInner:{
