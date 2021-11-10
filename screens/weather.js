@@ -97,7 +97,7 @@ const style = StyleSheet.create({
     backgroundColor: 'white',
   },
   bottomText: {
-    color: 'white',
+   // color: 'white',
   },
 
 
