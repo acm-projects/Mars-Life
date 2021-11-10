@@ -1,21 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ *
+ */
+ 
+import  React, { useState } from 'react';
+import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
+import Weather from './screens/weather';
+import ExpandedNews from './screens/expanded_news';
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+   return (
+      <Weather />
+   );
+  }
+const style = StyleSheet.create({
+
 });
