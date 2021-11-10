@@ -40,7 +40,6 @@ export default class modal extends React.Component{
 const style = StyleSheet.create({
   leftJustify: {
     marginLeft: 'auto',
-    width: '100%'
   },
   container:
   {
