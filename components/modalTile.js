@@ -6,8 +6,8 @@ export default class modal extends React.Component{
   render() {
     return (
       <View>
-        <View>
-          <Text>Photo</Text>
+        <View style = {style.container}>
+          <Text style = {style.words}>Weather</Text>
         </View>
         <View>
           <Text>Photo</Text>
@@ -24,4 +24,12 @@ export default class modal extends React.Component{
 }
 
 const style = StyleSheet.create({
+  container:
+  {
+    
+  },
+  words:
+  {
+    color: 'white'
+  }
   });
