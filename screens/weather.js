@@ -67,7 +67,7 @@ export default function Weather() {
             <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(true)}/>
           </TouchableOpacity> */}
         </View>
-        <ScrollView>
+        <ScrollView style = {style.scroll}>
  
           <Image
             style = {style.mars}
@@ -100,6 +100,9 @@ const style = StyleSheet.create({
   },
   bottomText: {
    // color: 'white',
+  },
+  scroll: {
+    marginBottom: 50
   },
 
 
