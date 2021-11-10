@@ -1,3 +1,4 @@
+
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -7,15 +8,18 @@
  *
  */
  
-import  React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
-import Weather from './screens/weather';
-import ExpandedNews from './screens/expanded_news';
+ import  React, { useState } from 'react';
+ import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
+ import * as Font from 'expo-font';
+ import {AppLoading} from 'expo';
+ //import HomeScreen from '../HomeScreen';
+ import Navigator from './routes/homeStack';
 
 export default function App() {
 
    return (
-      <Weather />
+      <Navigator />
+      //<HomeScreen/>
    );
   }
 const style = StyleSheet.create({
