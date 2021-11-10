@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, RefreshControl, View, StyleSheet, Dimensions, Text, Image, TouchableOpacity, Button} from "react-native";
+import {SafeAreaView, ScrollView, RefreshControl, View, StyleSheet, Dimensions, Text, Image, TouchableOpacity, Button, ImageBackground} from "react-native";
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import {LinearGradient} from 'expo-linear-gradient';
 import CarouselViewAnim, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselViewAnim.js';
@@ -23,8 +23,9 @@ const RoverPhotos = () => {
   }
 
   return (
-    //<View style = {styles.container}>
-      <SafeAreaView style={styles.body}>
+    <ImageBackground
+    style = {style.background}
+    source = {require('C:/Users/12148/Mars-Life/assets/HomeBack.png')}>      <SafeAreaView style={styles.body}>
         <LinearGradient 
           colors={['#D0764E', '#080B1F']} 
           >
@@ -69,7 +70,7 @@ const RoverPhotos = () => {
           </ScrollView>
         </LinearGradient>
       </SafeAreaView>
-    //</View>
+    </ImageBackground>
   )
 }
 
@@ -105,5 +106,10 @@ const styles = StyleSheet.create({
   },
   loadText: {
     color: "#FFFFFF"
-  }
+  },
+
+  background:{
+    flex: 1,
+    resizeMode: 'stretch'
+  },
 })
