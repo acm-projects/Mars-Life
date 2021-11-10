@@ -80,8 +80,8 @@ export default function Weather() {
           <View style = {style.bottomBar}>
             <View style = {style.bottomInner}>
             <Icons name={'arrow-back'} size={width*0.075, height*0.075} color='#000' style={style.button}/>
-              {/* <Text style = {style.bottomText}>adsfasdfasdf</Text>
-            </View> */}
+              {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
+            </View>
             <View style = {style.bottomInner}>
             <Icons name={'arrow-back'} size={width*0.075, height*0.075} color='#000' style={style.button}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
@@ -94,7 +94,6 @@ export default function Weather() {
             <Icons name={'arrow-back'} size={width*0.075, height*0.075} color='#000' style={style.button}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
-          </View>
           </View>
       </View>
     </ImageBackground>
