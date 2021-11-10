@@ -23,7 +23,6 @@ const RoverPhotos = () => {
   }
 
   return (
-    <View style = {styles.container}>
       <SafeAreaView style={styles.body}>
         <LinearGradient 
           colors={['#D0764E', '#080B1F']} 
@@ -69,7 +68,6 @@ const RoverPhotos = () => {
           </ScrollView>
         </LinearGradient>
       </SafeAreaView>
-    </View>
   )
 }
 
@@ -92,7 +90,7 @@ const styles = StyleSheet.create({
     flex : 1,
     justifyContent: 'center',
     alignItems: 'center',
-  //  backgroundColor: '#080B1F'
+    backgroundColor: '#080B1F'
   },
 
   photocontainer: {                        //how do I remove the that blue bar from top???
