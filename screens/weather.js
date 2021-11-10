@@ -77,6 +77,11 @@ export default function Weather() {
           <WeatherTile />
 
           </ScrollView>
+          <View>
+            <Text>
+              asdfasdfasdfadf
+            </Text>
+          </View>
       </View>
     </ImageBackground>
    );
