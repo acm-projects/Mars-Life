@@ -19,7 +19,6 @@ import News from './News';
 import {AppLoading} from 'expo';
 import * as Font from 'expo-font';
 import Navigator from './routes/homeStack';
-
  
 export default function App(){
  
@@ -33,7 +32,7 @@ const [show, setShow] = useState(false);
     <View style={style.container}>
       
       {show ? <SafeAreaView style={style.photocontainer}>
-      <RoverPhotos />
+      <Navigator />
       </SafeAreaView> : <SplashLoad/> }
       
       <StatusBar style="auto" />
