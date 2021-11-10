@@ -37,6 +37,16 @@ export default function Weather() {
 
       <Modal visible = {modalOpen}>
         <ImageBackground style = {style.background} source = {require('../assets/HomeBack.png')}>
+        <View style = {style.header}>
+          <TouchableOpacity>
+          <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
+          </TouchableOpacity>
+          <Text style = {style.headerText}>Weather</Text>
+          <TouchableOpacity>
+            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button}/>
+          </TouchableOpacity>
+        </View>
+
           <View style = {style.modal}>
             <TouchableOpacity>
             <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
