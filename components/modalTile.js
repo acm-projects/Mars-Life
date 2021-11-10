@@ -1,19 +1,11 @@
 import React from "react";
-import {StyleSheet, View, Text, TouchableOpacity,Dimensions, Image, ScrollView} from 'react-native';
+import {StyleSheet, View, Text, Dimensions, Image, ScrollView} from 'react-native';
 import * as Font from 'expo-font';
-import Icons from 'react-native-vector-icons/MaterialIcons';
-
-const {width, height} = Dimensions.get('window');
-const[modalOpen, setModalOpen] = useState(false);
 
 export default class modal extends React.Component{
-  
   render() {
     return (
       <View style = {style.leftJustify}>
-                  <TouchableOpacity>
-            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
-            </TouchableOpacity>
         <View style = {style.minMaxOuter}>
           <View style = {style.minMaxInner}>
           <Text style = {style.atmospheric}>Weather</Text>
