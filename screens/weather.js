@@ -81,6 +81,12 @@ export default function Weather() {
             <View style = {style.bottomInner}>
               <Text style = {style.bottomText}>adsfasdfasdf</Text>
             </View>
+            <View style = {style.bottomInner}>
+              <Text style = {style.bottomText}>adsfasdfasdf</Text>
+            </View>
+            <View style = {style.bottomInner}>
+              <Text style = {style.bottomText}>adsfasdfasdf</Text>
+            </View>
           </View>
       </View>
     </ImageBackground>
@@ -95,6 +101,7 @@ const style = StyleSheet.create({
     marginBottom: 30,
   },
   bottomInner:{
+    width: '33%',
     backgroundColor: 'white',
   },
   bottomText: {
