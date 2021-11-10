@@ -41,13 +41,23 @@ export default class modal extends React.Component{
           </View>
         </View>
       </View>
-      </View>
+
+      <Image
+            style = {style.mars}
+            source = {require('../assets/Mars.png')}>
+          </Image>
+
+    </View>
       
     );
   }
 }
 
 const style = StyleSheet.create({
+  mars:{
+    justifyContent: 'center',
+    alignSelf: 'center',
+  },
   header: {
     flex: 1,
     flexDirection: 'row'
