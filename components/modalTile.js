@@ -46,6 +46,7 @@ const style = StyleSheet.create({
     color: 'white'
   },
   minMaxOuter:{
+    paddingVertical: 5,
     width: '85%',
     borderWidth: 8,
     borderRadius: 5,
@@ -57,7 +58,6 @@ const style = StyleSheet.create({
     backgroundColor: '#323547',
     flexDirection: 'row',
     flex: 1,
-    marginTop: 15,
   },
 
   atmosphericInner: {
