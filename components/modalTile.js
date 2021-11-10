@@ -23,6 +23,7 @@ export default class modal extends React.Component{
           <Text style = {style.atmospheric}>News</Text>
           </View>
         </View>
+        <View style = {style.sideline}/>
 
         <View style = {style.minMaxOuter}>
           <View style = {style.minMaxInner}>
@@ -71,5 +72,14 @@ const style = StyleSheet.create({
     color: '#F1FAEE',
     fontSize: 40,
   //   fontFamily: 'Nunito'
+  },
+  
+  sideline: {
+    marginTop: 10,
+    height: 1,
+    width: '70%',
+    backgroundColor: '#F1FAEE',
+    justifyContent: 'center',
+    alignSelf: 'center'
   },
   });
