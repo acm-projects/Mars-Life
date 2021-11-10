@@ -125,8 +125,6 @@ const style = StyleSheet.create({
     alignItems: 'center',
    // marginBottom: 30,
     marginBottom: height * 0.055,
-
-
   },
   bottomInner:{
     width: '20%',
