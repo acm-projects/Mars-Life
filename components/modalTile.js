@@ -13,10 +13,10 @@ export default class modal extends React.Component{
           <Text style = {style.words}>Photo</Text>
         </View>
         <View>
-          <Text style = {style.words}>Photo</Text>
+          <Text style = {style.words}>News</Text>
         </View>
         <View>
-          <Text style = {style.words}>Photo</Text>
+          <Text style = {style.words}>Map</Text>
         </View>
       </View>
     );
