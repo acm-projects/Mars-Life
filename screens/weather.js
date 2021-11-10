@@ -77,16 +77,30 @@ export default function Weather() {
           <WeatherTile />
 
           </ScrollView>
-          <View>
-            <Text>
-              asdfasdfasdfadf
-            </Text>
+          <View style = {style.bottomBar}>
+            <View style = {style.bottomInner}>
+              <Text style = {style.bottomText}>adsfasdfasdf</Text>
+            </View>
           </View>
       </View>
     </ImageBackground>
    );
   }
 const style = StyleSheet.create({
+  bottomBar:{
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  bottomInner:{
+    background: 'white'
+  },
+  bottomText: {
+    color: 'white',
+  },
+
+
   background: {
     flex: 1,
     resizeMode: 'stretch',
