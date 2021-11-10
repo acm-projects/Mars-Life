@@ -30,6 +30,10 @@ export default function Weather({navigation}) {
   const photoHandler = () => {
     navigation.navigate('photos')
   }
+
+  const weatherHandler = () => {
+    navigation.navigate('weather')
+  }
   
   const[modalOpen, setModalOpen] = useState(false);
 
@@ -96,13 +100,11 @@ export default function Weather({navigation}) {
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             <View style = {style.bottomInner}>
-            <Icons name={'camera-alt'} size={width*0.075, height*0.075} color='#000' style={style.button}/>
+            <Icons name={'camera-alt'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress={photoHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             <View style = {style.bottomInner}>
-              <TouchableOpacity  onPress={homeHandler}>
                 <Icons name={'cloud'} size={width*0.075, height*0.075} color='#000' style={style.button}/>
-              </TouchableOpacity>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             
