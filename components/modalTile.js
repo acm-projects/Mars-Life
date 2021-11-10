@@ -3,6 +3,8 @@ import {StyleSheet, View, Text, TouchableOpacity,Dimensions, Image, ScrollView} 
 import * as Font from 'expo-font';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 
+const {width, height} = Dimensions.get('window');
+
 export default class modal extends React.Component{
   render() {
     return (
@@ -52,6 +54,11 @@ export default class modal extends React.Component{
 }
 
 const style = StyleSheet.create({
+  header: {
+    flex: 1,
+    flexDirection: 'row'
+
+  },
   leftJustify: {
     marginLeft: '20%',
     width: '100%'
