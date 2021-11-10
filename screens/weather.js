@@ -59,21 +59,13 @@ export default function Weather() {
       <View style = {style.body}>
  
         <View style = {style.header}>
-          <View style = {style.headerIn}>
-           <TouchableOpacity>
-              <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
-            </TouchableOpacity>
-          </View>
-
-          <View style = {style.headerIn}>
-            <Text style = {style.headerText}>Weather</Text>
-          </View>
-
-          <View style = {style.headerIn}>
-            <TouchableOpacity>
-              <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(true)}/>
-            </TouchableOpacity>
-          </View>
+          <TouchableOpacity>
+            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
+          </TouchableOpacity>
+          <Text style = {style.headerText}>Weather</Text>
+          <TouchableOpacity>
+            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(true)}/>
+          </TouchableOpacity>
         </View>
         <ScrollView>
  
@@ -105,20 +97,11 @@ const style = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    flex:1,
-    flexDirection: 'row'
+    //flex:1,
   },
 
 
-  top: {
-    marginTop: 20,
-    paddingVertical: 15,
-    flex: 1,
-    flexDirection: 'row',
-    alignItems: 'flex-start',
-    justifyContent: 'space-around',
-    margin: width*.05,
-},
+
   
   headerText: {
     fontSize: 50,
