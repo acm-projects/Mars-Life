@@ -3,6 +3,7 @@ import {StyleSheet, View, Text, TouchableOpacity,Dimensions, Image, ScrollView} 
 import * as Font from 'expo-font';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 
+const {width, height} = Dimensions.get('window');
 
 export default class modal extends React.Component{
   render() {
