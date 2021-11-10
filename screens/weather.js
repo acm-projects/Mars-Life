@@ -86,10 +86,10 @@ const style = StyleSheet.create({
   header: {
     marginTop: 20,
     paddingVertical: 15,
-    width: '33%',
+    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
-    flex:1,
+    //flex:1,
   },
   headerText: {
     fontSize: 50,
