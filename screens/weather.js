@@ -19,8 +19,8 @@ const {width, height} = Dimensions.get('window');
 
 export default function Weather({navigation}) {
    
-  const weatherHandler = () => {
-    navigation.navigate('weatherScreen');
+  const homeHandler = () => {
+    navigation.navigate('home');
   }
 
   const newsHandler = () => {
@@ -92,7 +92,7 @@ export default function Weather({navigation}) {
           </ScrollView>
           <View style = {style.bottomBar}>
             <View style = {style.bottomInner}>
-            <Icons name={'home'} size={width*0.075, height*0.075} color='#000' style={style.button}  onPress={newsHandler}/>
+            <Icons name={'home'} size={width*0.075, height*0.075} color='#000' style={style.button}  onPress={homeHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             <View style = {style.bottomInner}>
@@ -100,7 +100,7 @@ export default function Weather({navigation}) {
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             <View style = {style.bottomInner}>
-              <TouchableOpacity  onPress={weatherHandler}>
+              <TouchableOpacity  onPress={homeHandler}>
                 <Icons name={'cloud'} size={width*0.075, height*0.075} color='#000' style={style.button}/>
               </TouchableOpacity>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
