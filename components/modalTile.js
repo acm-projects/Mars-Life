@@ -9,13 +9,13 @@ export default class modal extends React.Component{
         <View style = {style.container}>
           <Text style = {style.words}>Weather</Text>
         </View>
-        <View>
+        <View style = {style.container}>
           <Text style = {style.words}>Photo</Text>
         </View>
-        <View>
+        <View style = {style.container}>
           <Text style = {style.words}>News</Text>
         </View>
-        <View>
+        <View style = {style.container}>
           <Text style = {style.words}>Map</Text>
         </View>
       </View>
