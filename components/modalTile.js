@@ -54,7 +54,6 @@ const style = StyleSheet.create({
  
   minMaxInner: {
     height: '100%',
-    marginLeft:5    
   },
  
   atmosphericInner: {
