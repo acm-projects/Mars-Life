@@ -5,7 +5,7 @@ import * as Font from 'expo-font';
 export default class modal extends React.Component{
   render() {
     return (
-      <View>
+      <View style = {style.leftJustify}>
         <View style = {style.minMaxOuter}>
           <View style = {style.minMaxInner}>
           <Text style = {style.atmospheric}>Weather</Text>
@@ -38,6 +38,11 @@ export default class modal extends React.Component{
 }
 
 const style = StyleSheet.create({
+  leftJustify: {
+    marginLeft: 'auto',
+    //justifyContent: 'left'
+    width: '70%'
+  },
   container:
   {
     justifyContent: 'center',
