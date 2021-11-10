@@ -58,7 +58,7 @@ export default function Weather() {
 
       <View style = {style.body}>
  
-        <View style = {style.header}>
+        <View style = {style.top}>
           <TouchableOpacity>
             <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
           </TouchableOpacity>
@@ -99,6 +99,16 @@ const style = StyleSheet.create({
     alignItems: 'center',
     //flex:1,
   },
+
+
+  top: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-around',
+    margin: width*.05,
+},
+  
   headerText: {
     fontSize: 50,
     color: '#F1FAEE',
