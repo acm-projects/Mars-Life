@@ -6,7 +6,18 @@ export default class modal extends React.Component{
   render() {
     return (
       <View>
-        <Text>asdfasdfadsf</Text>
+        <View>
+          <Text>Photo</Text>
+        </View>
+        <View>
+          <Text>Photo</Text>
+        </View>
+        <View>
+          <Text>Photo</Text>
+        </View>
+        <View>
+          <Text>Photo</Text>
+        </View>
       </View>
     );
   }
