@@ -12,6 +12,9 @@
  import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
  import * as Font from 'expo-font';
  import {AppLoading} from 'expo';
+ import News from './News';
+ import { StatusBar } from 'expo-status-bar';
+
  //import HomeScreen from '../HomeScreen';
  import Navigator from './routes/homeStack';
 
