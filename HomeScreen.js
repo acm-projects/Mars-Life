@@ -135,12 +135,21 @@ const style = StyleSheet.create({
     },
   container:{
     width: '100%',
-    height: '43%',
+    height: '21.5%',
     padding: 5,
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignContent: 'center',
  
+  },
+
+  container2:{
+    width: '100%',
+    height: '21.5%',
+    padding: 5,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignContent: 'center',
   },
   select:{
     width: '47%',

@@ -21,6 +21,7 @@ const RoverPhotos = () => {
     setStart(start + carouselLength)    //handles the refresh now. Done. Need anything more??
     setRefreshing(false);
   }
+  const {width, height} = Dimensions.get('window');
 
   return (
       <SafeAreaView style={styles.body}>
