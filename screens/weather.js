@@ -79,19 +79,19 @@ export default function Weather() {
           </ScrollView>
           <View style = {style.bottomBar}>
             <View style = {style.bottomInner}>
-            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
+            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
               <Text style = {style.bottomText}>adsfasdfasdf</Text>
             </View>
             <View style = {style.bottomInner}>
-            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
+            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
               <Text style = {style.bottomText}>adsfasdfasdf</Text>
             </View>
             <View style = {style.bottomInner}>
-              <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
+              <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
               <Text style = {style.bottomText}>adsfasdfasdf</Text>
             </View>
             <View style = {style.bottomInner}>
-            <Icons name={'arrow-back'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
+            <Icons name={'arrow-back'} size={width*0.075, height*0.075} color='#000' style={style.button}/>
               <Text style = {style.bottomText}>adsfasdfasdf</Text>
             </View>
           </View>
