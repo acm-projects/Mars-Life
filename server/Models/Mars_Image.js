@@ -11,7 +11,7 @@ let data1 = []
     fetch(IMG_API)
       .then(res => res.json())
       .then(data => {
-          for(var i = 0; i < 10; i++){
+          for(var i = 0; i < 500; i++){
             dataList[i] = {
                 img_src : data.photos[i].img_src,
                 camera_name : data.photos[i].camera.full_name,
@@ -21,9 +21,12 @@ let data1 = []
         console.log(data)
       })
 
-const pressHandler = (key) => {            //print the key when an item is pressed
-  console.log(key)
+
+
+const refreshHandler = (key) => {            //print the key when an item is pressed
+  //console.log(key)
 }
+
 //---schema---
 const MarsImageSchema = new mongoose.Schema({
     sol:String,
