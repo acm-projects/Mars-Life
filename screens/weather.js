@@ -102,7 +102,7 @@ const style = StyleSheet.create({
    // color: 'white',
   },
   scroll: {
-    marginBottom: 50
+    marginBottom: 5
   },
 
 
