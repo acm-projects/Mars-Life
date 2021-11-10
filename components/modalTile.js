@@ -4,9 +4,9 @@ import * as Font from 'expo-font';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 
 const {width, height} = Dimensions.get('window');
+const[modalOpen, setModalOpen] = useState(false);
 
 export default class modal extends React.Component{
-  const[modalOpen, setModalOpen] = useState(false);
 
   render() {
 
