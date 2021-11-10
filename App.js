@@ -32,9 +32,9 @@ const [show, setShow] = useState(false);
   return (
     <View style={style.container}>
       
-      {/* {show ? <SafeAreaView style={style.photocontainer}> */}
+      {show ? <SafeAreaView style={style.photocontainer}>
       <Navigator />
-      {/* </SafeAreaView> : <SplashLoad/> } */}
+      </SafeAreaView> : <SplashLoad/> }
       
       <StatusBar style="auto" />
       
@@ -52,7 +52,7 @@ const style = StyleSheet.create({
     flex : 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#080B1F'
+    backgroundColor: 'white'
   },
 
   photocontainer: {                        //how do I remove the that blue bar from top???
