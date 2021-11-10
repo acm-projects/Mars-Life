@@ -3,6 +3,7 @@ import { createAppContainer } from "react-navigation";
 import weatherTest from '../screens/weatherTest.js';
 import HomeScreen from "../HomeScreen.js";
 import News from '../News';
+import weather from '../screens/weather.js'
 
 const screens = {
 
@@ -10,7 +11,7 @@ const screens = {
         screen: HomeScreen
     },
     weatherScreen: {
-        screen: weatherTest
+        screen: weather
     },
     news: {
         screen: News
