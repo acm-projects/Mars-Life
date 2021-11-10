@@ -10,13 +10,13 @@ export default class modal extends React.Component{
           <Text style = {style.words}>Weather</Text>
         </View>
         <View>
-          <Text>Photo</Text>
+          <Text style = {style.words}>Photo</Text>
         </View>
         <View>
-          <Text>Photo</Text>
+          <Text style = {style.words}>Photo</Text>
         </View>
         <View>
-          <Text>Photo</Text>
+          <Text style = {style.words}>Photo</Text>
         </View>
       </View>
     );
@@ -30,6 +30,7 @@ const style = StyleSheet.create({
   },
   words:
   {
+    fontSize: 40,
     color: 'white'
   }
   });
