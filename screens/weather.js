@@ -90,7 +90,6 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flex:1,
-    flexDirection: 'row'
   },
   headerText: {
     fontSize: 50,
