@@ -10,7 +10,7 @@ import Constants from 'expo-constants';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 
 const {width, height} = Dimensions.get('window');
-
+export default function RoverPhotos({navigation}) {
 const RoverPhotos = () => {
   const carouselLength = 10;
   const [index, setIndex] = React.useState(0)
@@ -109,8 +109,7 @@ const RoverPhotos = () => {
       </SafeAreaView>
   )
 }
-
-export default RoverPhotos
+}
 
 const styles = StyleSheet.create({
   bottomBar:{
