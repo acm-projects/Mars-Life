@@ -94,7 +94,7 @@ const style = StyleSheet.create({
     alignItems: 'center'
   },
   bottomInner:{
-    background: 'white'
+    backgroundColor: 'white',
   },
   bottomText: {
     color: 'white',
