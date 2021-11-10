@@ -53,7 +53,6 @@ const style = StyleSheet.create({
   },
  
   minMaxInner: {
-    width: '50%',
     height: '100%',
     marginLeft:5    
   },
