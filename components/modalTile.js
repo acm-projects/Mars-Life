@@ -46,7 +46,6 @@ const style = StyleSheet.create({
     color: 'white'
   },
   minMaxOuter:{
-    paddingVertical: 5,
     width: '85%',
     borderWidth: 8,
     borderRadius: 5,
