@@ -11,7 +11,7 @@ export default class modal extends React.Component{
       <View>
         <View style = {style.header}>
           <TouchableOpacity>
-            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
+          <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(true)}/>
           </TouchableOpacity>
           <Text style = {style.headerText}>Weather</Text>
           <TouchableOpacity>
@@ -107,5 +107,14 @@ const style = StyleSheet.create({
     backgroundColor: '#F1FAEE',
     justifyContent: 'center',
     alignSelf: 'center'
+  },
+  button: {
+    overflow: 'hidden',
+    color: 'white',
+    backgroundColor: '#FD773B',
+    padding: width*.01,
+    borderColor: '#B35335',
+    borderRadius: 10,
+    borderWidth: 2,
   },
   });
