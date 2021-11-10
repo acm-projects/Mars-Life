@@ -87,19 +87,20 @@ export default function Weather() {
    );
   }
 const style = StyleSheet.create({
-  // bottomBar:{
-  //   flex: 1,
-  //   flexDirection: 'row',
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   paddingVertical: 5
-  // },
-  // bottomInner:{
-  //   backgroundColor: 'white',
-  // },
-  // bottomText: {
-  //  // color: 'white',
-  // },
+  bottomBar:{
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 20
+  
+  },
+  bottomInner:{
+    backgroundColor: 'white',
+  },
+  bottomText: {
+   // color: 'white',
+  },
 
 
   background: {
