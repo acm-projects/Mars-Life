@@ -11,14 +11,23 @@ export default class modal extends React.Component{
           <Text style = {style.atmospheric}>Weather</Text>
           </View>
         </View>
-        <View style = {style.container}>
-          <Text style = {style.words}>Photo</Text>
+
+        <View style = {style.minMaxOuter}>
+          <View style = {style.minMaxInner}>
+          <Text style = {style.atmospheric}>Photos</Text>
+          </View>
         </View>
-        <View style = {style.container}>
-          <Text style = {style.words}>News</Text>
+
+        <View style = {style.minMaxOuter}>
+          <View style = {style.minMaxInner}>
+          <Text style = {style.atmospheric}>News</Text>
+          </View>
         </View>
-        <View style = {style.container}>
-          <Text style = {style.words}>Map</Text>
+
+        <View style = {style.minMaxOuter}>
+          <View style = {style.minMaxInner}>
+          <Text style = {style.atmospheric}>Map</Text>
+          </View>
         </View>
       </View>
     );
