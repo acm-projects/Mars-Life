@@ -7,6 +7,8 @@ import CarouselViewAnim, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselViewAnim.j
 import Mars_Image from '../server/Models/Mars_Image.js';
 import { dataList } from '../server/Models/Mars_Image';
 import Constants from 'expo-constants';
+import Icons from 'react-native-vector-icons/MaterialIcons';
+
 const {width, height} = Dimensions.get('window');
 
 const RoverPhotos = () => {
@@ -94,6 +96,21 @@ const RoverPhotos = () => {
 }
 
 export default RoverPhotos
+const homeHandler = () => {
+  navigation.navigate('home');
+}
+
+const newsHandler = () => {
+  navigation.navigate('news')
+}
+
+const photoHandler = () => {
+  navigation.navigate('photos')
+}
+
+const weatherHandler = () => {
+  navigation.navigate('weather')
+}
 
 const styles = StyleSheet.create({
   bottomBar:{
