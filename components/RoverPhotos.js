@@ -3,10 +3,12 @@ import {SafeAreaView, ScrollView, RefreshControl, View, StyleSheet, Dimensions, 
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import {LinearGradient} from 'expo-linear-gradient';
 import CarouselViewAnim, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselViewAnim.js';
-//import RoverPhotosData from './RoverPhotosData';
-import Mars_Image from '../server/Models/Mars_Image.js';
-import { dataList } from '../server/Models/Mars_Image';
+import {dataList} from '../server/Models/Mars_Image.js';
 import Constants from 'expo-constants';
+import Icons from 'react-native-vector-icons/MaterialIcons';
+
+
+const {width, height} = Dimensions.get('window') // define width and height
 
 const RoverPhotos = () => {
   const carouselLength = 10;
@@ -68,22 +70,22 @@ const RoverPhotos = () => {
           </ScrollView>
 
 
-          <View style = {style.bottomBar}>
-            <View style = {style.bottomInner}>
-            <Icons name={'home'} size={width*0.075, height*0.075} color='#000' style={style.button}  onPress={homeHandler}/>
+          <View style = {styles.bottomBar}>
+            <View style = {styles.bottomInner}>
+            <Icons name={'home'} size={width*0.075, height*0.075} color='#000' style={styles.button}  onPress={homeHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
-            <View style = {style.bottomInner}>
-            <Icons name={'camera-alt'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress={photoHandler}/>
+            <View style = {styles.bottomInner}>
+            <Icons name={'camera-alt'} size={width*0.075, height*0.075} color='#000' style={styles.button} onPress={photoHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
-            <View style = {style.bottomInner}>
-                <Icons name={'cloud'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress={weatherHandler}/>
+            <View style = {styles.bottomInner}>
+                <Icons name={'cloud'} size={width*0.075, height*0.075} color='#000' style={styles.button} onPress={weatherHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             
-            <View style = {style.bottomInner}>
-              <Icons name={'menu-book'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress = {newsHandler}/>
+            <View style = {styles.bottomInner}>
+              <Icons name={'menu-book'} size={width*0.075, height*0.075} color='#000' style={styles.button} onPress = {newsHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
           </View>
@@ -101,7 +103,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
    // marginBottom: 30,
-    marginBottom: height * 0.055,
+    marginBottom: (height * 0.055),
   },
   bottomInner:{
     width: '20%',
@@ -113,7 +115,7 @@ const styles = StyleSheet.create({
    // color: 'white',
   },
   scroll: {
-    marginBottom: height * 0.055,
+    marginBottom: (height * 0.055),
   },
   body: {
     flex: 1,
