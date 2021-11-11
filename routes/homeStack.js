@@ -3,7 +3,7 @@ import { createAppContainer } from "react-navigation";
 import HomeScreen from "../HomeScreen.js";
 import News from '../screens/News';
 import weather from '../screens/weather.js'
-import RoverPhotos from "../components/RoverPhotos.js";
+import Photos from "../screens/photos.js";
 
 const screens = {
 
@@ -17,7 +17,7 @@ const screens = {
         screen: News
     },
     photos : {
-        screen: RoverPhotos
+        screen: Photos
     }
 }
 

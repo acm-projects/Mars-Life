@@ -85,6 +85,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#B35335',
         paddingBottom: height*.1,
         paddingHorizontal: width*0.02,
+        justifyContent: 'center',
+        alignSelf:'center',
     },
 
     captionText: {
