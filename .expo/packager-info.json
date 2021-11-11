@@ -2,9 +2,15 @@
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
+<<<<<<< HEAD
   "expoServerNgrokUrl": null,
   "packagerNgrokUrl": null,
   "ngrokPid": null,
+=======
+  "expoServerNgrokUrl": "https://2i-t8s.couchchurro.mars-life.exp.direct",
+  "packagerNgrokUrl": "https://packager.2i-t8s.couchchurro.mars-life.exp.direct",
+  "ngrokPid": 18744,
+>>>>>>> 6fb2ef15a033b02b8768d1afcfe241d6a4304752
   "webpackServerPort": null,
   "devToolsPort": 19002
 }
