@@ -42,9 +42,9 @@ export default function Weather({navigation}) {
     Nunito: require('../assets/Nunito.ttf')
   });
  
-  if(!loaded){
-    return <SplashLoad />
-  }
+  // if(!loaded){
+  //   return <SplashLoad style={justifyContent='center'}/>
+  // }
 
   return (
     <ImageBackground
@@ -68,6 +68,9 @@ export default function Weather({navigation}) {
       <View style = {style.body}>
         <ScrollView>
         <WeatherTile />
+         
+          </ScrollView>
+
           <View style  = {style.bottomBar}>
             <View style = {style.bottomInner}>
             <Icons name={'home'} size={width*0.075, height*0.075} color='#000' style={style.button}  onPress={homeHandler}/>
@@ -87,7 +90,6 @@ export default function Weather({navigation}) {
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
           </View>
-          </ScrollView>
       </View>
     </ImageBackground>
     
@@ -142,6 +144,14 @@ const style = StyleSheet.create({
     fontSize: 50,
     color: '#F1FAEE',
   //  fontFamily: 'Nunito'
+  },
+
+  animation: {
+    width: 200,
+    height: 200,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    
   },
  
   mars:{
