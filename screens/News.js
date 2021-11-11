@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 20,
     marginRight: 50,
+    //marginLeft: 10,               //to fix the news screen left margin on the image
     padding: 80,
     borderRadius: 10,
     height: 100,
