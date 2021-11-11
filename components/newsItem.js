@@ -65,7 +65,7 @@ export default class NewsItem extends React.Component{
                     {dataSource.map(article => (
                         <React.Fragment key={article.key}>
                             <TouchableOpacity onPress={() => pressHandler(article.key)}>
-                                {article.key != dataSource[0].key? <View style={styles.item}><Image style={styles.newsImage} source={{uri: article.img_url}}/><Text style={styles.newsText}> {article.title} </Text></View>: <View></View>}
+                                {article.key != dataSource[0].key? <View style={styles.item}><Image style={styles.newsImage} source={{uri: article.img_url}}/><Text style={styles.newsText}>{article.title} </Text></View>: <View></View>}
                                 {/* <View style={styles.item}><Image style={styles.newsImage} source={{uri: article.img_url}}/><Text style={styles.newsText}> {article.title} </Text></View> */}
                             </TouchableOpacity>
                         </React.Fragment>
@@ -117,13 +117,17 @@ const styles = StyleSheet.create({
     topNewsImage: {
       marginTop: 20,
       marginBottom: 20,
-      marginRight: 50,
+      marginRight: 40,
+      marginLeft: 15,
       padding: 80,
       borderRadius: 10,
       height: 100,
       width: 100
     },
     topNewsText: {
+      flex: 1,
+      flexDirection: "row",
+      flexWrap: "wrap",
       marginTop: 40,
       marginRight: 30
     },
@@ -153,7 +157,11 @@ const styles = StyleSheet.create({
       width: 65
     },
     newsText: {
+      flex: 1,
+      flexDirection: "row",
+      flexWrap: "wrap",
       marginTop: 10,
-      marginLeft: 80,
+      marginLeft: 35,
+      marginRight: 10,
     },
   });
