@@ -160,7 +160,7 @@ const style = StyleSheet.create({
   },
 
   select2:{
-    width: '94%',
+    width: '96%',
     height: '48%',
     borderWidth: 8,
     borderRadius: 10,
