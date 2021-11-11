@@ -1,8 +1,7 @@
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
-import weatherTest from '../screens/weatherTest.js';
 import HomeScreen from "../HomeScreen.js";
-import News from '../News';
+import News from '../screens/News';
 import weather from '../screens/weather.js'
 import RoverPhotos from "../components/RoverPhotos.js";
 
