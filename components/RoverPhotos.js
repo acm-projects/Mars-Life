@@ -3,13 +3,15 @@ import {SafeAreaView, ScrollView, RefreshControl, View, StyleSheet, Dimensions, 
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import {LinearGradient} from 'expo-linear-gradient';
 import CarouselViewAnim, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselViewAnim.js';
+import WeatherTile from '../components/weatherTile';
+import ModalTile from '../components/modalTile'; 
 import {dataList} from '../server/Models/Mars_Image.js';
 import Constants from 'expo-constants';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 
 
 const {width, height} = Dimensions.get('window') // define width and height
-
+export default function RoverPhotos({navigation}) {
 const homeHandler = () => {
   navigation.navigate('home');
 }
@@ -18,14 +20,17 @@ const newsHandler = () => {
   navigation.navigate('news')
 }
 
+const weatherHandler = () => {
+  navigation.navigate('weather')
+}
+
 const photoHandler = () => {
   navigation.navigate('photos')
 }
 
-const weatherHandler = () => {
-  navigation.navigate('weather')
-}
-const RoverPhotos = () => {
+
+
+
   const carouselLength = 10;
   const [index, setIndex] = React.useState(0)
   const [start, setStart] = React.useState(0)
@@ -40,6 +45,7 @@ const RoverPhotos = () => {
   }
 
   return (
+   
       <SafeAreaView style={styles.body}>
         <LinearGradient 
           colors={['#D0764E', '#080B1F']} 
@@ -73,6 +79,7 @@ const RoverPhotos = () => {
           />
           <Pagination
             dotsLength={carouselLength}
+            
             activeDotIndex={index}
             carouselRef={isCarousel}
             dotStyle={{
@@ -80,6 +87,7 @@ const RoverPhotos = () => {
               height: 10,
               borderRadius: 5,
               marginHorizontal: 0,
+              marginBottom: 50,
               backgroundColor: '#fff'
             }}
             inactiveDotOpacity={0.4}
@@ -100,8 +108,9 @@ const RoverPhotos = () => {
             <Icons name={'camera-alt'} size={width*0.075, height*0.075} color='#000' style={styles.button} onPress={photoHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
+           
             <View style = {styles.bottomInner}>
-                <Icons name={'cloud'} size={width*0.075, height*0.075} color='#000' style={styles.button} onPress={weatherHandler}/>
+              <Icons name={'cloud'} size={width*0.075, height*0.075} color='#000' style={styles.button} onPress = {weatherHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             
@@ -112,10 +121,10 @@ const RoverPhotos = () => {
           </View>
         </LinearGradient>
       </SafeAreaView>
+      
   )
 }
 
-export default RoverPhotos
 
 const styles = StyleSheet.create({
   bottomBar:{
