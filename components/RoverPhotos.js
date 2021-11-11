@@ -107,7 +107,7 @@ const RoverPhotos = () => {
           </View>
         </LinearGradient>
       </SafeAreaView>
-  )
+  );
 }
 }
 
