@@ -41,7 +41,7 @@ export default class WeatherTile extends React.Component{
         let {dataSource, isLoading} = this.state;
         if (isLoading) {
             return (
-                <SplashLoad />
+                <Text style={style.loadingText}>loading...</Text>
             );
         }
         else{
@@ -261,7 +261,12 @@ const style = StyleSheet.create({
       justifyContent: 'center'
     },
    
-   
+    loadingText: {
+      justifyContent: 'center',
+      color: 'white',
+      alignItems: 'center',
+      fontSize: 30
+    },
     container: {
       marginTop: 14,
       width:'70%',
@@ -281,7 +286,7 @@ const style = StyleSheet.create({
       color: '#F1FAEE',
     //  fontFamily: 'Nunito'
     },
-   
+    
     date: {
       marginTop: 20,
       borderWidth: 8,
