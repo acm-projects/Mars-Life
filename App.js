@@ -53,13 +53,10 @@ const style = StyleSheet.create({
     backgroundColor: '#080B1F'
   },
 
-  photocontainer: {                        //how do I remove the that blue bar from top???
-    //backgroundColor: "#fff",             //background photo of the image carousel
+  photocontainer: {
     alignItems: 'center',
     justifyContent: 'center',
     padding: 50,
-    //backgroundColor: '#080B1F'
-    //backgroundColor: '#fff'
   },
   loadText: {
     color: "#FFFFFF"
