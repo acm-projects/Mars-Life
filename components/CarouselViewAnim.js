@@ -37,6 +37,8 @@ const styles = StyleSheet.create({
   image: {
     width: ITEM_WIDTH,
     height: 300,
+    borderTopLeftRadius: 8, // round edges
+    borderTopRightRadius: 8 // round edges
 
   },
   header: {

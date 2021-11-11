@@ -44,9 +44,7 @@ const RoverPhotos = () => {
         <LinearGradient 
           colors={['#D0764E', '#080B1F']} 
           >
-            <View style={styles.header}> 
-            <Text style={styles.headerText}>Rover Photos</Text>
-            </View>
+          
           <ScrollView contentContainerStyle={styles.scrollView}
             refreshControl = {
               <RefreshControl
@@ -58,6 +56,10 @@ const RoverPhotos = () => {
               tintColor={'#080B1F'}
               />
             }>
+
+            <View style={styles.header}> 
+            <Text style={styles.headerText}>Rover Photos</Text>
+            </View>
           <Carousel
             layout="default"
             layoutCardOffset={9}
@@ -83,6 +85,7 @@ const RoverPhotos = () => {
             inactiveDotOpacity={0.4}
             inactiveDotScale={0.6}
             tappableDots={true}
+            
           />
 
           </ScrollView>
