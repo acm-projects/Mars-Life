@@ -14,7 +14,6 @@ import SplashLoad from './components/SplashLoad';
 import { useState, useEffect } from 'react';
 import RoverPhotos from './components/RoverPhotos';
 import Header from './Shared/header';
-import News from './News';
 import {AppLoading} from 'expo';
 import * as Font from 'expo-font';
 import Navigator from './routes/homeStack';

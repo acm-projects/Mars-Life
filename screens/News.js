@@ -2,75 +2,20 @@ import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import {LinearGradient} from 'expo-linear-gradient';
 import {Icons, Button, StyleSheet, Dimensions, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity, Pressable, TouchableHighlight } from 'react-native';
-import NewsItem from './newsItem';
+import NewsItem from '../components/newsItem';
 
 const {width, height} = Dimensions.get('window')
 
 export default function News() {
-   // Since the breaking news is not part of the news list, it can be shown individually
-    const [people, setPeople] = useState([
-      { name: 'Sankalp', key: '1'},
-      { name: 'Batman', key: '2'},
-      { name: 'Superman', key: '3'},
-      { name: 'Flash', key: '4'},
-      { name: 'Spiderman', key: '5'},
-      { name: 'Ironman', key: '6'},
-      { name: 'Captain America', key: '7'}
-    ]);
-
-    const headNum = '0.0';
-
     return (
       <View style={styles.container}>
-
-        {/* <View style={styles.backButton}>
-          <Icons name={'arrow-back'} size={width*0.075} color='#000' style={styles.arrowButton} />
-            <Text style={styles.headerText}>News</Text>
-          <Icons name={'menu'} size={width*0.075} color='#fff' style={styles.arrowButton} />
-        </View> */}
-
-      {/* <Button
-        // buttonStyle={                  back arrow button in creation
-        // }
-        icon={
-          <Icons
-            name="arrow-right"
-            size={15}
-            color="white"
-          />
-        }
-        title="B"
-      /> */}
-
-        <LinearGradient 
-          colors={['#D0764E', '#080B1F']} 
-          >
-        
-
-        <ScrollView>
-
-        {/* <View>
-            {people.map(item => (
-                <TouchableOpacity onPress={() => pressHandler(item.key)} >
-                    <View key={item.key} style={styles.item}>
-                        <Image style = {styles.newsImage} source = {require('./assets/NewsBackgroundImg.png')}/>
-                        <Text style={styles.newsText}> {item.name} </Text>
-                    </View>
-                </TouchableOpacity>
-            ))}
-        </View> */}
-        <NewsItem />
-
-
-        </ScrollView>
-
+        <LinearGradient colors={['#D0764E', '#080B1F']}>
+          <ScrollView>
+            <NewsItem />
+          </ScrollView>
         </LinearGradient>
       </View>
     );
-}
-
-const pressHandler = (key) => {            //print the key when an item is pressed
-  console.log(key)
 }
 
 
