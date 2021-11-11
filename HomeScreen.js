@@ -84,19 +84,19 @@ export default function HomeScreen({navigation}){
               </View>
             </View>
  
-            <View style = {style.select}>
+            {/* <View style = {style.select}>
               <View style = {style.selectInner}>
-              <TouchableOpacity>
+              <TouchableOpacity> */}
                 {/* <View style = {style.selectHeader}> */}
                   {/* <Text style = {style.selectText}>Map</Text> */}
                 {/* </View> */}
-                <Image
+                {/* <Image
                 style = {style.selectIcon}
                 source = {require('./assets/Map.png')}
-                ></Image>
-                </TouchableOpacity>
+                ></Image> */}
+                {/* </TouchableOpacity>
               </View>
-            </View>
+            </View> */}
 
 
          </View>
