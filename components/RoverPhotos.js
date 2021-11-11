@@ -10,6 +10,21 @@ import Icons from 'react-native-vector-icons/MaterialIcons';
 
 const {width, height} = Dimensions.get('window') // define width and height
 
+const homeHandler = () => {
+  navigation.navigate('home');
+}
+
+const newsHandler = () => {
+  navigation.navigate('news')
+}
+
+const photoHandler = () => {
+  navigation.navigate('photos')
+}
+
+const weatherHandler = () => {
+  navigation.navigate('weather')
+}
 const RoverPhotos = () => {
   const carouselLength = 10;
   const [index, setIndex] = React.useState(0)
@@ -29,6 +44,9 @@ const RoverPhotos = () => {
         <LinearGradient 
           colors={['#D0764E', '#080B1F']} 
           >
+            <View style={styles.header}> 
+            <Text style={styles.headerText}>Rover Photos</Text>
+            </View>
           <ScrollView contentContainerStyle={styles.scrollView}
             refreshControl = {
               <RefreshControl
@@ -111,6 +129,37 @@ const styles = StyleSheet.create({
     marginHorizontal: '2%'
 
   },
+
+  button: {
+    overflow: 'hidden',
+    color: 'white',
+    backgroundColor: '#e36b35',
+    padding: width*.01,
+    borderColor: '#B35335',
+    borderRadius: 10,
+    borderWidth: 2,
+    alignSelf: 'center',
+    justifyContent: 'center'
+  },
+
+  header: {
+    marginTop: 20,
+    paddingVertical: 15,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    
+  },
+
+  headerText: {
+    fontSize: 50,
+    color: '#F1FAEE',
+    justifyContent: 'center',
+    alignContent: 'center',
+    
+   
+  //  fontFamily: 'Nunito'
+  },
   bottomText: {
    // color: 'white',
   },
@@ -119,7 +168,7 @@ const styles = StyleSheet.create({
   },
   body: {
     flex: 1,
-    alignItems: 'stretch',
+    alignItems: 'center',
     justifyContent: 'center'
   },
 
@@ -142,7 +191,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 50,
     //backgroundColor: '#080B1F'
-    //backgroundColor: '#fff'
   },
   loadText: {
     color: "#FFFFFF"
