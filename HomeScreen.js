@@ -70,7 +70,7 @@ export default function HomeScreen({navigation}){
               </View>
             </View>  
  
-            <View style = {style.select}>
+            <View style = {style.select2}>
               <View style = {style.selectInner}>
               <TouchableOpacity onPress = {newsHandler}>
                 <View style = {style.selectHeader}>
@@ -140,10 +140,27 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignContent: 'center',
- 
+  },
+  container2:{
+    width: '100%',
+    height: '43%',
+    padding: 5,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignContent: 'center',
   },
   select:{
     width: '47%',
+    height: '48%',
+    borderWidth: 8,
+    borderRadius: 10,
+    borderColor: '#323547',
+    borderStartColor: '#323547',
+    margin: 5,
+  },
+
+  select2:{
+    width: '94%',
     height: '48%',
     borderWidth: 8,
     borderRadius: 10,
