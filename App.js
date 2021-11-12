@@ -12,10 +12,8 @@ import { StyleSheet, SafeAreaView, Text, View, Image, ImageBackground, ScrollVie
  import { StatusBar } from 'expo-status-bar';
 import SplashLoad from './components/SplashLoad';
 import { useState, useEffect } from 'react';
-import HomeView from './components/HomeView';
 import RoverPhotos from './components/RoverPhotos';
 import Header from './Shared/header';
-import News from './News';
 import {AppLoading} from 'expo';
 import * as Font from 'expo-font';
 import Navigator from './routes/homeStack';
@@ -55,13 +53,10 @@ const style = StyleSheet.create({
     backgroundColor: '#080B1F'
   },
 
-  photocontainer: {                        //how do I remove the that blue bar from top???
-    //backgroundColor: "#fff",             //background photo of the image carousel
+  photocontainer: {
     alignItems: 'center',
     justifyContent: 'center',
     padding: 50,
-    //backgroundColor: '#080B1F'
-    //backgroundColor: '#fff'
   },
   loadText: {
     color: "#FFFFFF"

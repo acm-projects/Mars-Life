@@ -1,10 +1,10 @@
 {
-  "expoServerPort": 19001,
-  "packagerPort": 19001,
+  "devToolsPort": 19002,
+  "expoServerPort": 19000,
+  "packagerPort": 19000,
   "packagerPid": null,
-  "expoServerNgrokUrl": "https://2i-t8s.couchchurro.mars-life.exp.direct",
-  "packagerNgrokUrl": "https://packager.2i-t8s.couchchurro.mars-life.exp.direct",
-  "ngrokPid": 21632,
-  "webpackServerPort": null,
-  "devToolsPort": 19003
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
+  "webpackServerPort": null
 }

@@ -29,7 +29,7 @@ export default function HomeScreen({navigation}){
    return (
     <ImageBackground
     style = {style.background}
-    source = {require('C:/Users/12148/Mars-Life/assets/HomeBack.png')}>
+    source = {require('./assets/HomeBack.png')}>
        <View style = {style.body}>
         <View style = {style.header}>
           <Text style = {style.headerText}> Mars Life </Text>
@@ -70,7 +70,7 @@ export default function HomeScreen({navigation}){
               </View>
             </View>  
  
-            <View style = {style.select}>
+            <View style = {style.select2}>
               <View style = {style.selectInner}>
               <TouchableOpacity onPress = {newsHandler}>
                 <View style = {style.selectHeader}>
@@ -84,19 +84,19 @@ export default function HomeScreen({navigation}){
               </View>
             </View>
  
-            <View style = {style.select}>
+            {/* <View style = {style.select}>
               <View style = {style.selectInner}>
-              <TouchableOpacity>
+              <TouchableOpacity> */}
                 {/* <View style = {style.selectHeader}> */}
                   {/* <Text style = {style.selectText}>Map</Text> */}
                 {/* </View> */}
-                <Image
+                {/* <Image
                 style = {style.selectIcon}
                 source = {require('./assets/Map.png')}
-                ></Image>
-                </TouchableOpacity>
+                ></Image> */}
+                {/* </TouchableOpacity>
               </View>
-            </View>
+            </View> */}
 
 
          </View>
@@ -140,10 +140,27 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     alignContent: 'center',
- 
+  },
+  container2:{
+    width: '100%',
+    height: '43%',
+    padding: 5,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    alignContent: 'center',
   },
   select:{
     width: '47%',
+    height: '48%',
+    borderWidth: 8,
+    borderRadius: 10,
+    borderColor: '#323547',
+    borderStartColor: '#323547',
+    margin: 5,
+  },
+
+  select2:{
+    width: '96%',
     height: '48%',
     borderWidth: 8,
     borderRadius: 10,

@@ -13,6 +13,7 @@ import * as Font from 'expo-font';
 import WeatherTile from '../components/weatherTile';
 import ModalTile from '../components/modalTile'; 
 import Icons from 'react-native-vector-icons/MaterialIcons';
+import SplashLoad from '../components/SplashLoad';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const {width, height} = Dimensions.get('window');
@@ -41,9 +42,9 @@ export default function Weather({navigation}) {
     Nunito: require('../assets/Nunito.ttf')
   });
  
-  if(!loaded){
-    return null;
-  }
+  // if(!loaded){
+  //   return <SplashLoad style={justifyContent='center'}/>
+  // }
 
   return (
     <ImageBackground
@@ -54,15 +55,6 @@ export default function Weather({navigation}) {
 
       <Modal visible = {modalOpen}>
         <ImageBackground style = {style.background} source = {require('../assets/Home2.png')}>
-        <View style = {style.header}>
-          <TouchableOpacity>
-          <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button} onPress = {() => setModalOpen(false)}/>
-          </TouchableOpacity>
-          <Text style = {style.headerText}>Weather</Text>
-          <TouchableOpacity>
-            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button}/>
-          </TouchableOpacity>
-        </View>
 
           <View style = {style.modal}>
 
@@ -74,27 +66,12 @@ export default function Weather({navigation}) {
       </Modal>
 
       <View style = {style.body}>
- 
-        <View style = {style.header}>
-          {/* <TouchableOpacity>
-            <Icons name={'arrow-back'} size={width*0.075} color='#000' style={style.button}/>
-          </TouchableOpacity> */}
-          <Text style = {style.headerText}>Weather</Text>
-          {/* <TouchableOpacity>
-            <Icons name={'menu'} size={width*0.075} color='#fff' style={style.button} onPress = {() => setModalOpen(true)}/>
-          </TouchableOpacity> */}
-        </View>
-        <ScrollView style = {style.scroll}>
- 
-          <Image
-            style = {style.mars}
-            source = {require('../assets/Mars.png')}>
-          </Image>
-
-          <WeatherTile />
-
+        <ScrollView>
+        <WeatherTile />
+         
           </ScrollView>
-          <View style = {style.bottomBar}>
+
+          <View style  = {style.bottomBar}>
             <View style = {style.bottomInner}>
             <Icons name={'home'} size={width*0.075, height*0.075} color='#000' style={style.button}  onPress={homeHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
@@ -115,6 +92,7 @@ export default function Weather({navigation}) {
           </View>
       </View>
     </ImageBackground>
+    
    );
   }
 const style = StyleSheet.create({
@@ -124,6 +102,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
    // marginBottom: 30,
+    marginTop: height*0.055,
     marginBottom: height * 0.055,
   },
   bottomInner:{
@@ -165,6 +144,14 @@ const style = StyleSheet.create({
     fontSize: 50,
     color: '#F1FAEE',
   //  fontFamily: 'Nunito'
+  },
+
+  animation: {
+    width: 200,
+    height: 200,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    
   },
  
   mars:{

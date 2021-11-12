@@ -1,6 +1,7 @@
 import React from "react";
 import {StyleSheet, View, Text, Dimensions, Image, ScrollView} from 'react-native';
 import getWeather from '../tools/getWeather'
+import SplashLoad from './SplashLoad';
 import * as Font from 'expo-font';
 
 const {width, height} = Dimensions.get('window');
@@ -40,12 +41,21 @@ export default class WeatherTile extends React.Component{
         let {dataSource, isLoading} = this.state;
         if (isLoading) {
             return (
-                <Text>loading</Text>
+                <Text style={style.loadingText}>loading...</Text>
             );
         }
         else{
             return (
-                    <View>
+              <View>
+                    <View style = {style.header}>
+                      <Text style = {style.headerText}>Weather</Text>
+                    </View>
+                    <ScrollView style = {style.scroll}>
+                      <Image
+                        style = {style.mars}
+                        source = {require('../assets/Mars.png')}>
+                      </Image>
+                      <View>
                         <View style = {style.solTemp}>
                             <Text style = {style.solTempText}>{(dataSource[0].min+dataSource[0].max)/2} C</Text>
                         </View>
@@ -174,8 +184,10 @@ export default class WeatherTile extends React.Component{
                             </View>
                         </View>
                         <View style = {style.sideline}/>
+                      </View>
+                    </ScrollView>
 
-                    </View>
+                  </View>
             );
         }
     }
@@ -249,7 +261,12 @@ const style = StyleSheet.create({
       justifyContent: 'center'
     },
    
-   
+    loadingText: {
+      justifyContent: 'center',
+      color: 'white',
+      alignItems: 'center',
+      fontSize: 30
+    },
     container: {
       marginTop: 14,
       width:'70%',
@@ -269,7 +286,7 @@ const style = StyleSheet.create({
       color: '#F1FAEE',
     //  fontFamily: 'Nunito'
     },
-   
+    
     date: {
       marginTop: 20,
       borderWidth: 8,
