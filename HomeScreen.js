@@ -49,7 +49,9 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>Weather</Text>
                 </View>
-                <Ionicons style = {style.selectIcon} name="cloud-outline" size = {75}></Ionicons>
+                <View style = {style.selectIcon}>
+                  <Ionicons style = {style.selectIcon} name="cloud-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
+                </View>
                 {/* <Image
                 style = {style.selectIcon}
                 source = {require('./assets/Weather.png')}></Image> */}
@@ -176,5 +178,10 @@ const style = StyleSheet.create({
     flex: 1,
     resizeMode: 'stretch'
   },
+  iconStyle: {
+    
+  }
+
+
 });
  
