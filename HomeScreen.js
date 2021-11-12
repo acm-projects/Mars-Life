@@ -49,9 +49,11 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>Weather</Text>
                 </View>
-                <Image
+                <Ionicons style = {style.selectIcon} name="cloud-outline"></Ionicons>
+
+                {/* <Image
                 style = {style.selectIcon}
-                source = {require('./assets/Weather.png')}></Image>
+                source = {require('./assets/Weather.png')}></Image> */}
               </TouchableOpacity>             
             </View>
            </View>    
@@ -76,7 +78,6 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>News</Text>
                 </View>
-                <Ionicons style = {style.selectIcon} name="cloud-outline"></Ionicons>
                 <Image
                 style = {style.selectIcon}
                 source = {require('./assets/News.png')}
