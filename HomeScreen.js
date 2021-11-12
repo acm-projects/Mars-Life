@@ -9,7 +9,7 @@
  
  import  React from 'react';
  import { StyleSheet, Text, View, Image, ImageBackground, TouchableOpacity} from 'react-native';
-
+import Ionicons from 'react-native-vector-icons/Ionicons';
  
 export default function HomeScreen({navigation}){
  
@@ -76,6 +76,7 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>News</Text>
                 </View>
+                <Ionicons style = {style.selectIcon} name="cloud-outline"></Ionicons>
                 <Image
                 style = {style.selectIcon}
                 source = {require('./assets/News.png')}
@@ -112,7 +113,7 @@ const style = StyleSheet.create({
     alignSelf: 'center',
     resizeMode: 'contain',
     height: '40%',
-    width: '45%'
+    width: '75%'
     },
   container:{
     width: '100%',
