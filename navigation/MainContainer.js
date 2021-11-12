@@ -44,7 +44,7 @@ export default function MainContainer(){
                    } else if (rn === weatherName) {
                        iconName = focused ? 'cloud' : 'cloud-outline'
                    } else if (rn === photosName) {
-                       iconName = focused ? 'camera' : 'camera-outline'
+                       iconName = focused ? 'camera' : 'images-sharp'
                    }
 
                    return <Ionicons name={iconName} size={size} color={color}/>
