@@ -115,7 +115,7 @@ const style = StyleSheet.create({
     flex: 1,
   },
   header: {
-    marginTop: 20,
+    //marginTop: 20,
     height: '15%',
     width: '100%',
     justifyContent: 'center',
