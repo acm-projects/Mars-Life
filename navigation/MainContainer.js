@@ -16,11 +16,11 @@ const weatherName = 'Weather';
 const photosName = 'Photos';
 
 const Tab = createBottomTabNavigator(
-    {
-        defaultNavigationOptions:{
-            headerShown: false
-        }
-    }
+    // {
+    //     defaultNavigationOptions:{
+    //         headerShown: false
+    //     }
+    // }
 );
 
 
