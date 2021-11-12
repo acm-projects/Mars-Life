@@ -71,25 +71,7 @@ export default function Weather({navigation}) {
          
           </ScrollView>
 
-          <View style  = {style.bottomBar}>
-            <View style = {style.bottomInner}>
-            <Icons name={'home'} size={width*0.075, height*0.075} color='#000' style={style.button}  onPress={homeHandler}/>
-              {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
-            </View>
-            <View style = {style.bottomInner}>
-            <Icons name={'camera-alt'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress={photoHandler}/>
-              {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
-            </View>
-            <View style = {style.bottomInner}>
-                <Icons name={'cloud'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress={weatherHandler}/>
-              {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
-            </View>
-            
-            <View style = {style.bottomInner}>
-              <Icons name={'menu-book'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress = {newsHandler}/>
-              {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
-            </View>
-          </View>
+
       </View>
     </ImageBackground>
     
