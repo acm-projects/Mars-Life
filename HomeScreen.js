@@ -173,7 +173,10 @@ const style = StyleSheet.create({
     color: '#F1FAEE',
     fontWeight: '800'
   },
+
   selectIcon:{
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   
   background:{
