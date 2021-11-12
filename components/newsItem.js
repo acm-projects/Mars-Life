@@ -1,16 +1,32 @@
 
 import React from "react";
 import {StyleSheet, View, Text, Dimensions, Image, TouchableOpacity} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { withNavigation } from 'react-navigation';
 
 const {width, height} = Dimensions.get('window');
 
 const NEWS_API = "https://api.spaceflightnewsapi.net/v3/articles/";
 
-const pressHandler = (key) => {            //print the key when an item is pressed
-    console.log(key)
-  }
+// import { Button } from 'react-native';
+// const GoToButton = (screenName) => {
+//   const navigation = useNavigation();
 
-export default class NewsItem extends React.Component{
+//   return (
+//     <Button
+//       title={`Go to ${screenName}`}
+//       onPress={() => navigation.navigate(screenName)}
+//     />
+//   );
+// }
+
+class NewsItem extends React.Component{
+
+  pressHandler(article_id){
+    this.props.navigation.navigate('expanded',article_id)
+    // const navigation = useNavigation();
+    // navigation.navigate('home')
+  }
 
     constructor(props){
         super(props);
@@ -54,7 +70,7 @@ export default class NewsItem extends React.Component{
             return (
                 <View style={styles.body}>
                     <View>
-                        <TouchableOpacity onPress={() => pressHandler(dataSource[0].key)}>
+                        <TouchableOpacity onPress={()=> this.pressHandler(dataSource[0])}>
                             <View style={styles.topNews}> 
                                 <Image style = {styles.topNewsImage} source={{uri: dataSource[0].img_url}}/>
                                 <Text style={styles.topNewsText}>{dataSource[0].title} </Text>
@@ -64,7 +80,7 @@ export default class NewsItem extends React.Component{
                     <View>
                     {dataSource.map(article => (
                         <React.Fragment key={article.key}>
-                            <TouchableOpacity onPress={() => pressHandler(article.key)}>
+                            <TouchableOpacity onPress={() => this.pressHandler(article)}>
                                 {article.key != dataSource[0].key? <View style={styles.item}><Image style={styles.newsImage} source={{uri: article.img_url}}/><Text style={styles.newsText}>{article.title} </Text></View>: <View></View>}
                                 {/* <View style={styles.item}><Image style={styles.newsImage} source={{uri: article.img_url}}/><Text style={styles.newsText}> {article.title} </Text></View> */}
                             </TouchableOpacity>
@@ -165,3 +181,5 @@ const styles = StyleSheet.create({
       marginRight: 10,
     },
   });
+
+export default withNavigation(NewsItem);
