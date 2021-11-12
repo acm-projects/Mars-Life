@@ -10,7 +10,7 @@ import Icons from 'react-native-vector-icons/MaterialIcons';
 
 const {width, height} = Dimensions.get('window') // define width and height
 
-export default function RoverPhotos() {
+export default function RoverPhotos({navigator}) {
 
 
 

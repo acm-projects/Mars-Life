@@ -20,10 +20,12 @@ const Tab = createBottomTabNavigator();
 
 export default function MainContainer(){
     return(
+       
        <NavigationContainer>
            <Tab.Navigator
            initialRouteName={newsName}
            screenOptions={({route}) => ({
+               headerShown: false,
                tabBarIcon: ({focused, color, size}) => {
                    let iconName;
                    let rn = route.name;
@@ -48,21 +50,19 @@ export default function MainContainer(){
            tabBarOptions={{
                activeTintColor: 'tomato',
                inactiveTintColor: 'grey',
-               labelStyle: { paddingBottom: 10, fontSize: 10 },
-               style: {padding: 10, height: 70}
+               labelStyle: { paddingBottom: 5, fontSize: 10 },
+               style: {padding: 20, height: 70}
            }}
 
            > 
            
+           {/* Shows the tabs of the nav bar on the bottom */}
            <Tab.Screen name={homeName} component={HomeScreen}/>
            <Tab.Screen name={newsName} component={News}/>
            <Tab.Screen name={weatherName} component={Weather}/>
            <Tab.Screen name={photosName} component={Photos}/>
-
-
-           
-
            </Tab.Navigator>
-       </NavigationContainer>
+        </NavigationContainer>
+       
     );
 }
