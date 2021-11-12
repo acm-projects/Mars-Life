@@ -16,6 +16,7 @@ const weatherName = 'Weather';
 const photosName = 'Photos';
 
 const Tab = createBottomTabNavigator(
+    
     // {
     //     defaultNavigationOptions:{
     //         headerShown: false
@@ -30,6 +31,7 @@ export default function MainContainer(){
            <Tab.Navigator
            initialRouteName={newsName}
            screenOptions={({route}) => ({
+               headerShown: false,
                tabBarIcon: ({focused, color, size}) => {
                    let iconName;
                    let rn = route.name;
