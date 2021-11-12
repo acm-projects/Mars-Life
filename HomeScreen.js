@@ -95,8 +95,8 @@ const style = StyleSheet.create({
     flex: 1,
   },
   header: {
-    marginTop: 20,
-    height: '15%',
+    marginTop: 40,
+    height: '10%',
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
@@ -108,15 +108,15 @@ const style = StyleSheet.create({
   },
 
   mars:{
-    //justifyContent: 'center',
+    justifyContent: 'center',
     alignSelf: 'center',
     resizeMode: 'contain',
-    height: '45%',
-    width: '65%'
+    height: '40%',
+    width: '45%'
     },
   container:{
     width: '100%',
-    height: '43%',
+    height: '45%',
     padding: 5,
     flexDirection: 'row',
     flexWrap: 'wrap',
