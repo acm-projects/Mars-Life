@@ -17,7 +17,7 @@ import Header from './Shared/header';
 import {AppLoading} from 'expo';
 import * as Font from 'expo-font';
 import Navigator from './routes/homeStack';
-
+import MainContainer from './navigation/MainContainer';
  
 export default function App(){
  
@@ -31,7 +31,7 @@ const [show, setShow] = useState(false);
     //<View style={style.container}>
       
       //{show ? <SafeAreaView style={style.photocontainer}>
-      <Navigator />
+      <MainContainer/>
       //</SafeAreaView> : <SplashLoad/> }
       
       //<StatusBar style="auto" />
