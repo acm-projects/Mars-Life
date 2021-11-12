@@ -49,7 +49,7 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>Weather</Text>
                 </View>
-                <View style = {style.selectIcon}>
+                <View style = {style.asdf}>
                   <Ionicons style = {style.selectIcon} name="cloud-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
                 </View>
                 {/* <Image
@@ -66,9 +66,11 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>Photos</Text>
                 </View>
-                <Image
-                style = {style.selectIcon}
-                source = {require('./assets/Rover.png')}></Image>
+                <Ionicons style = {style.selectIcon} name="camera-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
+
+                {/* <Image
+                style = {style.Iconasdf}
+                source = {require('./assets/Rover.png')}></Image> */}
                </TouchableOpacity>              
               </View>
             </View>  
@@ -79,10 +81,12 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>News</Text>
                 </View>
-                <Image
+                <Ionicons style = {style.selectIcon} name="newspaper-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
+
+                {/* <Image
                 style = {style.selectIcon}
                 source = {require('./assets/News.png')}
-                ></Image>
+                ></Image> */}
                </TouchableOpacity>
               </View>
             </View>
@@ -174,14 +178,11 @@ const style = StyleSheet.create({
     height: '75%',
     resizeMode: 'contain'
   },
+  
   background:{
     flex: 1,
     resizeMode: 'stretch'
   },
-  iconStyle: {
-    
-  }
-
 
 });
  
