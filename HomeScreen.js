@@ -66,7 +66,7 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>Photos</Text>
                 </View>
-                <Ionicons style = {style.selectIcon} name="camera-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
+                <Ionicons style = {style.selectIcon} name="images-sharp" size = {75} color = {"#F1FAEE"}></Ionicons>
 
                 {/* <Image
                 style = {style.Iconasdf}
@@ -174,9 +174,6 @@ const style = StyleSheet.create({
     fontWeight: '800'
   },
   selectIcon:{
-    marginTop: 5,
-    height: '75%',
-    resizeMode: 'contain'
   },
   
   background:{
