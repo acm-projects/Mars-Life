@@ -15,7 +15,13 @@ const newsName = 'News';
 const weatherName = 'Weather';
 const photosName = 'Photos';
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator(
+    {
+        defaultNavigationOptions:{
+            headerShown: false
+        }
+    }
+);
 
 
 export default function MainContainer(){
