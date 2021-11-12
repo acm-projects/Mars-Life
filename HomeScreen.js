@@ -49,7 +49,7 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>Weather</Text>
                 </View>
-                <Ionicons style = {style.selectIcon} name="cloud-outline" size = 75></Ionicons>
+                <Ionicons style = {style.selectIcon} name="cloud-outline" size = '75'></Ionicons>
                 {/* <Image
                 style = {style.selectIcon}
                 source = {require('./assets/Weather.png')}></Image> */}
