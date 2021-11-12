@@ -130,8 +130,8 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignSelf: 'center',
     resizeMode: 'contain',
-    // height: '45%',
-    // width: '65%'
+    height: '45%',
+    width: '65%'
     },
   container:{
     width: '100%',
