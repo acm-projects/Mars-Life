@@ -155,12 +155,12 @@ const style = StyleSheet.create({
     borderStartColor: '#323547',
     margin: 5,
   },
-  selectInner:{
-    flex: 1,
-    backgroundColor: '#323547',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
+  // selectInner:{
+  //   flex: 1,
+  //   backgroundColor: '#323547',
+  //   alignItems: 'center',
+  //   justifyContent: 'center'
+  // },
   selectHeader:{
     width: '100%',
     height: '25%',
@@ -185,6 +185,7 @@ const style = StyleSheet.create({
   selectIcon: {
     justifyContent: 'center',
     alignSelf: 'center'
+
   }
 
 });
