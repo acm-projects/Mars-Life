@@ -1,8 +1,8 @@
-import * as React from 'react';
+import React, {StyleSheet} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
+import { BlurView } from 'expo-blur';
 // Screens
 import HomeScreen from "../HomeScreen.js";
 import News from '../screens/News';
@@ -26,10 +26,11 @@ export default function MainContainer(){
            initialRouteName={newsName}
            screenOptions={({route}) => ({
                headerShown: false,
+            
                tabBarIcon: ({focused, color, size}) => {
                    let iconName;
                    let rn = route.name;
-
+                
                    if(rn === homeName) {
                        iconName = focused ? 'home' : 'home-outline'
                    }
@@ -38,7 +39,7 @@ export default function MainContainer(){
                    } else if (rn === weatherName) {
                        iconName = focused ? 'cloud' : 'cloud-outline'
                    } else if (rn === photosName) {
-                       iconName = focused ? 'camera' : 'camera-outline'
+                       iconName = focused ? 'images' : 'images-outline'
                    }
 
                    return <Ionicons name={iconName} size={size} color={color}/>
