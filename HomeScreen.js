@@ -139,28 +139,29 @@ const style = StyleSheet.create({
   select:{
     width: '47%',
     height: '48%',
-    borderWidth: 8,
+    borderWidth: 5,
     borderRadius: 10,
-    borderColor: '#323547',
+    borderColor: '#080B1F',
     borderStartColor: '#323547',
     margin: 5,
+    backgroundColor: '#323547',
+
   },
 
   select2:{
     width: '96%',
     height: '48%',
-    borderWidth: 8,
+    borderWidth: 5,
     borderRadius: 10,
     borderColor: '#323547',
     borderStartColor: '#323547',
     margin: 5,
   },
-  selectInner:{
-    flex: 1,
-    backgroundColor: '#323547',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
+  // selectInner:{
+  //   flex: 1,
+  //   alignItems: 'center',
+  //   justifyContent: 'center'
+  // },
   selectHeader:{
     width: '100%',
     height: '25%',
