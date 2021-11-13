@@ -8,7 +8,8 @@
  */
  
 import  React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, ImageBackground, ScrollView, Dimensions, Modal,} from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, ScrollView, Dimensions, Modal} from 'react-native';
+import {LinearGradient} from 'expo-linear-gradient';
 import * as Font from 'expo-font';
 import WeatherTile from '../components/weatherTile';
 import ModalTile from '../components/modalTile'; 
@@ -32,24 +33,8 @@ export default function Weather() {
   // }
 
   return (
-    <ImageBackground
-      style = {style.background}
-      source = {require('../assets/HomeBack.png')}>
-
-
-
-      <Modal visible = {modalOpen}>
-        <ImageBackground style = {style.background} source = {require('../assets/Home2.png')}>
-
-          <View style = {style.modal}>
-
-            <ScrollView>
-              <ModalTile />
-            </ScrollView>
-          </View>
-        </ImageBackground>
-      </Modal>
-
+    <View style={style.container2}>
+    <LinearGradient style={style.background} colors={['#D0764E', '#080B1F']}>
       <View style = {style.body}>
         <ScrollView>
         <WeatherTile />
@@ -57,8 +42,8 @@ export default function Weather() {
           </ScrollView>
 
       </View>
-    </ImageBackground>
-    
+    </LinearGradient>
+    </View>
    );
   }
 const style = StyleSheet.create({
@@ -175,6 +160,18 @@ const style = StyleSheet.create({
     flex: 1
   },
  
+  container2: {
+    flex: 1,
+    backgroundColor: '#D0764E',
+    // paddingTop: 40,
+    // paddingHorizontal: 20,
+    // alignItems: 'center',
+    // justifyContent: 'center',
+    flex: 1,
+    resizeMode: 'stretch',
+    overflow: 'hidden',
+ },
+
   solText:{
     fontSize: 30,
     color: '#F1FAEE',
