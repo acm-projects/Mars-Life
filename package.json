@@ -8,6 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.0.9",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
     "@react-navigation/stack": "^6.0.11",
@@ -15,6 +16,7 @@
     "cross-fetch": "^3.1.4",
     "expo": "~42.0.1",
     "expo-app-loading": "1.1.2",
+    "expo-blur": "~9.0.3",
     "expo-cli": "^4.12.6",
     "expo-constants": "~11.0.2",
     "expo-font": "~9.2.1",
@@ -35,7 +37,7 @@
     "react-native-loading-spinner-overlay": "^2.0.0",
     "react-native-paper": "3.6.0",
     "react-native-safe-area-context": "3.2.0",
-    "react-native-screens": "^3.8.0",
+    "react-native-screens": "~3.4.0",
     "react-native-snap-carousel": "^3.9.1",
     "react-native-vector-icons": "^9.0.0",
     "react-native-web": "~0.13.12",
