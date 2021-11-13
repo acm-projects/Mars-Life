@@ -21,7 +21,7 @@ const newsHandler = () => {
 }
 
 const weatherHandler = () => {
-  navigation.navigate('weather')
+  navigation.navigate('weatherScreen')
 }
 
 const photoHandler = () => {

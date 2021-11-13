@@ -3,7 +3,7 @@ import { createAppContainer } from "react-navigation";
 import HomeScreen from "../HomeScreen.js";
 import News from '../screens/News.js';
 import weather from '../screens/weather.js'
-import Photos from "../screens/photos.js";
+import Photos from "../components/RoverPhotos.js";
 import ExpandedNews from "../screens/expanded_news.js";
 import NewsItem from "../components/newsItem.js";
 
