@@ -18,7 +18,6 @@ let data1 = []
                 earth_date : data.photos[i].earth_date
             }
           }
-        console.log(data)
       })
 
 

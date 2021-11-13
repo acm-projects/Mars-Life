@@ -1,10 +1,11 @@
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
-import weatherTest from '../screens/weatherTest.js';
 import HomeScreen from "../HomeScreen.js";
-import News from '../News';
+import News from '../screens/News.js';
 import weather from '../screens/weather.js'
-import RoverPhotos from "../components/RoverPhotos.js";
+import Photos from "../components/RoverPhotos.js";
+import ExpandedNews from "../screens/expanded_news.js";
+import NewsItem from "../components/newsItem.js";
 
 const screens = {
 
@@ -17,9 +18,15 @@ const screens = {
     news: {
         screen: News
     },
-    photos : {
-        screen: RoverPhotos
-    }
+    photos: {
+        screen: Photos
+    },
+    expanded: {
+        screen: ExpandedNews
+    },
+    newsItem:{
+        screen: NewsItem
+    },
 }
 
 const HomeStack = createStackNavigator(screens, {

@@ -1,23 +1,31 @@
 import React from 'react';
-import {StyleSheet, View, Text, Dimensions, Image} from 'react-native';
+import {StyleSheet, View, Text, Dimensions, TouchableOpacity} from 'react-native';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import NewsTile from '../components/newsTile'
 
 const {width, height} = Dimensions.get('window');
 
-export default function ExpandedNews() {
+export default function ExpandedNews({navigation}) {
+    
+    const backHandler = () => {
+        navigation.navigate('news');
+    }
+
+    const homeHandler = () => {
+        navigation.navigate('home');
+    }
+
+
     return (
         <View style={styles.container}>
             <View>
                 <View style={styles.top}>
-                    <Icons name={'arrow-back'} size={width*0.075} color='#000' style={styles.button}/>
+                    <Icons name={'arrow-back'} size={width*0.075} color='#000' style={styles.button} onPress={backHandler}/>
                     <Text style={styles.headerText}>News</Text>
-                    <Icons name={'menu'} size={width*0.075} color='#fff' style={styles.button}/>
+                    <Icons name={'menu'} size={width*0.075} color='#fff' style={styles.button} onPress={homeHandler}/>
                 </View>
-            </View>
-            
-            <NewsTile />
-
+            </View>  
+            <NewsTile ID={navigation.getParam('key')}/>
         </View>
     );
 }

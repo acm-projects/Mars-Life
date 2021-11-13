@@ -3,15 +3,34 @@ import {SafeAreaView, ScrollView, RefreshControl, View, StyleSheet, Dimensions, 
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import {LinearGradient} from 'expo-linear-gradient';
 import CarouselViewAnim, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselViewAnim.js';
-//import RoverPhotosData from './RoverPhotosData';
-import Mars_Image from '../server/Models/Mars_Image.js';
-import { dataList } from '../server/Models/Mars_Image';
+import WeatherTile from '../components/weatherTile';
+import ModalTile from '../components/modalTile'; 
+import {dataList} from '../server/Models/Mars_Image.js';
 import Constants from 'expo-constants';
 import Icons from 'react-native-vector-icons/MaterialIcons';
 
-const {width, height} = Dimensions.get('window');
+
+const {width, height} = Dimensions.get('window') // define width and height
 export default function RoverPhotos({navigation}) {
-const RoverPhotos = () => {
+const homeHandler = () => {
+  navigation.navigate('home');
+}
+
+const newsHandler = () => {
+  navigation.navigate('news')
+}
+
+const weatherHandler = () => {
+  navigation.navigate('weatherScreen')
+}
+
+const photoHandler = () => {
+  navigation.navigate('photos')
+}
+
+
+
+
   const carouselLength = 10;
   const [index, setIndex] = React.useState(0)
   const [start, setStart] = React.useState(0)
@@ -41,10 +60,12 @@ const RoverPhotos = () => {
   }
   
   return (
+   
       <SafeAreaView style={styles.body}>
         <LinearGradient 
           colors={['#D0764E', '#080B1F']} 
           >
+          
           <ScrollView contentContainerStyle={styles.scrollView}
             refreshControl = {
               <RefreshControl
@@ -56,6 +77,10 @@ const RoverPhotos = () => {
               tintColor={'#080B1F'}
               />
             }>
+
+            <View style={styles.header}> 
+            <Text style={styles.headerText}>Rover Photos</Text>
+            </View>
           <Carousel
             layout="default"
             layoutCardOffset={9}
@@ -69,6 +94,7 @@ const RoverPhotos = () => {
           />
           <Pagination
             dotsLength={carouselLength}
+            
             activeDotIndex={index}
             carouselRef={isCarousel}
             dotStyle={{
@@ -76,11 +102,13 @@ const RoverPhotos = () => {
               height: 10,
               borderRadius: 5,
               marginHorizontal: 0,
+              marginBottom: 50,
               backgroundColor: '#fff'
             }}
             inactiveDotOpacity={0.4}
             inactiveDotScale={0.6}
             tappableDots={true}
+            
           />
 
           </ScrollView>
@@ -95,8 +123,9 @@ const RoverPhotos = () => {
             <Icons name={'camera-alt'} size={width*0.075, height*0.075} color='#000' style={styles.button} onPress={photoHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
+           
             <View style = {styles.bottomInner}>
-                <Icons name={'cloud'} size={width*0.075, height*0.075} color='#000' style={styles.button} onPress={weatherHandler}/>
+              <Icons name={'cloud'} size={width*0.075, height*0.075} color='#000' style={styles.button} onPress = {weatherHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             
@@ -107,9 +136,10 @@ const RoverPhotos = () => {
           </View>
         </LinearGradient>
       </SafeAreaView>
-  );
+      
+  )
 }
-}
+
 
 const styles = StyleSheet.create({
   bottomBar:{
@@ -118,7 +148,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
    // marginBottom: 30,
-    marginBottom: height * 0.055,
+    marginBottom: (height * 0.055),
   },
   bottomInner:{
     width: '20%',
@@ -126,15 +156,46 @@ const styles = StyleSheet.create({
     marginHorizontal: '2%'
 
   },
+
+  button: {
+    overflow: 'hidden',
+    color: 'white',
+    backgroundColor: '#e36b35',
+    padding: width*.01,
+    borderColor: '#B35335',
+    borderRadius: 10,
+    borderWidth: 2,
+    alignSelf: 'center',
+    justifyContent: 'center'
+  },
+
+  header: {
+    marginTop: 20,
+    paddingVertical: 15,
+    width: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
+    
+  },
+
+  headerText: {
+    fontSize: 50,
+    color: '#F1FAEE',
+    justifyContent: 'center',
+    alignContent: 'center',
+    
+   
+  //  fontFamily: 'Nunito'
+  },
   bottomText: {
    // color: 'white',
   },
   scroll: {
-    marginBottom: height * 0.055,
+    marginBottom: (height * 0.055),
   },
   body: {
     flex: 1,
-    alignItems: 'stretch',
+    alignItems: 'center',
     justifyContent: 'center'
   },
 
@@ -157,7 +218,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 50,
     //backgroundColor: '#080B1F'
-    //backgroundColor: '#fff'
   },
   loadText: {
     color: "#FFFFFF"

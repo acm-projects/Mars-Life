@@ -1,9 +1,10 @@
+import { stringify } from "querystring";
 import React from "react";
 import {StyleSheet, View, Text, Dimensions, Image} from 'react-native';
 
 const {width, height} = Dimensions.get('window');
 
-const NEWS_API = "https://api.spaceflightnewsapi.net/v3/articles/11333";
+const NEWS_API = "https://api.spaceflightnewsapi.net/v3/articles/";
 
 export default class NewsTile extends React.Component{
 
@@ -12,11 +13,14 @@ export default class NewsTile extends React.Component{
         this.state = {
             isLoading: true,
             dataSource: null,
+            ID: this.props.ID,
         }
     }
 
+    
+
     componentDidMount(){
-        return fetch(NEWS_API)
+        return fetch(NEWS_API+this.state.ID)
         .then(res => res.json())
         .then(data => {
             data = {
@@ -85,6 +89,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#B35335',
         paddingBottom: height*.1,
         paddingHorizontal: width*0.02,
+        justifyContent: 'center',
+        alignSelf:'center',
     },
 
     captionText: {
