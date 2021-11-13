@@ -179,7 +179,8 @@ const style = StyleSheet.create({
 
   imageStyle: {
     justifyContent: 'center',
-    alignContent: 'center'
+    alignContent: 'center',
+    alignSelf:'center',
   }
 });
  
