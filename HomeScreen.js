@@ -146,21 +146,21 @@ const style = StyleSheet.create({
     margin: 5,
   },
 
-  // select2:{
-  //   width: '96%',
-  //   height: '48%',
-  //   borderWidth: 8,
-  //   borderRadius: 10,
-  //   borderColor: '#323547',
-  //   borderStartColor: '#323547',
-  //   margin: 5,
-  // },
-  // selectInner:{
-  //   flex: 1,
-  //   backgroundColor: '#323547',
-  //   alignItems: 'center',
-  //   justifyContent: 'center'
-  // },
+  select2:{
+    width: '96%',
+    height: '48%',
+    borderWidth: 8,
+    borderRadius: 10,
+    borderColor: '#323547',
+    borderStartColor: '#323547',
+    margin: 5,
+  },
+  selectInner:{
+    flex: 1,
+    backgroundColor: '#323547',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
   selectHeader:{
     width: '100%',
     height: '25%',
