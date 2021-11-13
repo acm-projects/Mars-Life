@@ -12,24 +12,6 @@ import Icons from 'react-native-vector-icons/MaterialIcons';
 
 const {width, height} = Dimensions.get('window') // define width and height
 export default function RoverPhotos({navigation}) {
-const homeHandler = () => {
-  navigation.navigate('home');
-}
-
-const newsHandler = () => {
-  navigation.navigate('news')
-}
-
-const weatherHandler = () => {
-  navigation.navigate('weatherScreen')
-}
-
-const photoHandler = () => {
-  navigation.navigate('photos')
-}
-
-
-
 
   const carouselLength = 10;
   const [index, setIndex] = React.useState(0)
