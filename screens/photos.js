@@ -13,8 +13,8 @@ import RoverPhotos from '../components/RoverPhotos';
 
 const {width, height} = Dimensions.get('window');
 
-export default function Photos(navigation) {
+export default function Photos() {
     return (
-        <RoverPhotos/>
+        <RoverPhotos />
     )
 }

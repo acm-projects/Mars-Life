@@ -19,8 +19,23 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const {width, height} = Dimensions.get('window');
 
-export default function Weather() {
+export default function Weather({navigation}) {
    
+  const homeHandler = () => {
+    navigation.navigate('home');
+  }
+
+  const newsHandler = () => {
+    navigation.navigate('news')
+  }
+
+  const photoHandler = () => {
+    navigation.navigate('photos')
+  }
+
+  const weatherHandler = () => {
+    navigation.navigate('weather')
+  }
   
   const[modalOpen, setModalOpen] = useState(false);
 
@@ -41,6 +56,25 @@ export default function Weather() {
          
           </ScrollView>
 
+          <View style  = {style.bottomBar}>
+            <View style = {style.bottomInner}>
+            <Icons name={'home'} size={width*0.075, height*0.075} color='#000' style={style.button}  onPress={homeHandler}/>
+              {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
+            </View>
+            <View style = {style.bottomInner}>
+            <Icons name={'camera-alt'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress={photoHandler}/>
+              {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
+            </View>
+            <View style = {style.bottomInner}>
+                <Icons name={'cloud'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress={weatherHandler}/>
+              {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
+            </View>
+            
+            <View style = {style.bottomInner}>
+              <Icons name={'menu-book'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress = {newsHandler}/>
+              {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
+            </View>
+          </View>
       </View>
     </LinearGradient>
     </View>
