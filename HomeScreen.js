@@ -177,5 +177,9 @@ const style = StyleSheet.create({
     resizeMode: 'stretch'
   },
 
+  imageStyle: {
+    justifyContent: 'center',
+    alignContent: 'center'
+  }
 });
  
