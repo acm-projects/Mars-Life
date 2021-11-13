@@ -142,9 +142,8 @@ const style = StyleSheet.create({
     borderWidth: 5,
     borderRadius: 10,
     borderColor: '#080B1F',
-    borderStartColor: '#323547',
     margin: 5,
-    backgroundColor: '#323547',
+    backgroundColor: '#080B1F',
 
   },
 
@@ -153,15 +152,15 @@ const style = StyleSheet.create({
     height: '48%',
     borderWidth: 5,
     borderRadius: 10,
-    borderColor: '#323547',
-    borderStartColor: '#323547',
+    borderColor: '#080B1F',
+    borderStartColor: '#080B1F',
     margin: 5,
   },
-  // selectInner:{
-  //   flex: 1,
-  //   alignItems: 'center',
-  //   justifyContent: 'center'
-  // },
+  selectInner:{
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
   selectHeader:{
     width: '100%',
     height: '25%',
