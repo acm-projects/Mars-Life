@@ -183,7 +183,8 @@ const style = StyleSheet.create({
     alignSelf:'center',
   },
   selectIcon: {
-    justifyContent: 'center'
+    justifyContent: 'center',
+    alignSelf: 'center'
   }
 
 });
