@@ -50,7 +50,7 @@ export default function HomeScreen({navigation}){
                   <Text style = {style.selectText}>Weather</Text>
                 </View>
 
-                <View>
+                <View style = {style.imageStyle}>
                   <Ionicons style = {style.selectIcon} name="cloud-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
                 </View>
              
@@ -66,7 +66,7 @@ export default function HomeScreen({navigation}){
                   <Text style = {style.selectText}>Photos</Text>
                 </View>
 
-                <View>
+                <View style = {style.imageStyle}>
                   <Ionicons style = {style.selectIcon} name="images-sharp" size = {75} color = {"#F1FAEE"}></Ionicons>
                 </View>
                
@@ -81,7 +81,7 @@ export default function HomeScreen({navigation}){
                   <Text style = {style.selectText}>News</Text>
                 </View>
 
-                <View>
+                <View style = {style.imageStyle}>
                   <Ionicons style = {style.selectIcon} name="newspaper-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
                 </View>
 
