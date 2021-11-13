@@ -58,10 +58,9 @@ export default function HomeScreen({navigation}){
             </View>
            </View>    
  
-          
-            <View style = {style.select}>
-            <TouchableOpacity onPress = {photoHandler}>
+           <TouchableOpacity onPress = {photoHandler}>
 
+            <View style = {style.select}>
               <View style = {style.selectInner}>
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>Photos</Text>
@@ -72,10 +71,9 @@ export default function HomeScreen({navigation}){
                 </View>
                
               </View>
-              </TouchableOpacity>              
-
             </View>  
- 
+            </TouchableOpacity>              
+
             <View style = {style.select2}>
               <View style = {style.selectInner}>
               <TouchableOpacity onPress = {newsHandler}>
