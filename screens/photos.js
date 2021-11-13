@@ -15,6 +15,6 @@ const {width, height} = Dimensions.get('window');
 
 export default function Photos(navigation) {
     return (
-        <RoverPhotos />
+        <RoverPhotos/>
     )
 }

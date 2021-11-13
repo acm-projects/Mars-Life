@@ -18,23 +18,8 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const {width, height} = Dimensions.get('window');
 
-export default function Weather({navigation}) {
+export default function Weather() {
    
-  const homeHandler = () => {
-    navigation.navigate('home');
-  }
-
-  const newsHandler = () => {
-    navigation.navigate('news')
-  }
-
-  const photoHandler = () => {
-    navigation.navigate('photos')
-  }
-
-  const weatherHandler = () => {
-    navigation.navigate('weather')
-  }
   
   const[modalOpen, setModalOpen] = useState(false);
 
@@ -70,7 +55,6 @@ export default function Weather({navigation}) {
         <WeatherTile />
          
           </ScrollView>
-
 
       </View>
     </ImageBackground>
