@@ -155,11 +155,14 @@ const style = StyleSheet.create({
     borderColor: '#080B1F',
     borderStartColor: '#080B1F',
     margin: 5,
+    backgroundColor: '#080B1F',
+
   },
   selectInner:{
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
+    
   },
   selectHeader:{
     width: '100%',
