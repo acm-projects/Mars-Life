@@ -49,12 +49,7 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>Weather</Text>
                 </View>
-                <View style = {style.asdf}>
                   <Ionicons style = {style.selectIcon} name="cloud-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
-                </View>
-                {/* <Image
-                style = {style.selectIcon}
-                source = {require('./assets/Weather.png')}></Image> */}
               </TouchableOpacity>             
             </View>
            </View>    
@@ -67,10 +62,6 @@ export default function HomeScreen({navigation}){
                   <Text style = {style.selectText}>Photos</Text>
                 </View>
                 <Ionicons style = {style.selectIcon} name="images-sharp" size = {75} color = {"#F1FAEE"}></Ionicons>
-
-                {/* <Image
-                style = {style.Iconasdf}
-                source = {require('./assets/Rover.png')}></Image> */}
                </TouchableOpacity>              
               </View>
             </View>  
@@ -81,12 +72,9 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>News</Text>
                 </View>
-                <Ionicons style = {style.selectIcon} name="newspaper-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
 
-                {/* <Image
-                style = {style.selectIcon}
-                source = {require('./assets/News.png')}
-                ></Image> */}
+
+                <Ionicons style = {style.selectIcon} name="newspaper-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
                </TouchableOpacity>
               </View>
             </View>
@@ -176,7 +164,7 @@ const style = StyleSheet.create({
 
   selectIcon:{
     justifyContent: 'center',
-    alignItems: 'center'
+    alignSelf: 'center'
   },
   
   background:{
