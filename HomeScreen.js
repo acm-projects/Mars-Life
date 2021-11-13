@@ -73,8 +73,11 @@ export default function HomeScreen({navigation}){
                   <Text style = {style.selectText}>News</Text>
                 </View>
 
+                <View>
+                  <Ionicons style = {style.selectIcon} name="newspaper-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
+                </View>
 
-                <Ionicons style = {style.selectIcon} name="newspaper-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
+                
                </TouchableOpacity>
               </View>
             </View>
@@ -160,13 +163,7 @@ const style = StyleSheet.create({
     fontSize: 30,
     color: '#F1FAEE',
     fontWeight: '800'
-  },
-
-  selectIcon:{
-    justifyContent: 'center',
-    alignSelf: 'center'
-  },
-  
+  },  
   background:{
     flex: 1,
     resizeMode: 'stretch'
