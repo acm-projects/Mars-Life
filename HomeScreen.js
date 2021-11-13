@@ -9,7 +9,7 @@
  
  import  React from 'react';
  import { StyleSheet, Text, View, Image, ImageBackground, TouchableOpacity} from 'react-native';
-
+import Ionicons from 'react-native-vector-icons/Ionicons';
  
 export default function HomeScreen({navigation}){
  
@@ -37,7 +37,7 @@ export default function HomeScreen({navigation}){
  
          <Image
           style = {style.mars}
-          source = {require('./assets/Mars.png')}></Image>
+          source = {require('./assets/marsv3.png')}></Image>
 
 
           <View style = {style.container}>
@@ -49,9 +49,11 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>Weather</Text>
                 </View>
-                <Image
-                style = {style.selectIcon}
-                source = {require('./assets/Weather.png')}></Image>
+
+                <View style = {style.imageStyle}>
+                  <Ionicons style = {style.selectIcon} name="cloud-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
+                </View>
+             
               </TouchableOpacity>             
             </View>
            </View>    
@@ -63,9 +65,11 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>Photos</Text>
                 </View>
-                <Image
-                style = {style.selectIcon}
-                source = {require('./assets/Rover.png')}></Image>
+
+                <View style = {style.imageStyle}>
+                  <Ionicons style = {style.selectIcon} name="images-sharp" size = {75} color = {"#F1FAEE"}></Ionicons>
+                </View>
+               
                </TouchableOpacity>              
               </View>
             </View>  
@@ -76,38 +80,20 @@ export default function HomeScreen({navigation}){
                 <View style = {style.selectHeader}>
                   <Text style = {style.selectText}>News</Text>
                 </View>
-                <Image
-                style = {style.selectIcon}
-                source = {require('./assets/News.png')}
-                ></Image>
+
+                <View style = {style.imageStyle}>
+                  <Ionicons style = {style.selectIcon} name="newspaper-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
+                </View>
+
+
                </TouchableOpacity>
               </View>
             </View>
- 
-            {/* <View style = {style.select}>
-              <View style = {style.selectInner}>
-              <TouchableOpacity> */}
-                {/* <View style = {style.selectHeader}> */}
-                  {/* <Text style = {style.selectText}>Map</Text> */}
-                {/* </View> */}
-                {/* <Image
-                style = {style.selectIcon}
-                source = {require('./assets/Map.png')}
-                ></Image> */}
-                {/* </TouchableOpacity>
-              </View>
-            </View> */}
-
-
          </View>
- 
       </View>
     </ImageBackground>
    );
   }
- 
- 
-
  
 const style = StyleSheet.create({
  
@@ -115,8 +101,8 @@ const style = StyleSheet.create({
     flex: 1,
   },
   header: {
-    marginTop: 20,
-    height: '15%',
+    marginTop: 40,
+    height: '10%',
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
@@ -126,16 +112,17 @@ const style = StyleSheet.create({
     fontSize: 50,
     color: '#F1FAEE',
   },
+
   mars:{
     justifyContent: 'center',
     alignSelf: 'center',
     resizeMode: 'contain',
-    // height: '45%',
-    // width: '65%'
+    height: '40%',
+    width: '75%'
     },
   container:{
     width: '100%',
-    height: '21.5%',
+    height: '45%',
     padding: 5,
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -149,39 +136,33 @@ const style = StyleSheet.create({
     flexWrap: 'wrap',
     alignContent: 'center',
   },
-
-  container2:{
-    width: '100%',
-    height: '21.5%',
-    padding: 5,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    alignContent: 'center',
-  },
   select:{
     width: '47%',
     height: '48%',
-    borderWidth: 8,
+    borderWidth: 5,
     borderRadius: 10,
-    borderColor: '#323547',
-    borderStartColor: '#323547',
+    borderColor: '#080B1F',
     margin: 5,
+    backgroundColor: '#080B1F',
+
   },
 
   select2:{
     width: '96%',
     height: '48%',
-    borderWidth: 8,
+    borderWidth: 5,
     borderRadius: 10,
-    borderColor: '#323547',
-    borderStartColor: '#323547',
+    borderColor: '#080B1F',
+    borderStartColor: '#080B1F',
     margin: 5,
+    backgroundColor: '#080B1F',
+
   },
   selectInner:{
     flex: 1,
-    backgroundColor: '#323547',
     alignItems: 'center',
     justifyContent: 'center'
+    
   },
   selectHeader:{
     width: '100%',
@@ -193,15 +174,22 @@ const style = StyleSheet.create({
     fontSize: 30,
     color: '#F1FAEE',
     fontWeight: '800'
-  },
-  selectIcon:{
-    marginTop: 5,
-    height: '75%',
-    resizeMode: 'contain'
-  },
+  },  
   background:{
     flex: 1,
     resizeMode: 'stretch'
   },
+
+  imageStyle: {
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignSelf:'center',
+  },
+  selectIcon: {
+    justifyContent: 'center',
+    alignSelf: 'center'
+
+  }
+
 });
  
