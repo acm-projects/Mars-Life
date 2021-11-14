@@ -42,7 +42,7 @@ export default class WeatherTile extends React.Component{
         if (isLoading) {
             return (
               <View style={style.anime}>
-                  <SplashLoad/> {/* do we need a loading screen here? -Sydney*/}
+                  <SplashLoad/> 
               </View>
               
             );
