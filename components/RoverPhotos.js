@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, RefreshControl, View, StyleSheet, Dimensions, Text, Image, TouchableOpacity, Button} from "react-native";
+import {SafeAreaView, ScrollView, RefreshControl, View, StyleSheet, Dimensions, Text, Image, TouchableOpacity, Button, Platform} from "react-native";
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import {LinearGradient} from 'expo-linear-gradient';
 import CarouselViewAnim, { SLIDER_WIDTH, ITEM_WIDTH } from './CarouselViewAnim.js';
@@ -47,7 +47,7 @@ const photoHandler = () => {
   return (
    
       <SafeAreaView style={styles.body}>
-        <LinearGradient 
+        <LinearGradient
           colors={['#D0764E', '#080B1F']} 
           >
           
@@ -55,10 +55,8 @@ const photoHandler = () => {
             refreshControl = {
               <RefreshControl
               refreshing={Refreshing}
-              onRefresh={onRefresh}
-              //colors={["#FFA500"]}              //refresh color from orange to blue
+              onRefresh={onRefresh}         //refresh color from orange to blue
               colors={["#080B1F"]}
-              //tintColor={'#FFA500'}
               tintColor={'#080B1F'}
               />
             }>
@@ -79,7 +77,6 @@ const photoHandler = () => {
           />
           <Pagination
             dotsLength={carouselLength}
-            
             activeDotIndex={index}
             carouselRef={isCarousel}
             dotStyle={{
@@ -127,26 +124,42 @@ const photoHandler = () => {
 
 
 const styles = StyleSheet.create({
+
+  background: {
+    flex: 1,
+    resizeMode: 'stretch',
+    height: '100%',
+    width: '100%'
+  },
+
   bottomBar:{
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-   // marginBottom: 30,
-    marginBottom: (height * 0.055),
+    marginBottom: Platform.OS === 'ios' ? 30 : (height * 0.055)
   },
   bottomInner:{
     width: '20%',
-   // backgroundColor: 'white',
     marginHorizontal: '2%'
 
   },
+
+  body: {
+    flex: 1,
+    backgroundColor: '#D0764E',
+    alignItems: 'center',
+    justifyContent: 'center',
+    resizeMode: 'stretch',
+    overflow: 'hidden',
+  
+ },
 
   button: {
     overflow: 'hidden',
     color: 'white',
     backgroundColor: '#e36b35',
-    padding: width*.01,
+    padding: width*0.01,
     borderColor: '#B35335',
     borderRadius: 10,
     borderWidth: 2,
@@ -172,16 +185,9 @@ const styles = StyleSheet.create({
    
   //  fontFamily: 'Nunito'
   },
-  bottomText: {
-   // color: 'white',
-  },
+
   scroll: {
     marginBottom: (height * 0.055),
-  },
-  body: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
   },
 
   scrollView: {

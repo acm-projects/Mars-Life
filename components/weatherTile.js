@@ -41,10 +41,13 @@ export default class WeatherTile extends React.Component{
         let {dataSource, isLoading} = this.state;
         if (isLoading) {
             return (
-                <Text style={style.loadingText}>loading...</Text>
+              <View style={style.anime}>
+                  <SplashLoad/> {/* do we need a loading screen here? -Sydney*/}
+              </View>
+              
             );
         }
-        else{
+        
             return (
               <View>
                     <View style = {style.header}>
@@ -189,11 +192,19 @@ export default class WeatherTile extends React.Component{
 
                   </View>
             );
-        }
+        
     }
 }
 
 const style = StyleSheet.create({
+
+  anime: {
+    flex : 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    resizeMode: 'stretch',
+    backgroundColor: '#080B1F'
+  },
     back:{
         flex: 1,
         backgroundColor: '#323547', 
@@ -208,6 +219,7 @@ const style = StyleSheet.create({
     body: {
       flex: 1,
     },
+
     header: {
       marginTop: 20,
       paddingVertical: 15,

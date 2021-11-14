@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions, Image } from "react-native"
+import { View, Text, StyleSheet, Dimensions, Image, Platform } from "react-native"
 export const SLIDER_WIDTH = Dimensions.get('window').width + 80
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.7)
 // comment
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     borderTopEndRadius: 8,
     width: ITEM_WIDTH,
-    paddingBottom: 50,
+    paddingBottom: 30,
     justifyContent: 'center',
     shadowColor: "#000",
     shadowOffset: {
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: ITEM_WIDTH,
-    height: 300,
+    height: Platform.OS === 'ios' ? 400 : 300,
     borderTopLeftRadius: 8, // round edges
     borderTopRightRadius: 8 // round edges
 
