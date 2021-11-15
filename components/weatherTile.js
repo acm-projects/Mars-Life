@@ -56,7 +56,7 @@ export default class WeatherTile extends React.Component{
                     <ScrollView style = {style.scroll}>
                       <Image
                         style = {style.mars}
-                        source = {require('../assets/Mars.png')}>
+                        source = {require('../assets/marsv3.png')}>
                       </Image>
                       <View>
                         <View style = {style.solTemp}>
@@ -236,6 +236,9 @@ const style = StyleSheet.create({
     mars:{
       justifyContent: 'center',
       alignSelf: 'center',
+      resizeMode: 'contain',
+      height: '25%',
+      width: '75%'
     },
     solTemp: {
       justifyContent: 'center',
