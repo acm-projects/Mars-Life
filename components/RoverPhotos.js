@@ -97,21 +97,21 @@ export default function RoverPhotos({navigation}) {
 
           <View style = {styles.bottomBar}>
             <View style = {styles.bottomInner}>
-            <Ionicons name={'home'} size={width*0.095, height*0.05} color='#080B1F' style={style.button}  onPress={homeHandler}/>
+            <Ionicons name={'home'} size={width*0.095, height*0.05} color='#080B1F' style={styles.button}  onPress={homeHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             <View style = {styles.bottomInner}>
-            <Ionicons name={'image'} size={width*0.075, height*0.055} color='#080B1F' style={style.button} onPress={photoHandler}/>
+            <Ionicons name={'image'} size={width*0.075, height*0.055} color='#080B1F' style={styles.button} onPress={photoHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
            
             <View style = {styles.bottomInner}>
-            <Ionicons name={'cloud'} size={width*0.075, height*0.055} color='#080B1F' style={style.button} onPress={weatherHandler}/>
+            <Ionicons name={'cloud'} size={width*0.075, height*0.055} color='#080B1F' style={styles.button} onPress={weatherHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             
             <View style = {styles.bottomInner}>
-            <Ionicons name={'newspaper'} size={width*0.075, height*0.05} color='#000' style={style.button} onPress = {newsHandler}/>
+            <Ionicons name={'newspaper'} size={width*0.075, height*0.05} color='#000' style={styles.button} onPress = {newsHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
           </View>
