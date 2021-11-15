@@ -14,7 +14,10 @@ import * as Font from 'expo-font';
 import WeatherTile from '../components/weatherTile';
 import ModalTile from '../components/modalTile'; 
 import Icons from 'react-native-vector-icons/MaterialIcons';
-import Ionicons from 'react-native-vector-icons/MaterialIcons';
+//import Ionicons from 'react-native-vector-icons/MaterialIcons';
+
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 import SplashLoad from '../components/SplashLoad';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
