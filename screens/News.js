@@ -22,12 +22,6 @@ export default function News() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#D0764E',
-    // paddingTop: 40,
-    // paddingHorizontal: 20,
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    flex: 1,
     resizeMode: 'stretch',
     overflow: 'hidden',
   },
@@ -59,7 +53,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginBottom: 20,
     marginRight: 50,
-    //marginLeft: 10,               //to fix the news screen left margin on the image
     padding: 80,
     borderRadius: 10,
     height: 100,
@@ -67,7 +60,9 @@ const styles = StyleSheet.create({
   },
   topNewsText: {
     marginTop: 40,
-    marginRight: 30
+    marginRight: 30,
+    fontWeight: "bold",
+    color: "white",
   },
   backButton: {
     flex: 1,
@@ -97,6 +92,8 @@ const styles = StyleSheet.create({
   newsText: {
     marginTop: 10,
     marginLeft: 80,
+    fontWeight: "bold",
+    color: "white",
   },
 });
 
