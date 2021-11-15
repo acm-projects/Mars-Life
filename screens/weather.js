@@ -325,7 +325,7 @@ const style = StyleSheet.create({
     color: 'white',
     //backgroundColor: '#080B1F',
     padding: width*.01,
-    borderColor: '#080B1F',
+    //borderColor: '#080B1F',
     borderRadius: 10,
     borderWidth: 2,
     alignSelf: 'center',
