@@ -37,7 +37,7 @@ export default function HomeScreen({navigation}){
  
          <Image
           style = {style.mars}
-          source = {require('./assets/marsv3.png')}></Image>
+          source = {require('./assets/marsv4.png')}></Image>
 
 
           <View style = {style.container}>
