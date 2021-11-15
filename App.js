@@ -21,26 +21,23 @@ import Navigator from './routes/homeStack';
  
 export default function App(){
  
-const [show, setShow] = useState(false);
+  const [isLoading, setIsLoading]  = React.useState(true);
 
   useEffect(() => {
-    setTimeout(() => setShow(true), 3000);
+    setTimeout(async() => setIsLoading(false), 3000); // Shows loading screen
   }, []);
-
-  return (
-    //<View style={style.container}>
-      
-      //{show ? <SafeAreaView style={style.photocontainer}>
-      <Navigator />
-      //</SafeAreaView> : <SplashLoad/> }
-      
-      //<StatusBar style="auto" />
-      
-    //</View>
-  );
   
+  if(isLoading) { // Loads for three seconds
+    return(
+      <View style={style.container}>
+        <SplashLoad/>
+      </View>
+    );
+  }
   
-
+  else { // Shows navigator when the loading screen times out
+    return( <Navigator/>);
+  }
 }
 
 

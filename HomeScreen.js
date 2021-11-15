@@ -192,4 +192,3 @@ const style = StyleSheet.create({
   }
 
 });
- 
