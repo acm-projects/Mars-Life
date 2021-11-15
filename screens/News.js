@@ -94,7 +94,6 @@ const styles = StyleSheet.create({
     marginLeft: 80,
     fontWeight: "bold",
     color: "white",
-    backgroundColor: 'red !important'
 
 
   },
