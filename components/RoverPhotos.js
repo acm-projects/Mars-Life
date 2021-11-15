@@ -38,7 +38,7 @@ export default function RoverPhotos({navigation}) {
   }
 
   const weatherHandler = () => {
-    navigation.navigate('weather')
+    navigation.navigate('weatherScreen')
   }
   
   return (
