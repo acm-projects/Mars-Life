@@ -203,7 +203,9 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     resizeMode: 'stretch',
-    backgroundColor: '#080B1F'
+    backgroundColor: '#080B1F',
+    width: width,
+    height: height,
   },
     back:{
         flex: 1,
