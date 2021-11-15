@@ -89,7 +89,7 @@ const style = StyleSheet.create({
     // marginTop: height*0.035,
      marginBottom: height * 0.035,
     //backgroundColor: 'white'
-    opacity:0.5
+    opacity:1
   },
   bottomInner:{
     width: '20%',
