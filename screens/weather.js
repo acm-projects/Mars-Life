@@ -323,7 +323,7 @@ const style = StyleSheet.create({
   button: {
     overflow: 'hidden',
     color: 'white',
-    backgroundColor: '#080B1F',
+    //backgroundColor: '#080B1F',
     padding: width*.01,
     borderColor: '#080B1F',
     borderRadius: 10,
