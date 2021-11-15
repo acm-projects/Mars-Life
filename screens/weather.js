@@ -14,6 +14,7 @@ import * as Font from 'expo-font';
 import WeatherTile from '../components/weatherTile';
 import ModalTile from '../components/modalTile'; 
 import Icons from 'react-native-vector-icons/MaterialIcons';
+import Ionicons from 'react-native-vector-icons/MaterialIcons';
 import SplashLoad from '../components/SplashLoad';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -58,20 +59,20 @@ export default function Weather({navigation}) {
 
           <View style  = {style.bottomBar}>
             <View style = {style.bottomInner}>
-            <Icons name={'home'} size={width*0.075, height*0.055} color='#080B1F' style={style.button}  onPress={homeHandler}/>
+            <Ionicons name={'home'} size={width*0.075, height*0.055} color='#080B1F' style={style.button}  onPress={homeHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             <View style = {style.bottomInner}>
-            <Icons name={'camera-alt'} size={width*0.075, height*0.055} color='#080B1F' style={style.button} onPress={photoHandler}/>
+            <Ionicons name={'image'} size={width*0.075, height*0.055} color='#080B1F' style={style.button} onPress={photoHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             <View style = {style.bottomInner}>
-                <Icons name={'cloud'} size={width*0.075, height*0.055} color='#080B1F' style={style.button} onPress={weatherHandler}/>
+                <Ionicons name={'cloud'} size={width*0.075, height*0.055} color='#080B1F' style={style.button} onPress={weatherHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             
             <View style = {style.bottomInner}>
-              <Icons name={'menu-book'} size={width*0.075, height*0.055} color='#000' style={style.button} onPress = {newsHandler}/>
+              <Ionicons name={'newspaper'} size={width*0.075, height*0.055} color='#000' style={style.button} onPress = {newsHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
           </View>
