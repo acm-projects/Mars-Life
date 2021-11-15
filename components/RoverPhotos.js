@@ -8,6 +8,8 @@ import ModalTile from '../components/modalTile';
 import {dataList} from '../server/Models/Mars_Image.js';
 import Constants from 'expo-constants';
 import Icons from 'react-native-vector-icons/MaterialIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 
 
 const {width, height} = Dimensions.get('window') // define width and height
@@ -95,21 +97,21 @@ export default function RoverPhotos({navigation}) {
 
           <View style = {styles.bottomBar}>
             <View style = {styles.bottomInner}>
-            <Icons name={'home'} size={width*0.075, height*0.075} color='#000' style={styles.button}  onPress={homeHandler}/>
+            <Ionicons name={'home'} size={width*0.095, height*0.05} color='#080B1F' style={style.button}  onPress={homeHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             <View style = {styles.bottomInner}>
-            <Icons name={'camera-alt'} size={width*0.075, height*0.075} color='#000' style={styles.button} onPress={photoHandler}/>
+            <Ionicons name={'image'} size={width*0.075, height*0.055} color='#080B1F' style={style.button} onPress={photoHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
            
             <View style = {styles.bottomInner}>
-              <Icons name={'cloud'} size={width*0.075, height*0.075} color='#000' style={styles.button} onPress = {weatherHandler}/>
+            <Ionicons name={'cloud'} size={width*0.075, height*0.055} color='#080B1F' style={style.button} onPress={weatherHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             
             <View style = {styles.bottomInner}>
-              <Icons name={'menu-book'} size={width*0.075, height*0.075} color='#000' style={styles.button} onPress = {newsHandler}/>
+            <Ionicons name={'newspaper'} size={width*0.075, height*0.05} color='#000' style={style.button} onPress = {newsHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
           </View>
