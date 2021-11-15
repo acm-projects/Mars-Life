@@ -10,7 +10,6 @@
  import  React from 'react';
  import { StyleSheet, Text, View, Image, ImageBackground, TouchableOpacity} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function HomeScreen({navigation}){
  
