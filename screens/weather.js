@@ -93,11 +93,8 @@ const style = StyleSheet.create({
   bottomInner:{
     width: '20%',
    // backgroundColor: 'white',
-    marginHorizontal: '2%'
+    marginHorizontal: '2%',
 
-  },
-  bottomText: {
-   // color: 'white',
   },
   scroll: {
     marginBottom: height * 0.055,
