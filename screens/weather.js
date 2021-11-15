@@ -86,8 +86,8 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    // marginTop: height*0.035,
-     marginBottom: height * 0.035,
+     marginTop: height*0.035,
+     marginBottom: height * 0.055,
     //backgroundColor: 'white'
     opacity:1
   },
