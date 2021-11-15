@@ -91,7 +91,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
      marginTop: height*0.025,
-     marginBottom: height * 0.025,
+     marginBottom: height * 0.035,
     //backgroundColor: 'white'
     opacity:1
   },
