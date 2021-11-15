@@ -59,10 +59,10 @@ const styles = StyleSheet.create({
     width: 100
   },
   topNewsText: {
+    color: "white",
     marginTop: 40,
     marginRight: 30,
     fontWeight: "bold",
-    color: "white",
   },
   backButton: {
     flex: 1,
@@ -90,12 +90,10 @@ const styles = StyleSheet.create({
     width: 65
   },
   newsText: {
+    color: "white",
     marginTop: 10,
     marginLeft: 80,
     fontWeight: "bold",
-    color: "white",
-
-
   },
 });
 
