@@ -74,12 +74,10 @@ export default function Weather({navigation}) {
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             
-            <TouchableOpacity onPress = {newsHandler}>
             <View style = {style.bottomInner}>
-              <Ionicons name={'newspaper'} size={width*0.075, height*0.05} color='#000' style={style.button} />
+              <Ionicons name={'newspaper'} size={width*0.075, height*0.05} color='#000' style={style.button} onPress = {newsHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
-            </TouchableOpacity>
           </View>
       </View>
     </LinearGradient>
