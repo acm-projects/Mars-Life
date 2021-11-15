@@ -3,6 +3,7 @@ import React from "react";
 import {StyleSheet, View, Text, Dimensions, Image, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { withNavigation } from 'react-navigation';
+import SplashLoad from "./SplashLoad";
 
 const {width, height} = Dimensions.get('window');
 
@@ -63,7 +64,9 @@ class NewsItem extends React.Component{
         let {dataSource, isLoading} = this.state;
         if (isLoading) {
             return (
-                <Text style={styles.headerText}>loading</Text>
+              <View style={styles.anime}>
+                <SplashLoad/> 
+              </View>
             );
         }
         else{
@@ -95,7 +98,17 @@ class NewsItem extends React.Component{
 }
 
 const styles = StyleSheet.create({
-    container: {
+  anime: {
+      flex : 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      resizeMode: 'stretch',
+      backgroundColor: '#080B1F',
+      width: width,
+      height: height,
+  },  
+  
+  container: {
       flex: 1,
       backgroundColor: '#D0764E',
       // paddingTop: 40,

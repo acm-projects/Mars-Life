@@ -1,6 +1,7 @@
 import { stringify } from "querystring";
 import React from "react";
 import {StyleSheet, View, Text, Dimensions, Image} from 'react-native';
+import SplashLoad from "./SplashLoad";
 
 const {width, height} = Dimensions.get('window');
 
@@ -42,7 +43,9 @@ export default class NewsTile extends React.Component{
         let {dataSource, isLoading} = this.state;
         if (isLoading) {
             return (
-                <Text style={styles.headerText}>loading</Text>
+                <View style={styles.anime}> 
+                <SplashLoad/> 
+                </View>
             );
         }
         else{
@@ -64,6 +67,16 @@ export default class NewsTile extends React.Component{
 }
 
 const styles = StyleSheet.create({
+    anime: {
+        flex : 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        resizeMode: 'stretch',
+        backgroundColor: '#080B1F',
+        width: width,
+        height: height,
+    },
+    
     body: {
         flex: 1,
         flexDirection: 'column',
