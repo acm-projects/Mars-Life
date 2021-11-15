@@ -62,7 +62,7 @@ export default function Weather({navigation}) {
 
           <View style  = {style.bottomBar}>
             <View style = {style.bottomInner}>
-            <Ionicons name={'home'} size={width*0.075, height*0.055} color='#080B1F' style={style.button}  onPress={homeHandler}/>
+            <Ionicons name={'home'} size={width*0.095, height*0.05} color='#080B1F' style={style.button}  onPress={homeHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
             <View style = {style.bottomInner}>
@@ -75,7 +75,7 @@ export default function Weather({navigation}) {
             </View>
             
             <View style = {style.bottomInner}>
-              <Ionicons name={'newspaper'} size={width*0.075, height*0.055} color='#000' style={style.button} onPress = {newsHandler}/>
+              <Ionicons name={'newspaper'} size={width*0.075, height*0.05} color='#000' style={style.button} onPress = {newsHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
           </View>
