@@ -3,6 +3,7 @@ import {StyleSheet, View, Text, Dimensions, TouchableOpacity} from 'react-native
 import Icons from 'react-native-vector-icons/MaterialIcons';
 import NewsTile from '../components/newsTile';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {LinearGradient} from 'expo-linear-gradient';
 
 const {width, height} = Dimensions.get('window');
 
@@ -19,14 +20,19 @@ export default function ExpandedNews({navigation}) {
 
     return (
         <View style={styles.container}>
+            <LinearGradient colors={['#D0764E', '#080B1F']} style={styles.container}>
             <View>
+            
                 <View style={styles.top}>
                     <Ionicons name={'arrow-back'} size={width*0.070} color='#000' style={styles.button} onPress={backHandler}/>
                     <Text style={styles.headerText}>News</Text>
                     <Ionicons name={"home"} size={width*0.070} color='#fff' style={styles.button} onPress={homeHandler}></Ionicons>
                 </View>
+            
             </View>  
+            
             <NewsTile ID={navigation.getParam('key')}/>
+            </LinearGradient>
         </View>
     );
 }
@@ -55,9 +61,10 @@ const styles = StyleSheet.create({
     button: {
         overflow: 'hidden',
         color: 'white',
-        backgroundColor: '#FD773B',
+        //backgroundColor: '#FD773B',
+        backgroundColor: '#e04e19',
         padding: width*.01,
-        borderColor: '#B35335',
+        borderColor: '#e04e19',
         borderRadius: 10,
         borderWidth: 2,
         alignContent: 'center',

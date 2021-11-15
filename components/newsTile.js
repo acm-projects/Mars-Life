@@ -2,6 +2,7 @@ import { stringify } from "querystring";
 import React from "react";
 import {StyleSheet, View, Text, Dimensions, Image} from 'react-native';
 import SplashLoad from "./SplashLoad";
+import {LinearGradient} from 'expo-linear-gradient';
 
 const {width, height} = Dimensions.get('window');
 
@@ -50,7 +51,9 @@ export default class NewsTile extends React.Component{
         }
         else{
             return (
+                
                 <View style={styles.body}>
+                    {/* <LinearGradient colors={['#D0764E', '#080B1F']} style={styles.container}> */}
                     <View>
                         <Image source={{uri: dataSource.img_url}} style={styles.image} />
                     </View>
@@ -59,14 +62,21 @@ export default class NewsTile extends React.Component{
                         <Text style={styles.captionText}>{"Date: " + dataSource.date}</Text>
                         <Text style={styles.articleSummary}>{dataSource.summary}</Text>
                     </View>
+                    {/* </LinearGradient> */}
                 </View>
-
+                
             );
         }
     }
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        resizeMode: 'stretch',
+        overflow: 'hidden',
+      },
+    
     anime: {
         flex : 1,
         justifyContent: 'center',
@@ -99,11 +109,12 @@ const styles = StyleSheet.create({
 
     articleSummary: {
         color: 'white',
-        backgroundColor: '#B35335',
+        //backgroundColor: '#B35335',
+        backgroundColor: "#080B1F",
         paddingBottom: height*.1,
         paddingHorizontal: width*0.02,
-        justifyContent: 'center',
-        alignSelf:'center',
+        //justifyContent: 'center',
+        //alignSelf:'center',
     },
 
     captionText: {
@@ -114,7 +125,8 @@ const styles = StyleSheet.create({
     },
 
     articleDetails: {
-        backgroundColor: '#FD773B',
+        //backgroundColor: '#FD773B',
+        backgroundColor: '#e04e19',
         borderRadius: 5,
         overflow: 'hidden',
         marginVertical: height*.02,

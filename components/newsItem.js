@@ -107,14 +107,9 @@ const styles = StyleSheet.create({
       width: width,
       height: height,
   },  
-  
   container: {
       flex: 1,
       backgroundColor: '#D0764E',
-      // paddingTop: 40,
-      // paddingHorizontal: 20,
-      // alignItems: 'center',
-      // justifyContent: 'center',
       flex: 1,
       resizeMode: 'stretch',
       overflow: 'hidden',
@@ -124,9 +119,9 @@ const styles = StyleSheet.create({
       overflow: 'hidden',
       marginTop: 24,
       marginHorizontal: 20,
-      backgroundColor: '#E14616',
+      backgroundColor: '#e04e19',
       fontSize: 20,
-      borderColor: '#E14616',
+      borderColor: '#e04e19',
       borderWidth: 1,
       borderRadius: 10,
     },
@@ -136,10 +131,11 @@ const styles = StyleSheet.create({
       justifyContent: 'space-evenly',
       overflow: 'hidden',
       marginTop: 50,
-      backgroundColor: '#E14616',
+      backgroundColor: '#e04e19',
+      //backgroundColor: '#E14616',
       marginHorizontal: 20,
       fontSize: 20,
-      borderColor: '#E14616',
+      borderColor: '#e04e19',
       borderWidth: 1,
       borderRadius: 10,
     },
@@ -163,7 +159,6 @@ const styles = StyleSheet.create({
       fontWeight: "bold",
       fontSize: 20,
       color: '#f6f5e3'
-      
     },
     backButton: {
       flex: 1,
