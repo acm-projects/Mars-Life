@@ -326,9 +326,9 @@ const style = StyleSheet.create({
   button: {
     overflow: 'hidden',
     color: 'white',
-    backgroundColor: '#e36b35',
+    backgroundColor: '#080B1F',
     padding: width*.01,
-    borderColor: '#B35335',
+    borderColor: '#080B1F',
     borderRadius: 10,
     borderWidth: 2,
     alignSelf: 'center',
