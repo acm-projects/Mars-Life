@@ -71,7 +71,7 @@ export default function Weather({navigation}) {
             </View>
             
             <View style = {style.bottomInner}>
-              <Icons name={'menu-book'} size={width*0.075, height*0.075} color='#000' style={style.button} onPress = {newsHandler}/>
+              <Icons name={'menu-book'} size={width*0.075, height*0.055} color='#000' style={style.button} onPress = {newsHandler}/>
               {/* <Text style = {style.bottomText}>adsfasdfasdf</Text> */}
             </View>
           </View>
@@ -86,8 +86,8 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-     marginTop: height*0.035,
-     marginBottom: height * 0.055,
+     marginTop: height*0.025,
+     marginBottom: height * 0.025,
     //backgroundColor: 'white'
     opacity:1
   },
