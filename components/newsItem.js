@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
       marginBottom: 10,
       fontWeight: "bold",
       fontSize: 20,
-      color: '#fffdd0'
+      color: '#f6f5e3'
       
     },
     backButton: {
@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
       marginLeft: 35,
       marginRight: 10,
       fontSize: 15,
-      color: '#fffdd0'
+      color: '#f6f5e3'
     },
   });
 

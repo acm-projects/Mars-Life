@@ -21,11 +21,9 @@ export default function ExpandedNews({navigation}) {
         <View style={styles.container}>
             <View>
                 <View style={styles.top}>
-                    <Icons name={'arrow-back'} size={width*0.070} color='#000' style={styles.button} onPress={backHandler}/>
-                    
+                    <Ionicons name={'arrow-back'} size={width*0.070} color='#000' style={styles.button} onPress={backHandler}/>
                     <Text style={styles.headerText}>News</Text>
-                    <Icons name={'menu'} size={width*0.075} color='#fff' style={styles.button} onPress={homeHandler}/>
-                    {/* <Ionicons name="home" size={width*0.070} color='#fff' style={styles.button} onPress={homeHandler}></Ionicons> */}
+                    <Ionicons name={"home"} size={width*0.070} color='#fff' style={styles.button} onPress={homeHandler}></Ionicons>
                 </View>
             </View>  
             <NewsTile ID={navigation.getParam('key')}/>
@@ -51,17 +49,18 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start',
         justifyContent: 'space-around',
         margin: width*.05,
+        alignSelf: 'center',
     },
 
     button: {
         overflow: 'hidden',
         color: 'white',
-        //backgroundColor: '#FD773B',
-        backgroundColor: '#080B1F',
+        backgroundColor: '#FD773B',
         padding: width*.01,
         borderColor: '#B35335',
         borderRadius: 10,
         borderWidth: 2,
+        alignContent: 'center',
     },
 
     headerText: {
