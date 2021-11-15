@@ -87,7 +87,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     // marginTop: height*0.035,
-     marginBottom: height * 0.035,
+     marginBottom: height * 0.015,
     //backgroundColor: 'white'
   },
   bottomInner:{
@@ -329,6 +329,6 @@ const style = StyleSheet.create({
     borderRadius: 10,
     //borderWidth: 2,
     alignSelf: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
 });
