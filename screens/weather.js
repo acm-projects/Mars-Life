@@ -87,7 +87,7 @@ const style = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     // marginTop: height*0.035,
-     marginBottom: height * 0.035,
+    // marginBottom: height * 0.035,
     //backgroundColor: 'white'
   },
   bottomInner:{
