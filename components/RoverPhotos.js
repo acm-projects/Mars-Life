@@ -135,6 +135,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: Platform.OS === 'ios' ? 30 : (height * 0.055)
+
+    
   },
   bottomInner:{
     width: '20%',

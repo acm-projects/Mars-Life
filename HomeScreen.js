@@ -10,7 +10,8 @@
  import  React from 'react';
  import { StyleSheet, Text, View, Image, ImageBackground, TouchableOpacity} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
- 
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
 export default function HomeScreen({navigation}){
  
   const weatherHandler = () => {
@@ -67,7 +68,7 @@ export default function HomeScreen({navigation}){
                 </View>
 
                 <View style = {style.imageStyle}>
-                  <Ionicons style = {style.selectIcon} name="images-sharp" size = {75} color = {"#F1FAEE"}></Ionicons>
+                  <Ionicons style = {style.selectIcon} name="image" size = {75} color = {"#F1FAEE"}></Ionicons>
                 </View>
                
                </TouchableOpacity>              
