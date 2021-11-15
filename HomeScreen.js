@@ -82,7 +82,7 @@ export default function HomeScreen({navigation}){
                 </View>
 
                 <View style = {style.imageStyle}>
-                  <Ionicons style = {style.selectIcon} name="newspaper-outline" size = {75} color = {"#F1FAEE"}></Ionicons>
+                  <Ionicons style = {style.selectIcon} name="newspaper" size = {75} color = {"#F1FAEE"}></Ionicons>
                 </View>
 
 
