@@ -88,7 +88,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
     marginTop: height*0.055,
     marginBottom: height * 0.055,
-    backgroundColor: 'white'
+    //backgroundColor: 'white'
   },
   bottomInner:{
     width: '20%',
