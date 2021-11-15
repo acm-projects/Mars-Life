@@ -186,7 +186,7 @@ export default class WeatherTile extends React.Component{
                             <Text style = {style.atmosphericNumber}>{dataSource[0].sunset}</Text>
                             </View>
                         </View>
-                        <View style = {style.sideline}/>
+                        {/* <View style = {style.sideline}/> */}
                       </View>
                     </ScrollView>
 
@@ -237,8 +237,8 @@ const style = StyleSheet.create({
       justifyContent: 'center',
       alignSelf: 'center',
       resizeMode: 'contain',
-      height: '25%',
-      width: '75%'
+      height: height * 0.5,
+      width: width * 0.75
     },
     solTemp: {
       justifyContent: 'center',
