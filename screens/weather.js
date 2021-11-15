@@ -327,7 +327,7 @@ const style = StyleSheet.create({
     padding: width*.01,
     //borderColor: '#080B1F',
     borderRadius: 10,
-    borderWidth: 2,
+    //borderWidth: 2,
     alignSelf: 'center',
     justifyContent: 'center'
   },
