@@ -144,8 +144,12 @@ const styles = StyleSheet.create({
       flex: 1,
       flexDirection: "row",
       flexWrap: "wrap",
-      marginTop: 40,
-      marginRight: 30
+      marginTop: 20,
+      marginRight: 30,
+      marginBottom: 10,
+      fontWeight: "bold",
+      fontSize: 20,
+      
     },
     backButton: {
       flex: 1,
@@ -179,6 +183,7 @@ const styles = StyleSheet.create({
       marginTop: 10,
       marginLeft: 35,
       marginRight: 10,
+      fontSize: 15
     },
   });
 

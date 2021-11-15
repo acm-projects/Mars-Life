@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
         fontSize: width*.1,
         marginHorizontal: width*.15,
         textAlign: 'center',
+        justifyContent: 'center'
     },
 });
 

@@ -9,6 +9,7 @@
  
  import  React from 'react';
  import { StyleSheet, Text, View, Image, ImageBackground, TouchableOpacity} from 'react-native';
+ import LottieView from 'lottie-react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function HomeScreen({navigation}){
@@ -30,6 +31,12 @@ export default function HomeScreen({navigation}){
     <ImageBackground
     style = {style.background}
     source = {require('./assets/HomeBack.png')}>
+
+      <LottieView
+      source={require("./components/stars.json")}
+            style={style.starsAnime}
+            autoPlay
+        />
        <View style = {style.body}>
         <View style = {style.header}>
           <Text style = {style.headerText}> Mars Life </Text>
@@ -97,6 +104,15 @@ export default function HomeScreen({navigation}){
  
 const style = StyleSheet.create({
  
+  starsAnime: {
+    width: '100%',
+    height: '100%',
+    position: 'absolute',
+    top: -100, // Changes where the stars are
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+
   body: {
     flex: 1,
   },
