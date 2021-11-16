@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
       flexDirection: "row",
       flexWrap: "wrap",
       marginTop: 20,
-      marginRight: 30,
+      marginRight: 25,
       marginBottom: 10,
       fontWeight: "bold",
       fontSize: 20,

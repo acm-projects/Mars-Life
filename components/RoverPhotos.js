@@ -75,7 +75,7 @@ export default function RoverPhotos({navigation}) {
             useScrollView={true}
           />
           <Pagination
-            dotsLength={carouselLength}
+            dotsLength={carouselLength}             //changed from carouselLength
             activeDotIndex={index}
             carouselRef={isCarousel}
             dotStyle={{
